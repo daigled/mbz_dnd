@@ -9,15 +9,9 @@
 				"number": 1,
 				"faces": 8
 			},
-			"proficiency": [
-				"str",
-				"dex"
-			],
+			"proficiency": ["str", "dex"],
 			"startingProficiencies": {
-				"weapons": [
-					"simple",
-					"{@item shortsword|phb|shortswords}"
-				],
+				"weapons": ["simple", "{@item shortsword|phb|shortswords}"],
 				"tools": [
 					"any one type of {@item artisan's tools|PHB} or any one {@item musical instrument|PHB} of your choice"
 				],
@@ -55,9 +49,7 @@
 				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"shortsword|phb"
-						],
+						"a": ["shortsword|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -65,12 +57,8 @@
 						]
 					},
 					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["dungeoneer's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					},
 					{
 						"_": [
@@ -88,10 +76,7 @@
 					"wis": 13
 				},
 				"proficienciesGained": {
-					"weapons": [
-						"simple",
-						"{@item shortsword|phb|shortswords}"
-					]
+					"weapons": ["simple", "{@item shortsword|phb|shortswords}"]
 				}
 			},
 			"classTableGroups": [
@@ -506,9 +491,7 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"minor illusion#c"
-						]
+						"3": ["minor illusion#c"]
 					},
 					"innate": {
 						"3": {
@@ -544,9 +527,7 @@
 			"optionalfeatureProgression": [
 				{
 					"name": "Elemental Disciplines",
-					"featureType": [
-						"ED"
-					],
+					"featureType": ["ED"],
 					"progression": {
 						"3": 2,
 						"6": 3,
@@ -554,9 +535,7 @@
 						"17": 5
 					},
 					"required": {
-						"3": [
-							"Elemental Attunement|PHB"
-						]
+						"3": ["Elemental Attunement|PHB"]
 					}
 				}
 			],
@@ -580,9 +559,7 @@
 					"innate": {
 						"11": {
 							"daily": {
-								"1": [
-									"sanctuary"
-								]
+								"1": ["sanctuary"]
 							}
 						}
 					},
@@ -656,9 +633,7 @@
 					"innate": {
 						"6": {
 							"resource": {
-								"2": [
-									"burning hands"
-								]
+								"2": ["burning hands"]
 							}
 						}
 					},
@@ -826,9 +801,7 @@
 				{
 					"type": "abilityDc",
 					"name": "Ki",
-					"attributes": [
-						"wis"
-					]
+					"attributes": ["wis"]
 				},
 				{
 					"type": "entries",
@@ -1250,14 +1223,8 @@
 				{
 					"type": "table",
 					"caption": "Ascendant Dragon Origin",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
+					"colLabels": ["d6", "Origin"],
+					"colStyles": ["col-1 text-center", "col-11"],
 					"rows": [
 						[
 							"1",
@@ -1487,22 +1454,10 @@
 								"col-7 text-center"
 							],
 							"rows": [
-								[
-									"5th-8th",
-									3
-								],
-								[
-									"9th-12th",
-									4
-								],
-								[
-									"13th-16th",
-									5
-								],
-								[
-									"17th-20th",
-									6
-								]
+								["5th-8th", 3],
+								["9th-12th", 4],
+								["13th-16th", 5],
+								["17th-20th", 6]
 							]
 						}
 					]
@@ -2059,9 +2014,7 @@
 				{
 					"type": "entries",
 					"name": "Armor of the Spirit",
-					"entries": [
-						"You gain a +2 bonus to Armor Class."
-					]
+					"entries": ["You gain a +2 bonus to Armor Class."]
 				},
 				{
 					"type": "entries",
@@ -2153,39 +2106,15 @@
 				{
 					"type": "table",
 					"caption": "Merciful Mask",
-					"colLabels": [
-						"d6",
-						"Mask Appearance"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Mask Appearance"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1",
-							"Raven"
-						],
-						[
-							"2",
-							"Blank and white"
-						],
-						[
-							"3",
-							"Crying visage"
-						],
-						[
-							"4",
-							"Laughing visage"
-						],
-						[
-							"5",
-							"Skull"
-						],
-						[
-							"6",
-							"Butterfly"
-						]
+						["1", "Raven"],
+						["2", "Blank and white"],
+						["3", "Crying visage"],
+						["4", "Laughing visage"],
+						["5", "Skull"],
+						["6", "Butterfly"]
 					]
 				}
 			]

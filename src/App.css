@@ -7,17 +7,18 @@
 }
 
 .main-flex-wrap {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
-.character-builder-wrap, .character-summary-wrap {
-  flex: 1;
+.character-builder-wrap,
+.character-summary-wrap {
+	flex: 1;
 }
 
 .section-header {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 32px;
-  margin-bottom: 30px;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 32px;
+	margin-bottom: 30px;
 }

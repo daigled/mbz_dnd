@@ -9,19 +9,14 @@
 				"number": 1,
 				"faces": 10
 			},
-			"proficiency": [
-				"wis",
-				"cha"
-			],
+			"proficiency": ["wis", "cha"],
 			"spellcastingAbility": "cha",
 			"casterProgression": "1/2",
 			"preparedSpells": "<$level$> / 2 + <$cha_mod$>",
 			"optionalfeatureProgression": [
 				{
 					"name": "Fighting Style",
-					"featureType": [
-						"FS:P"
-					],
+					"featureType": ["FS:P"],
 					"progression": {
 						"2": 1
 					}
@@ -34,10 +29,7 @@
 					"heavy",
 					"{@item shield|phb|shields}"
 				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
+				"weapons": ["simple", "martial"],
 				"skills": [
 					{
 						"choose": {
@@ -92,12 +84,8 @@
 						]
 					},
 					{
-						"a": [
-							"priest's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["priest's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					},
 					{
 						"_": [
@@ -115,15 +103,8 @@
 					"cha": 13
 				},
 				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
+					"armor": ["light", "medium", "{@item shield|phb|shields}"],
+					"weapons": ["simple", "martial"]
 				}
 			},
 			"classTableGroups": [
@@ -137,146 +118,26 @@
 						"{@filter 5th|spells|level=5|class=Paladin}"
 					],
 					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						]
+						[0, 0, 0, 0, 0],
+						[2, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0],
+						[4, 2, 0, 0, 0],
+						[4, 2, 0, 0, 0],
+						[4, 3, 0, 0, 0],
+						[4, 3, 0, 0, 0],
+						[4, 3, 2, 0, 0],
+						[4, 3, 2, 0, 0],
+						[4, 3, 3, 0, 0],
+						[4, 3, 3, 0, 0],
+						[4, 3, 3, 1, 0],
+						[4, 3, 3, 1, 0],
+						[4, 3, 3, 2, 0],
+						[4, 3, 3, 2, 0],
+						[4, 3, 3, 3, 1],
+						[4, 3, 3, 3, 1],
+						[4, 3, 3, 3, 2],
+						[4, 3, 3, 3, 2]
 					]
 				}
 			],
@@ -334,26 +195,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"protection from evil and good",
-							"sanctuary"
-						],
-						"5": [
-							"lesser restoration",
-							"zone of truth"
-						],
-						"9": [
-							"beacon of hope",
-							"dispel magic"
-						],
-						"13": [
-							"freedom of movement",
-							"guardian of faith"
-						],
-						"17": [
-							"commune",
-							"flame strike"
-						]
+						"3": ["protection from evil and good", "sanctuary"],
+						"5": ["lesser restoration", "zone of truth"],
+						"9": ["beacon of hope", "dispel magic"],
+						"13": ["freedom of movement", "guardian of faith"],
+						"17": ["commune", "flame strike"]
 					}
 				}
 			],
@@ -374,26 +220,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"ensnaring strike",
-							"speak with animals"
-						],
-						"5": [
-							"moonbeam",
-							"misty step"
-						],
-						"9": [
-							"plant growth",
-							"protection from energy"
-						],
-						"13": [
-							"ice storm",
-							"stoneskin"
-						],
-						"17": [
-							"commune with nature",
-							"tree stride"
-						]
+						"3": ["ensnaring strike", "speak with animals"],
+						"5": ["moonbeam", "misty step"],
+						"9": ["plant growth", "protection from energy"],
+						"13": ["ice storm", "stoneskin"],
+						"17": ["commune with nature", "tree stride"]
 					}
 				}
 			],
@@ -414,26 +245,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"bane",
-							"hunter's mark"
-						],
-						"5": [
-							"hold person",
-							"misty step"
-						],
-						"9": [
-							"haste",
-							"protection from energy"
-						],
-						"13": [
-							"banishment",
-							"dimension door"
-						],
-						"17": [
-							"hold monster",
-							"scrying"
-						]
+						"3": ["bane", "hunter's mark"],
+						"5": ["hold person", "misty step"],
+						"9": ["haste", "protection from energy"],
+						"13": ["banishment", "dimension door"],
+						"17": ["hold monster", "scrying"]
 					}
 				}
 			],
@@ -454,26 +270,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"hellish rebuke",
-							"inflict wounds"
-						],
-						"5": [
-							"crown of madness",
-							"darkness"
-						],
-						"9": [
-							"animate dead",
-							"bestow curse"
-						],
-						"13": [
-							"blight",
-							"confusion"
-						],
-						"17": [
-							"contagion",
-							"dominate person"
-						]
+						"3": ["hellish rebuke", "inflict wounds"],
+						"5": ["crown of madness", "darkness"],
+						"9": ["animate dead", "bestow curse"],
+						"13": ["blight", "confusion"],
+						"17": ["contagion", "dominate person"]
 					}
 				}
 			],
@@ -494,26 +295,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"command",
-							"compelled duel"
-						],
-						"5": [
-							"warding bond",
-							"zone of truth"
-						],
-						"9": [
-							"aura of vitality",
-							"spirit guardians"
-						],
-						"13": [
-							"banishment",
-							"guardian of faith"
-						],
-						"17": [
-							"circle of power",
-							"geas"
-						]
+						"3": ["command", "compelled duel"],
+						"5": ["warding bond", "zone of truth"],
+						"9": ["aura of vitality", "spirit guardians"],
+						"13": ["banishment", "guardian of faith"],
+						"17": ["circle of power", "geas"]
 					}
 				}
 			],
@@ -534,26 +320,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"armor of Agathys",
-							"command"
-						],
-						"5": [
-							"hold person",
-							"spiritual weapon"
-						],
-						"9": [
-							"bestow curse",
-							"fear"
-						],
-						"13": [
-							"dominate beast",
-							"stoneskin"
-						],
-						"17": [
-							"cloudkill",
-							"dominate person"
-						]
+						"3": ["armor of Agathys", "command"],
+						"5": ["hold person", "spiritual weapon"],
+						"9": ["bestow curse", "fear"],
+						"13": ["dominate beast", "stoneskin"],
+						"17": ["cloudkill", "dominate person"]
 					}
 				}
 			],
@@ -575,26 +346,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"sanctuary",
-							"sleep"
-						],
-						"5": [
-							"calm emotions",
-							"hold person"
-						],
-						"9": [
-							"counterspell",
-							"hypnotic pattern"
-						],
-						"13": [
-							"Otiluke's resilient sphere",
-							"stoneskin"
-						],
-						"17": [
-							"hold monster",
-							"wall of force"
-						]
+						"3": ["sanctuary", "sleep"],
+						"5": ["calm emotions", "hold person"],
+						"9": ["counterspell", "hypnotic pattern"],
+						"13": ["Otiluke's resilient sphere", "stoneskin"],
+						"17": ["hold monster", "wall of force"]
 					}
 				}
 			],
@@ -622,26 +378,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"guiding bolt",
-							"heroism"
-						],
-						"5": [
-							"enhance ability",
-							"magic weapon"
-						],
-						"9": [
-							"haste",
-							"protection from energy"
-						],
-						"13": [
-							"compulsion",
-							"freedom of movement"
-						],
-						"17": [
-							"commune",
-							"flame strike"
-						]
+						"3": ["guiding bolt", "heroism"],
+						"5": ["enhance ability", "magic weapon"],
+						"9": ["haste", "protection from energy"],
+						"13": ["compulsion", "freedom of movement"],
+						"17": ["commune", "flame strike"]
 					}
 				}
 			],
@@ -663,26 +404,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"alarm",
-							"detect magic"
-						],
-						"5": [
-							"moonbeam",
-							"see invisibility"
-						],
-						"9": [
-							"counterspell",
-							"nondetection"
-						],
-						"13": [
-							"aura of purity",
-							"banishment"
-						],
-						"17": [
-							"hold monster",
-							"scrying"
-						]
+						"3": ["alarm", "detect magic"],
+						"5": ["moonbeam", "see invisibility"],
+						"9": ["counterspell", "nondetection"],
+						"13": ["aura of purity", "banishment"],
+						"17": ["hold monster", "scrying"]
 					}
 				}
 			],
@@ -704,22 +430,10 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"3": [
-							"create or destroy water",
-							"expeditious retreat"
-						],
-						"5": [
-							"augury",
-							"misty step"
-						],
-						"9": [
-							"call lightning",
-							"freedom of the waves|TDCSR"
-						],
-						"13": [
-							"control water",
-							"freedom of movement"
-						],
+						"3": ["create or destroy water", "expeditious retreat"],
+						"5": ["augury", "misty step"],
+						"9": ["call lightning", "freedom of the waves|TDCSR"],
+						"13": ["control water", "freedom of movement"],
 						"17": [
 							"commune with nature",
 							"freedom of the winds|TDCSR"
@@ -852,16 +566,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						}
 					]
 				},
@@ -1232,35 +942,17 @@
 				{
 					"type": "table",
 					"caption": "Oathbreaker Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell hellish rebuke}, {@spell inflict wounds}"
 						],
-						[
-							"5th",
-							"{@spell crown of madness}, {@spell darkness}"
-						],
-						[
-							"9th",
-							"{@spell animate dead}, {@spell bestow curse}"
-						],
-						[
-							"13th",
-							"{@spell blight}, {@spell confusion}"
-						],
-						[
-							"17th",
-							"{@spell contagion}, {@spell dominate person}"
-						]
+						["5th", "{@spell crown of madness}, {@spell darkness}"],
+						["9th", "{@spell animate dead}, {@spell bestow curse}"],
+						["13th", "{@spell blight}, {@spell confusion}"],
+						["17th", "{@spell contagion}, {@spell dominate person}"]
 					]
 				}
 			]
@@ -1389,31 +1081,19 @@
 				{
 					"type": "table",
 					"caption": "Oath of the Ancients Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell ensnaring strike}, {@spell speak with animals}"
 						],
-						[
-							"5th",
-							"{@spell moonbeam}, {@spell misty step}"
-						],
+						["5th", "{@spell moonbeam}, {@spell misty step}"],
 						[
 							"9th",
 							"{@spell plant growth}, {@spell protection from energy}"
 						],
-						[
-							"13th",
-							"{@spell ice storm}, {@spell stoneskin}"
-						],
+						["13th", "{@spell ice storm}, {@spell stoneskin}"],
 						[
 							"17th",
 							"{@spell commune with nature}, {@spell tree stride}"
@@ -1622,14 +1302,8 @@
 				{
 					"type": "table",
 					"caption": "Oath of Devotion Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
@@ -1647,10 +1321,7 @@
 							"13th",
 							"{@spell freedom of movement}, {@spell guardian of faith}"
 						],
-						[
-							"17th",
-							"{@spell commune}, {@spell flame strike}"
-						]
+						["17th", "{@spell commune}, {@spell flame strike}"]
 					]
 				}
 			]
@@ -1898,23 +1569,11 @@
 				{
 					"type": "table",
 					"caption": "Oath of Vengeance Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell bane}, {@spell hunter's mark}"
-						],
-						[
-							"5th",
-							"{@spell hold person}, {@spell misty step}"
-						],
+						["3rd", "{@spell bane}, {@spell hunter's mark}"],
+						["5th", "{@spell hold person}, {@spell misty step}"],
 						[
 							"9th",
 							"{@spell haste}, {@spell protection from energy}"
@@ -1923,10 +1582,7 @@
 							"13th",
 							"{@spell banishment}, {@spell dimension door}"
 						],
-						[
-							"17th",
-							"{@spell hold monster}, {@spell scrying}"
-						]
+						["17th", "{@spell hold monster}, {@spell scrying}"]
 					]
 				}
 			]
@@ -2139,19 +1795,10 @@
 				{
 					"type": "table",
 					"caption": "Oath of the Crown Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell command}, {@spell compelled duel}"
-						],
+						["3rd", "{@spell command}, {@spell compelled duel}"],
 						[
 							"5th",
 							"{@spell warding bond}, {@spell zone of truth}"
@@ -2164,10 +1811,7 @@
 							"13th",
 							"{@spell banishment}, {@spell guardian of faith}"
 						],
-						[
-							"17th",
-							"{@spell circle of power}, {@spell geas}"
-						]
+						["17th", "{@spell circle of power}, {@spell geas}"]
 					]
 				}
 			]
@@ -2384,19 +2028,10 @@
 				{
 					"type": "table",
 					"caption": "Oath of Glory Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell guiding bolt}, {@spell heroism}"
-						],
+						["3rd", "{@spell guiding bolt}, {@spell heroism}"],
 						[
 							"5th",
 							"{@spell enhance ability}, {@spell magic weapon}"
@@ -2409,10 +2044,7 @@
 							"13th",
 							"{@spell compulsion}, {@spell freedom of movement}"
 						],
-						[
-							"17th",
-							"{@spell commune}, {@spell flame strike}"
-						]
+						["17th", "{@spell commune}, {@spell flame strike}"]
 					]
 				}
 			]
@@ -2650,35 +2282,17 @@
 				{
 					"type": "table",
 					"caption": "Oath of the Watchers Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell alarm}, {@spell detect magic}"
-						],
-						[
-							"5th",
-							"{@spell moonbeam}, {@spell see invisibility}"
-						],
-						[
-							"9th",
-							"{@spell counterspell}, {@spell nondetection}"
-						],
+						["3rd", "{@spell alarm}, {@spell detect magic}"],
+						["5th", "{@spell moonbeam}, {@spell see invisibility}"],
+						["9th", "{@spell counterspell}, {@spell nondetection}"],
 						[
 							"13th",
 							"{@spell aura of purity}, {@spell banishment}"
 						],
-						[
-							"17th",
-							"{@spell hold monster}, {@spell scrying}"
-						]
+						["17th", "{@spell hold monster}, {@spell scrying}"]
 					]
 				}
 			]
@@ -2915,23 +2529,14 @@
 				{
 					"type": "table",
 					"caption": "Oath of the Open Sea Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell create or destroy water}, {@spell expeditious retreat}"
 						],
-						[
-							"5th",
-							"{@spell augury}, {@spell misty step}"
-						],
+						["5th", "{@spell augury}, {@spell misty step}"],
 						[
 							"9th",
 							"{@spell call lightning}, {@spell freedom of the waves|TDCSR}*"
@@ -3157,35 +2762,17 @@
 				{
 					"type": "table",
 					"caption": "Oath of Conquest Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell armor of Agathys}, {@spell command}"
-						],
+						["3rd", "{@spell armor of Agathys}, {@spell command}"],
 						[
 							"5th",
 							"{@spell hold person}, {@spell spiritual weapon}"
 						],
-						[
-							"9th",
-							"{@spell bestow curse}, {@spell fear}"
-						],
-						[
-							"13th",
-							"{@spell dominate beast}, {@spell stoneskin}"
-						],
-						[
-							"17th",
-							"{@spell cloudkill}, {@spell dominate person}"
-						]
+						["9th", "{@spell bestow curse}, {@spell fear}"],
+						["13th", "{@spell dominate beast}, {@spell stoneskin}"],
+						["17th", "{@spell cloudkill}, {@spell dominate person}"]
 					]
 				}
 			]
@@ -3363,23 +2950,11 @@
 				{
 					"type": "table",
 					"caption": "Oath of Redemption Spells",
-					"colLabels": [
-						"Paladin Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Paladin Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell sanctuary}, {@spell sleep}"
-						],
-						[
-							"5th",
-							"{@spell calm emotions}, {@spell hold person}"
-						],
+						["3rd", "{@spell sanctuary}, {@spell sleep}"],
+						["5th", "{@spell calm emotions}, {@spell hold person}"],
 						[
 							"9th",
 							"{@spell counterspell}, {@spell hypnotic pattern}"

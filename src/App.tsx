@@ -6,17 +6,16 @@ import CharacterBuilder from './components/CharacterBuilder'
 import CharacterSummary from './components/CharacterSummary'
 
 interface Character {
-  race: string,
-  subrace: string,
-  class: string
+	race: string
+	subrace: string
+	class: string
 }
 
 function App() {
-
 	const defaultCharacter: Character = {
 		race: '',
 		subrace: '',
-    	class: ''
+		class: '',
 	}
 
 	const [character, setCharacter] = useState(defaultCharacter)
@@ -25,7 +24,10 @@ function App() {
 		<>
 			<div className="container">
 				<div className="main-flex-wrap">
-					<CharacterBuilder character={character} setCharacter={setCharacter} />
+					<CharacterBuilder
+						character={character}
+						setCharacter={setCharacter}
+					/>
 					<CharacterSummary character={character} />
 				</div>
 			</div>

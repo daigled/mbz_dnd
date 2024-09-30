@@ -9,55 +9,15 @@
 				"number": 1,
 				"faces": 8
 			},
-			"proficiency": [
-				"wis",
-				"cha"
-			],
+			"proficiency": ["wis", "cha"],
 			"spellcastingAbility": "cha",
 			"casterProgression": "pact",
 			"cantripProgression": [
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4
+				2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 			],
 			"spellsKnownProgression": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				12,
-				12,
-				13,
-				13,
-				14,
-				14,
-				15,
-				15
+				2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14,
+				15, 15
 			],
 			"spellsKnownProgressionFixedByLevel": {
 				"11": {
@@ -76,49 +36,23 @@
 			"optionalfeatureProgression": [
 				{
 					"name": "Eldritch Invocations",
-					"featureType": [
-						"EI"
-					],
+					"featureType": ["EI"],
 					"progression": [
-						0,
-						2,
-						2,
-						2,
-						3,
-						3,
-						4,
-						4,
-						5,
-						5,
-						5,
-						6,
-						6,
-						6,
-						7,
-						7,
-						7,
-						8,
-						8,
+						0, 2, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8,
 						8
 					]
 				},
 				{
 					"name": "Pact Boon",
-					"featureType": [
-						"PB"
-					],
+					"featureType": ["PB"],
 					"progression": {
 						"3": 1
 					}
 				}
 			],
 			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple"
-				],
+				"armor": ["light"],
+				"weapons": ["simple"],
 				"skills": [
 					{
 						"choose": {
@@ -147,10 +81,7 @@
 				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
+						"a": ["light crossbow|phb", "crossbow bolts (20)|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -158,9 +89,7 @@
 						]
 					},
 					{
-						"a": [
-							"component pouch|phb"
-						],
+						"a": ["component pouch|phb"],
 						"b": [
 							{
 								"equipmentType": "focusSpellcastingArcane"
@@ -168,12 +97,8 @@
 						]
 					},
 					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"dungeoneer's pack|phb"
-						]
+						"a": ["scholar's pack|phb"],
+						"b": ["dungeoneer's pack|phb"]
 					},
 					{
 						"_": [
@@ -194,12 +119,8 @@
 					"cha": 13
 				},
 				"proficienciesGained": {
-					"armor": [
-						"light"
-					],
-					"weapons": [
-						"simple"
-					]
+					"armor": ["light"],
+					"weapons": ["simple"]
 				}
 			},
 			"classTableGroups": [
@@ -403,26 +324,11 @@
 			"additionalSpells": [
 				{
 					"expanded": {
-						"s1": [
-							"faerie fire",
-							"sleep"
-						],
-						"s2": [
-							"calm emotions",
-							"phantasmal force"
-						],
-						"s3": [
-							"blink",
-							"plant growth"
-						],
-						"s4": [
-							"dominate beast",
-							"greater invisibility"
-						],
-						"s5": [
-							"dominate person",
-							"seeming"
-						]
+						"s1": ["faerie fire", "sleep"],
+						"s2": ["calm emotions", "phantasmal force"],
+						"s3": ["blink", "plant growth"],
+						"s4": ["dominate beast", "greater invisibility"],
+						"s5": ["dominate person", "seeming"]
 					}
 				}
 			],
@@ -444,26 +350,11 @@
 			"additionalSpells": [
 				{
 					"expanded": {
-						"s1": [
-							"burning hands",
-							"command"
-						],
-						"s2": [
-							"blindness/deafness",
-							"scorching ray"
-						],
-						"s3": [
-							"fireball",
-							"stinking cloud"
-						],
-						"s4": [
-							"fire shield",
-							"wall of fire"
-						],
-						"s5": [
-							"flame strike",
-							"hallow"
-						]
+						"s1": ["burning hands", "command"],
+						"s2": ["blindness/deafness", "scorching ray"],
+						"s3": ["fireball", "stinking cloud"],
+						"s4": ["fire shield", "wall of fire"],
+						"s5": ["flame strike", "hallow"]
 					}
 				}
 			],
@@ -488,22 +379,10 @@
 							"dissonant whispers",
 							"Tasha's hideous laughter"
 						],
-						"s2": [
-							"detect thoughts",
-							"phantasmal force"
-						],
-						"s3": [
-							"clairvoyance",
-							"sending"
-						],
-						"s4": [
-							"dominate beast",
-							"Evard's black tentacles"
-						],
-						"s5": [
-							"dominate person",
-							"telekinesis"
-						]
+						"s2": ["detect thoughts", "phantasmal force"],
+						"s3": ["clairvoyance", "sending"],
+						"s4": ["dominate beast", "Evard's black tentacles"],
+						"s5": ["dominate person", "telekinesis"]
 					}
 				}
 			],
@@ -524,31 +403,14 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"1": [
-							"spare the dying#c"
-						]
+						"1": ["spare the dying#c"]
 					},
 					"expanded": {
-						"s1": [
-							"false life",
-							"ray of sickness"
-						],
-						"s2": [
-							"blindness/deafness",
-							"silence"
-						],
-						"s3": [
-							"feign death",
-							"speak with dead"
-						],
-						"s4": [
-							"aura of life",
-							"death ward"
-						],
-						"s5": [
-							"contagion",
-							"legend lore"
-						]
+						"s1": ["false life", "ray of sickness"],
+						"s2": ["blindness/deafness", "silence"],
+						"s3": ["feign death", "speak with dead"],
+						"s4": ["aura of life", "death ward"],
+						"s5": ["contagion", "legend lore"]
 					}
 				}
 			],
@@ -569,32 +431,14 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"1": [
-							"sacred flame#c",
-							"light#c"
-						]
+						"1": ["sacred flame#c", "light#c"]
 					},
 					"expanded": {
-						"s1": [
-							"cure wounds",
-							"guiding bolt"
-						],
-						"s2": [
-							"flaming sphere",
-							"lesser restoration"
-						],
-						"s3": [
-							"daylight",
-							"revivify"
-						],
-						"s4": [
-							"guardian of faith",
-							"wall of fire"
-						],
-						"s5": [
-							"flame strike",
-							"greater restoration"
-						]
+						"s1": ["cure wounds", "guiding bolt"],
+						"s2": ["flaming sphere", "lesser restoration"],
+						"s3": ["daylight", "revivify"],
+						"s4": ["guardian of faith", "wall of fire"],
+						"s5": ["flame strike", "greater restoration"]
 					}
 				}
 			],
@@ -616,26 +460,11 @@
 			"additionalSpells": [
 				{
 					"expanded": {
-						"s1": [
-							"shield",
-							"wrathful smite"
-						],
-						"s2": [
-							"blur",
-							"branding smite"
-						],
-						"s3": [
-							"blink",
-							"elemental weapon"
-						],
-						"s4": [
-							"phantasmal killer",
-							"staggering smite"
-						],
-						"s5": [
-							"banishing smite",
-							"cone of cold"
-						]
+						"s1": ["shield", "wrathful smite"],
+						"s2": ["blur", "branding smite"],
+						"s3": ["blink", "elemental weapon"],
+						"s4": ["phantasmal killer", "staggering smite"],
+						"s5": ["banishing smite", "cone of cold"]
 					}
 				}
 			],
@@ -657,33 +486,16 @@
 			"additionalSpells": [
 				{
 					"expanded": {
-						"s1": [
-							"create or destroy water",
-							"thunderwave"
-						],
-						"s2": [
-							"gust of wind",
-							"silence"
-						],
-						"s3": [
-							"lightning bolt",
-							"sleet storm"
-						],
-						"s4": [
-							"control water",
-							"summon elemental|tce"
-						],
-						"s5": [
-							"Bigby's hand",
-							"cone of cold"
-						]
+						"s1": ["create or destroy water", "thunderwave"],
+						"s2": ["gust of wind", "silence"],
+						"s3": ["lightning bolt", "sleet storm"],
+						"s4": ["control water", "summon elemental|tce"],
+						"s5": ["Bigby's hand", "cone of cold"]
 					},
 					"known": {
 						"10": {
 							"daily": {
-								"1": [
-									"Evard's black tentacles"
-								]
+								"1": ["Evard's black tentacles"]
 							}
 						}
 					}
@@ -709,113 +521,45 @@
 				{
 					"name": "Dao",
 					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"sanctuary"
-						],
-						"s2": [
-							"phantasmal force",
-							"spike growth"
-						],
-						"s3": [
-							"create food and water",
-							"meld into stone"
-						],
-						"s4": [
-							"phantasmal killer",
-							"stone shape"
-						],
-						"s5": [
-							"creation",
-							"wall of stone"
-						]
+						"9": ["wish"],
+						"s1": ["detect evil and good", "sanctuary"],
+						"s2": ["phantasmal force", "spike growth"],
+						"s3": ["create food and water", "meld into stone"],
+						"s4": ["phantasmal killer", "stone shape"],
+						"s5": ["creation", "wall of stone"]
 					}
 				},
 				{
 					"name": "Djinni",
 					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"thunderwave"
-						],
-						"s2": [
-							"phantasmal force",
-							"gust of wind"
-						],
-						"s3": [
-							"create food and water",
-							"wind wall"
-						],
-						"s4": [
-							"phantasmal killer",
-							"greater invisibility"
-						],
-						"s5": [
-							"creation",
-							"seeming"
-						]
+						"9": ["wish"],
+						"s1": ["detect evil and good", "thunderwave"],
+						"s2": ["phantasmal force", "gust of wind"],
+						"s3": ["create food and water", "wind wall"],
+						"s4": ["phantasmal killer", "greater invisibility"],
+						"s5": ["creation", "seeming"]
 					}
 				},
 				{
 					"name": "Efreeti",
 					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"burning hands"
-						],
-						"s2": [
-							"phantasmal force",
-							"scorching ray"
-						],
-						"s3": [
-							"create food and water",
-							"fireball"
-						],
-						"s4": [
-							"phantasmal killer",
-							"fire shield"
-						],
-						"s5": [
-							"creation",
-							"flame strike"
-						]
+						"9": ["wish"],
+						"s1": ["detect evil and good", "burning hands"],
+						"s2": ["phantasmal force", "scorching ray"],
+						"s3": ["create food and water", "fireball"],
+						"s4": ["phantasmal killer", "fire shield"],
+						"s5": ["creation", "flame strike"]
 					}
 				},
 				{
 					"name": "Marid",
 					"expanded": {
-						"9": [
-							"wish"
-						],
-						"s1": [
-							"detect evil and good",
-							"fog cloud"
-						],
-						"s2": [
-							"phantasmal force",
-							"blur"
-						],
-						"s3": [
-							"create food and water",
-							"sleet storm"
-						],
-						"s4": [
-							"phantasmal killer",
-							"control water"
-						],
-						"s5": [
-							"creation",
-							"cone of cold"
-						]
+						"9": ["wish"],
+						"s1": ["detect evil and good", "fog cloud"],
+						"s2": ["phantasmal force", "blur"],
+						"s3": ["create food and water", "sleet storm"],
+						"s4": ["phantasmal killer", "control water"],
+						"s5": ["creation", "cone of cold"]
 					}
 				}
 			],
@@ -837,26 +581,11 @@
 			"additionalSpells": [
 				{
 					"expanded": {
-						"s1": [
-							"bane",
-							"false life"
-						],
-						"s2": [
-							"blindness/deafness",
-							"phantasmal force"
-						],
-						"s3": [
-							"phantom steed",
-							"speak with dead"
-						],
-						"s4": [
-							"death ward",
-							"greater invisibility"
-						],
-						"s5": [
-							"antilife shell",
-							"cloudkill"
-						]
+						"s1": ["bane", "false life"],
+						"s2": ["blindness/deafness", "phantasmal force"],
+						"s3": ["phantom steed", "speak with dead"],
+						"s4": ["death ward", "greater invisibility"],
+						"s5": ["antilife shell", "cloudkill"]
 					}
 				}
 			],
@@ -924,16 +653,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						}
 					]
 				},
@@ -1204,19 +929,10 @@
 						{
 							"type": "table",
 							"caption": "Archfey Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
-								[
-									"1st",
-									"{@spell faerie fire}, {@spell sleep}"
-								],
+								["1st", "{@spell faerie fire}, {@spell sleep}"],
 								[
 									"2nd",
 									"{@spell calm emotions}, {@spell phantasmal force}"
@@ -1323,14 +1039,8 @@
 						{
 							"type": "table",
 							"caption": "Fiend Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",
@@ -1444,14 +1154,8 @@
 						{
 							"type": "table",
 							"caption": "Great Old One Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",
@@ -1561,14 +1265,8 @@
 						{
 							"type": "table",
 							"caption": "Undying Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",
@@ -1682,14 +1380,8 @@
 						{
 							"type": "table",
 							"caption": "Fathomless Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",
@@ -1835,37 +1527,13 @@
 				{
 					"type": "table",
 					"caption": "Genie Kind",
-					"colLabels": [
-						"d4",
-						"Kind",
-						"Element"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-5",
-						"col-5"
-					],
+					"colLabels": ["d4", "Kind", "Element"],
+					"colStyles": ["col-2 text-center", "col-5", "col-5"],
 					"rows": [
-						[
-							1,
-							"{@creature Dao}",
-							"Earth"
-						],
-						[
-							2,
-							"{@creature Djinni}",
-							"Air"
-						],
-						[
-							3,
-							"{@creature Efreeti}",
-							"Fire"
-						],
-						[
-							4,
-							"{@creature Marid}",
-							"Water"
-						]
+						[1, "{@creature Dao}", "Earth"],
+						[2, "{@creature Djinni}", "Air"],
+						[3, "{@creature Efreeti}", "Fire"],
+						[4, "{@creature Marid}", "Water"]
 					]
 				},
 				{
@@ -1968,39 +1636,15 @@
 				{
 					"type": "table",
 					"caption": "Genie's Vessel",
-					"colLabels": [
-						"d6",
-						"Vessel"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Vessel"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1",
-							"Oil lamp"
-						],
-						[
-							"2",
-							"Urn"
-						],
-						[
-							"3",
-							"Ring with a compartment"
-						],
-						[
-							"4",
-							"Stoppered bottle"
-						],
-						[
-							"5",
-							"Hollow statuette"
-						],
-						[
-							"6",
-							"Ornate lantern"
-						]
+						["1", "Oil lamp"],
+						["2", "Urn"],
+						["3", "Ring with a compartment"],
+						["4", "Stoppered bottle"],
+						["5", "Hollow statuette"],
+						["6", "Ornate lantern"]
 					]
 				},
 				"While you are touching the vessel, you can use it in the following ways:",
@@ -2092,19 +1736,10 @@
 						{
 							"type": "table",
 							"caption": "Undead Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
-								[
-									"1st",
-									"{@spell bane}, {@spell false life}"
-								],
+								["1st", "{@spell bane}, {@spell false life}"],
 								[
 									"2nd",
 									"{@spell blindness/deafness}, {@spell phantasmal force}"
@@ -2235,14 +1870,8 @@
 						{
 							"type": "table",
 							"caption": "Celestial Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",
@@ -2252,10 +1881,7 @@
 									"2nd",
 									"{@spell flaming sphere}, {@spell lesser restoration}"
 								],
-								[
-									"3rd",
-									"{@spell daylight}, {@spell revivify}"
-								],
+								["3rd", "{@spell daylight}, {@spell revivify}"],
 								[
 									"4th",
 									"{@spell guardian of faith}, {@spell wall of fire}"
@@ -2371,14 +1997,8 @@
 						{
 							"type": "table",
 							"caption": "Hexblade Expanded Spells",
-							"colLabels": [
-								"Spell Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Spell Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
 								[
 									"1st",

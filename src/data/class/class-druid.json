@@ -9,34 +9,12 @@
 				"number": 1,
 				"faces": 8
 			},
-			"proficiency": [
-				"int",
-				"wis"
-			],
+			"proficiency": ["int", "wis"],
 			"spellcastingAbility": "wis",
 			"casterProgression": "full",
 			"preparedSpells": "<$level$> + <$wis_mod$>",
 			"cantripProgression": [
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4
+				2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 			],
 			"startingProficiencies": {
 				"armor": [
@@ -59,9 +37,7 @@
 					"{@item sling|phb|slings}",
 					"{@item spear|phb|spears}"
 				],
-				"tools": [
-					"{@item Herbalism kit|PHB}"
-				],
+				"tools": ["{@item Herbalism kit|PHB}"],
 				"toolProficiencies": [
 					{
 						"herbalism kit": true
@@ -95,9 +71,7 @@
 				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"shield|phb"
-						],
+						"a": ["shield|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -105,9 +79,7 @@
 						]
 					},
 					{
-						"a": [
-							"scimitar|phb"
-						],
+						"a": ["scimitar|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimpleMelee"
@@ -146,66 +118,26 @@
 						"{@filter Cantrips Known|spells|level=0|class=Druid}"
 					],
 					"rows": [
-						[
-							2
-						],
-						[
-							2
-						],
-						[
-							2
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						]
+						[2],
+						[2],
+						[2],
+						[3],
+						[3],
+						[3],
+						[3],
+						[3],
+						[3],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4]
 					]
 				},
 				{
@@ -222,226 +154,26 @@
 						"{@filter 9th|spells|level=9|class=Druid}"
 					],
 					"rowsSpellProgression": [
-						[
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							2,
-							1,
-							1
-						]
+						[2, 0, 0, 0, 0, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0, 0, 0, 0, 0],
+						[4, 2, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 2, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 1, 0, 0, 0, 0, 0],
+						[4, 3, 3, 2, 0, 0, 0, 0, 0],
+						[4, 3, 3, 3, 1, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 2, 1, 1]
 					]
 				}
 			],
@@ -505,22 +237,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"hold person",
-							"spike growth"
-						],
-						"5": [
-							"sleet storm",
-							"slow"
-						],
-						"7": [
-							"freedom of movement",
-							"ice storm"
-						],
-						"9": [
-							"commune with nature",
-							"cone of cold"
-						]
+						"3": ["hold person", "spike growth"],
+						"5": ["sleet storm", "slow"],
+						"7": ["freedom of movement", "ice storm"],
+						"9": ["commune with nature", "cone of cold"]
 					}
 				},
 				{
@@ -535,22 +255,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"mirror image",
-							"misty step"
-						],
-						"5": [
-							"water breathing",
-							"water walk"
-						],
-						"7": [
-							"control water",
-							"freedom of movement"
-						],
-						"9": [
-							"conjure elemental",
-							"scrying"
-						]
+						"3": ["mirror image", "misty step"],
+						"5": ["water breathing", "water walk"],
+						"7": ["control water", "freedom of movement"],
+						"9": ["conjure elemental", "scrying"]
 					}
 				},
 				{
@@ -565,22 +273,13 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"blur",
-							"silence"
-						],
+						"3": ["blur", "silence"],
 						"5": [
 							"create food and water",
 							"protection from energy"
 						],
-						"7": [
-							"blight",
-							"hallucinatory terrain"
-						],
-						"9": [
-							"insect plague",
-							"wall of stone"
-						]
+						"7": ["blight", "hallucinatory terrain"],
+						"9": ["insect plague", "wall of stone"]
 					}
 				},
 				{
@@ -595,22 +294,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"barkskin",
-							"spider climb"
-						],
-						"5": [
-							"call lightning",
-							"plant growth"
-						],
-						"7": [
-							"divination",
-							"freedom of movement"
-						],
-						"9": [
-							"commune with nature",
-							"tree stride"
-						]
+						"3": ["barkskin", "spider climb"],
+						"5": ["call lightning", "plant growth"],
+						"7": ["divination", "freedom of movement"],
+						"9": ["commune with nature", "tree stride"]
 					}
 				},
 				{
@@ -625,22 +312,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"invisibility",
-							"pass without trace"
-						],
-						"5": [
-							"daylight",
-							"haste"
-						],
-						"7": [
-							"divination",
-							"freedom of movement"
-						],
-						"9": [
-							"dream",
-							"insect plague"
-						]
+						"3": ["invisibility", "pass without trace"],
+						"5": ["daylight", "haste"],
+						"7": ["divination", "freedom of movement"],
+						"9": ["dream", "insect plague"]
 					}
 				},
 				{
@@ -655,22 +330,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"spider climb",
-							"spike growth"
-						],
-						"5": [
-							"lightning bolt",
-							"meld into stone"
-						],
-						"7": [
-							"stone shape",
-							"stoneskin"
-						],
-						"9": [
-							"passwall",
-							"wall of stone"
-						]
+						"3": ["spider climb", "spike growth"],
+						"5": ["lightning bolt", "meld into stone"],
+						"7": ["stone shape", "stoneskin"],
+						"9": ["passwall", "wall of stone"]
 					}
 				},
 				{
@@ -685,22 +348,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"darkness",
-							"Melf's acid arrow"
-						],
-						"5": [
-							"water walk",
-							"stinking cloud"
-						],
-						"7": [
-							"freedom of movement",
-							"locate creature"
-						],
-						"9": [
-							"insect plague",
-							"scrying"
-						]
+						"3": ["darkness", "Melf's acid arrow"],
+						"5": ["water walk", "stinking cloud"],
+						"7": ["freedom of movement", "locate creature"],
+						"9": ["insect plague", "scrying"]
 					}
 				},
 				{
@@ -715,22 +366,10 @@
 						}
 					},
 					"prepared": {
-						"3": [
-							"spider climb",
-							"web"
-						],
-						"5": [
-							"gaseous form",
-							"stinking cloud"
-						],
-						"7": [
-							"greater invisibility",
-							"stone shape"
-						],
-						"9": [
-							"cloudkill",
-							"insect plague"
-						]
+						"3": ["spider climb", "web"],
+						"5": ["gaseous form", "stinking cloud"],
+						"7": ["greater invisibility", "stone shape"],
+						"9": ["cloudkill", "insect plague"]
 					}
 				}
 			],
@@ -751,9 +390,7 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"14": [
-							"alter self"
-						]
+						"14": ["alter self"]
 					}
 				}
 			],
@@ -810,27 +447,13 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"2": [
-							"chill touch#c"
-						]
+						"2": ["chill touch#c"]
 					},
 					"prepared": {
-						"3": [
-							"blindness/deafness",
-							"gentle repose"
-						],
-						"5": [
-							"animate dead",
-							"gaseous form"
-						],
-						"7": [
-							"blight",
-							"confusion"
-						],
-						"9": [
-							"cloudkill",
-							"contagion"
-						]
+						"3": ["blindness/deafness", "gentle repose"],
+						"5": ["animate dead", "gaseous form"],
+						"7": ["blight", "confusion"],
+						"9": ["cloudkill", "contagion"]
 					}
 				}
 			],
@@ -852,14 +475,10 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"2": [
-							"guidance#c"
-						]
+						"2": ["guidance#c"]
 					},
 					"prepared": {
-						"2": [
-							"guiding bolt"
-						]
+						"2": ["guiding bolt"]
 					}
 				}
 			],
@@ -881,26 +500,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"2": [
-							"burning hands",
-							"cure wounds"
-						],
-						"3": [
-							"flaming sphere",
-							"scorching ray"
-						],
-						"5": [
-							"plant growth",
-							"revivify"
-						],
-						"7": [
-							"aura of life",
-							"fire shield"
-						],
-						"9": [
-							"flame strike",
-							"mass cure wounds"
-						]
+						"2": ["burning hands", "cure wounds"],
+						"3": ["flaming sphere", "scorching ray"],
+						"5": ["plant growth", "revivify"],
+						"7": ["aura of life", "fire shield"],
+						"9": ["flame strike", "mass cure wounds"]
 					}
 				}
 			],
@@ -978,16 +582,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						}
 					]
 				},
@@ -1050,12 +650,7 @@
 				{
 					"type": "table",
 					"caption": "Beast Shapes",
-					"colLabels": [
-						"Level",
-						"Max. CR",
-						"Limitations",
-						"Example"
-					],
+					"colLabels": ["Level", "Max. CR", "Limitations", "Example"],
 					"colStyles": [
 						"col-2 text-center",
 						"col-2 text-center",
@@ -1332,23 +927,11 @@
 				{
 					"type": "table",
 					"caption": "Arctic",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell hold person}, {@spell spike growth}"
-						],
-						[
-							"5th",
-							"{@spell sleet storm}, {@spell slow}"
-						],
+						["3rd", "{@spell hold person}, {@spell spike growth}"],
+						["5th", "{@spell sleet storm}, {@spell slow}"],
 						[
 							"7th",
 							"{@spell freedom of movement}, {@spell ice storm}"
@@ -1362,19 +945,10 @@
 				{
 					"type": "table",
 					"caption": "Coast",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell mirror image}, {@spell misty step}"
-						],
+						["3rd", "{@spell mirror image}, {@spell misty step}"],
 						[
 							"5th",
 							"{@spell water breathing}, {@spell water walk}"
@@ -1383,28 +957,16 @@
 							"7th",
 							"{@spell control water}, {@spell freedom of movement}"
 						],
-						[
-							"9th",
-							"{@spell conjure elemental}, {@spell scrying}"
-						]
+						["9th", "{@spell conjure elemental}, {@spell scrying}"]
 					]
 				},
 				{
 					"type": "table",
 					"caption": "Desert",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell blur}, {@spell silence}"
-						],
+						["3rd", "{@spell blur}, {@spell silence}"],
 						[
 							"5th",
 							"{@spell create food and water}, {@spell protection from energy}"
@@ -1422,19 +984,10 @@
 				{
 					"type": "table",
 					"caption": "Forest",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell barkskin}, {@spell spider climb}"
-						],
+						["3rd", "{@spell barkskin}, {@spell spider climb}"],
 						[
 							"5th",
 							"{@spell call lightning}, {@spell plant growth}"
@@ -1452,109 +1005,61 @@
 				{
 					"type": "table",
 					"caption": "Grassland",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell invisibility}, {@spell pass without trace}"
 						],
-						[
-							"5th",
-							"{@spell daylight}, {@spell haste}"
-						],
+						["5th", "{@spell daylight}, {@spell haste}"],
 						[
 							"7th",
 							"{@spell divination}, {@spell freedom of movement}"
 						],
-						[
-							"9th",
-							"{@spell dream}, {@spell insect plague}"
-						]
+						["9th", "{@spell dream}, {@spell insect plague}"]
 					]
 				},
 				{
 					"type": "table",
 					"caption": "Mountain",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell spider climb}, {@spell spike growth}"
-						],
+						["3rd", "{@spell spider climb}, {@spell spike growth}"],
 						[
 							"5th",
 							"{@spell lightning bolt}, {@spell meld into stone}"
 						],
-						[
-							"7th",
-							"{@spell stone shape}, {@spell stoneskin}"
-						],
-						[
-							"9th",
-							"{@spell passwall}, {@spell wall of stone}"
-						]
+						["7th", "{@spell stone shape}, {@spell stoneskin}"],
+						["9th", "{@spell passwall}, {@spell wall of stone}"]
 					]
 				},
 				{
 					"type": "table",
 					"caption": "Swamp",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell darkness}, {@spell Melf's acid arrow}"
 						],
-						[
-							"5th",
-							"{@spell water walk}, {@spell stinking cloud}"
-						],
+						["5th", "{@spell water walk}, {@spell stinking cloud}"],
 						[
 							"7th",
 							"{@spell freedom of movement}, {@spell locate creature}"
 						],
-						[
-							"9th",
-							"{@spell insect plague}, {@spell scrying}"
-						]
+						["9th", "{@spell insect plague}, {@spell scrying}"]
 					]
 				},
 				{
 					"type": "table",
 					"caption": "Underdark",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell spider climb}, {@spell web}"
-						],
+						["3rd", "{@spell spider climb}, {@spell web}"],
 						[
 							"5th",
 							"{@spell gaseous form}, {@spell stinking cloud}"
@@ -1563,10 +1068,7 @@
 							"7th",
 							"{@spell greater invisibility}, {@spell stone shape}"
 						],
-						[
-							"9th",
-							"{@spell cloudkill}, {@spell insect plague}"
-						]
+						["9th", "{@spell cloudkill}, {@spell insect plague}"]
 					]
 				}
 			]
@@ -1672,11 +1174,7 @@
 				{
 					"type": "table",
 					"caption": "Circle of the Moon Beast Shapes",
-					"colLabels": [
-						"Level",
-						"Max. CR",
-						"Limitations"
-					],
+					"colLabels": ["Level", "Max. CR", "Limitations"],
 					"colStyles": [
 						"col-2 text-center",
 						"col-2 text-center",
@@ -1843,31 +1341,16 @@
 				{
 					"type": "table",
 					"caption": "Circle of Spores Spells",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"3rd",
 							"{@spell blindness/deafness}, {@spell gentle repose}"
 						],
-						[
-							"5th",
-							"{@spell animate dead}, {@spell gaseous form}"
-						],
-						[
-							"7th",
-							"{@spell blight}, {@spell confusion}"
-						],
-						[
-							"9th",
-							"{@spell cloudkill}, {@spell contagion}"
-						]
+						["5th", "{@spell animate dead}, {@spell gaseous form}"],
+						["7th", "{@spell blight}, {@spell confusion}"],
+						["9th", "{@spell cloudkill}, {@spell contagion}"]
 					]
 				}
 			]
@@ -2025,14 +1508,8 @@
 				{
 					"type": "table",
 					"caption": "Star Map",
-					"colLabels": [
-						"d6",
-						"Map Form"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Map Form"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1",
@@ -2046,18 +1523,12 @@
 							"3",
 							"A speckled owlbear hide, tooled with raised marks"
 						],
-						[
-							"4",
-							"A collection of maps bound in an ebony cover"
-						],
+						["4", "A collection of maps bound in an ebony cover"],
 						[
 							"5",
 							"A crystal that projects starry patterns when placed before a light"
 						],
-						[
-							"6",
-							"Glass disks that depict constellations"
-						]
+						["6", "Glass disks that depict constellations"]
 					]
 				},
 				"While holding this map, you have these benefits:",
@@ -2214,31 +1685,16 @@
 				{
 					"type": "table",
 					"caption": "Circle of Wildfire Spells",
-					"colLabels": [
-						"Druid Level",
-						"Circle Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Druid Level", "Circle Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"2nd",
-							"{@spell burning hands}, {@spell cure wounds}"
-						],
+						["2nd", "{@spell burning hands}, {@spell cure wounds}"],
 						[
 							"3rd",
 							"{@spell flaming sphere}, {@spell scorching ray}"
 						],
-						[
-							"5th",
-							"{@spell plant growth}, {@spell revivify}"
-						],
-						[
-							"7th",
-							"{@spell aura of life}, {@spell fire shield}"
-						],
+						["5th", "{@spell plant growth}, {@spell revivify}"],
+						["7th", "{@spell aura of life}, {@spell fire shield}"],
 						[
 							"9th",
 							"{@spell flame strike}, {@spell mass cure wounds}"
@@ -2437,23 +1893,14 @@
 						{
 							"type": "table",
 							"caption": "Toxic Demise Damage",
-							"colLabels": [
-								"Creature CR",
-								"Damage"
-							],
-							"colStyles": [
-								"col-4 text-center",
-								"col-8"
-							],
+							"colLabels": ["Creature CR", "Damage"],
+							"colStyles": ["col-4 text-center", "col-8"],
 							"rows": [
 								[
 									"1/4 or lower",
 									"{@damage 1d4} necrotic damage"
 								],
-								[
-									"1/2",
-									"{@damage 1d6} necrotic damage"
-								],
+								["1/2", "{@damage 1d6} necrotic damage"],
 								[
 									"1 or higher",
 									"{@damage (#$prompt_number:min=1,title=Enter the creature's CR!,default=1$#)d8|A number of d8s of necrotic damage equal to the creature's challenge rating}"

@@ -10,44 +10,16 @@
 				"number": 1,
 				"faces": 8
 			},
-			"proficiency": [
-				"wis",
-				"cha"
-			],
+			"proficiency": ["wis", "cha"],
 			"spellcastingAbility": "wis",
 			"casterProgression": "full",
 			"preparedSpells": "<$level$> + <$wis_mod$>",
 			"cantripProgression": [
-				3,
-				3,
-				3,
-				4,
-				4,
-				4,
-				4,
-				4,
-				4,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5
+				3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5
 			],
 			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple"
-				],
+				"armor": ["light", "medium", "{@item shield|phb|shields}"],
+				"weapons": ["simple"],
 				"skills": [
 					{
 						"choose": {
@@ -75,29 +47,16 @@
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"mace|phb"
-						],
-						"b": [
-							"warhammer|phb"
-						]
+						"a": ["mace|phb"],
+						"b": ["warhammer|phb"]
 					},
 					{
-						"a": [
-							"scale mail|phb"
-						],
-						"b": [
-							"leather armor|phb"
-						],
-						"c": [
-							"chain mail|phb"
-						]
+						"a": ["scale mail|phb"],
+						"b": ["leather armor|phb"],
+						"c": ["chain mail|phb"]
 					},
 					{
-						"a": [
-							"light crossbow|phb",
-							"Crossbow Bolts (20)|phb"
-						],
+						"a": ["light crossbow|phb", "Crossbow Bolts (20)|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -105,12 +64,8 @@
 						]
 					},
 					{
-						"a": [
-							"priest's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["priest's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					},
 					{
 						"_": [
@@ -127,11 +82,7 @@
 					"wis": 13
 				},
 				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					]
+					"armor": ["light", "medium", "{@item shield|phb|shields}"]
 				}
 			},
 			"classTableGroups": [
@@ -140,66 +91,26 @@
 						"{@filter Cantrips Known|spells|level=0|class=Cleric}"
 					],
 					"rows": [
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							5
-						]
+						[3],
+						[3],
+						[3],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[4],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5],
+						[5]
 					]
 				},
 				{
@@ -216,226 +127,26 @@
 						"{@filter 9th|spells|level=9|class=Cleric}"
 					],
 					"rowsSpellProgression": [
-						[
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							2,
-							1,
-							1
-						]
+						[2, 0, 0, 0, 0, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0, 0, 0, 0, 0],
+						[4, 2, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 2, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 1, 0, 0, 0, 0, 0],
+						[4, 3, 3, 2, 0, 0, 0, 0, 0],
+						[4, 3, 3, 3, 1, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 2, 1, 1]
 					]
 				}
 			],
@@ -504,26 +215,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"command",
-							"identify"
-						],
-						"3": [
-							"augury",
-							"suggestion"
-						],
-						"5": [
-							"nondetection",
-							"speak with dead"
-						],
-						"7": [
-							"arcane eye",
-							"confusion"
-						],
-						"9": [
-							"legend lore",
-							"scrying"
-						]
+						"1": ["command", "identify"],
+						"3": ["augury", "suggestion"],
+						"5": ["nondetection", "speak with dead"],
+						"7": ["arcane eye", "confusion"],
+						"9": ["legend lore", "scrying"]
 					}
 				}
 			],
@@ -548,26 +244,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"bless",
-							"cure wounds"
-						],
-						"3": [
-							"lesser restoration",
-							"spiritual weapon"
-						],
-						"5": [
-							"beacon of hope",
-							"revivify"
-						],
-						"7": [
-							"death ward",
-							"guardian of faith"
-						],
-						"9": [
-							"mass cure wounds",
-							"raise dead"
-						]
+						"1": ["bless", "cure wounds"],
+						"3": ["lesser restoration", "spiritual weapon"],
+						"5": ["beacon of hope", "revivify"],
+						"7": ["death ward", "guardian of faith"],
+						"9": ["mass cure wounds", "raise dead"]
 					}
 				}
 			],
@@ -590,31 +271,14 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"burning hands",
-							"faerie fire"
-						],
-						"3": [
-							"flaming sphere",
-							"scorching ray"
-						],
-						"5": [
-							"daylight",
-							"fireball"
-						],
-						"7": [
-							"guardian of faith",
-							"wall of fire"
-						],
-						"9": [
-							"flame strike",
-							"scrying"
-						]
+						"1": ["burning hands", "faerie fire"],
+						"3": ["flaming sphere", "scorching ray"],
+						"5": ["daylight", "fireball"],
+						"7": ["guardian of faith", "wall of fire"],
+						"9": ["flame strike", "scrying"]
 					},
 					"known": {
-						"1": [
-							"light#c"
-						]
+						"1": ["light#c"]
 					}
 				}
 			],
@@ -646,26 +310,11 @@
 						}
 					},
 					"prepared": {
-						"1": [
-							"animal friendship",
-							"speak with animals"
-						],
-						"3": [
-							"barkskin",
-							"spike growth"
-						],
-						"5": [
-							"plant growth",
-							"wind wall"
-						],
-						"7": [
-							"dominate beast",
-							"grasping vine"
-						],
-						"9": [
-							"insect plague",
-							"tree stride"
-						]
+						"1": ["animal friendship", "speak with animals"],
+						"3": ["barkskin", "spike growth"],
+						"5": ["plant growth", "wind wall"],
+						"7": ["dominate beast", "grasping vine"],
+						"9": ["insect plague", "tree stride"]
 					}
 				}
 			],
@@ -688,26 +337,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"fog cloud",
-							"thunderwave"
-						],
-						"3": [
-							"gust of wind",
-							"shatter"
-						],
-						"5": [
-							"call lightning",
-							"sleet storm"
-						],
-						"7": [
-							"control water",
-							"ice storm"
-						],
-						"9": [
-							"destructive wave",
-							"insect plague"
-						]
+						"1": ["fog cloud", "thunderwave"],
+						"3": ["gust of wind", "shatter"],
+						"5": ["call lightning", "sleet storm"],
+						"7": ["control water", "ice storm"],
+						"9": ["destructive wave", "insect plague"]
 					}
 				}
 			],
@@ -730,26 +364,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"charm person",
-							"disguise self"
-						],
-						"3": [
-							"mirror image",
-							"pass without trace"
-						],
-						"5": [
-							"blink",
-							"dispel magic"
-						],
-						"7": [
-							"dimension door",
-							"polymorph"
-						],
-						"9": [
-							"dominate person",
-							"modify memory"
-						]
+						"1": ["charm person", "disguise self"],
+						"3": ["mirror image", "pass without trace"],
+						"5": ["blink", "dispel magic"],
+						"7": ["dimension door", "polymorph"],
+						"9": ["dominate person", "modify memory"]
 					}
 				}
 			],
@@ -772,26 +391,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"divine favor",
-							"shield of faith"
-						],
-						"3": [
-							"magic weapon",
-							"spiritual weapon"
-						],
-						"5": [
-							"crusader's mantle",
-							"spirit guardians"
-						],
-						"7": [
-							"freedom of movement",
-							"stoneskin"
-						],
-						"9": [
-							"flame strike",
-							"hold monster"
-						]
+						"1": ["divine favor", "shield of faith"],
+						"3": ["magic weapon", "spiritual weapon"],
+						"5": ["crusader's mantle", "spirit guardians"],
+						"7": ["freedom of movement", "stoneskin"],
+						"9": ["flame strike", "hold monster"]
 					}
 				}
 			],
@@ -824,26 +428,11 @@
 						}
 					},
 					"prepared": {
-						"1": [
-							"false life",
-							"ray of sickness"
-						],
-						"3": [
-							"blindness/deafness",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"animate dead",
-							"vampiric touch"
-						],
-						"7": [
-							"blight",
-							"death ward"
-						],
-						"9": [
-							"antilife shell",
-							"cloudkill"
-						]
+						"1": ["false life", "ray of sickness"],
+						"3": ["blindness/deafness", "ray of enfeeblement"],
+						"5": ["animate dead", "vampiric touch"],
+						"7": ["blight", "death ward"],
+						"9": ["antilife shell", "cloudkill"]
 					}
 				}
 			],
@@ -877,26 +466,11 @@
 						}
 					},
 					"prepared": {
-						"1": [
-							"detect magic",
-							"magic missile"
-						],
-						"3": [
-							"magic weapon",
-							"Nystul's magic aura"
-						],
-						"5": [
-							"dispel magic",
-							"magic circle"
-						],
-						"7": [
-							"arcane eye",
-							"Leomund's secret chest"
-						],
-						"9": [
-							"planar binding",
-							"teleportation circle"
-						],
+						"1": ["detect magic", "magic missile"],
+						"3": ["magic weapon", "Nystul's magic aura"],
+						"5": ["dispel magic", "magic circle"],
+						"7": ["arcane eye", "Leomund's secret chest"],
+						"9": ["planar binding", "teleportation circle"],
 						"17": [
 							{
 								"choose": "level=6|class=Wizard"
@@ -934,26 +508,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"bane",
-							"disguise self"
-						],
-						"3": [
-							"mirror image",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"bestow curse",
-							"vampiric touch"
-						],
-						"7": [
-							"death ward",
-							"dimension door"
-						],
-						"9": [
-							"dominate person",
-							"modify memory"
-						]
+						"1": ["bane", "disguise self"],
+						"3": ["mirror image", "ray of enfeeblement"],
+						"5": ["bestow curse", "vampiric touch"],
+						"7": ["death ward", "dimension door"],
+						"9": ["dominate person", "modify memory"]
 					}
 				}
 			],
@@ -978,26 +537,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"command",
-							"identify"
-						],
-						"3": [
-							"augury",
-							"suggestion"
-						],
-						"5": [
-							"nondetection",
-							"speak with dead"
-						],
-						"7": [
-							"arcane eye",
-							"confusion"
-						],
-						"9": [
-							"legend lore",
-							"scrying"
-						]
+						"1": ["command", "identify"],
+						"3": ["augury", "suggestion"],
+						"5": ["nondetection", "speak with dead"],
+						"7": ["arcane eye", "confusion"],
+						"9": ["legend lore", "scrying"]
 					}
 				}
 			],
@@ -1021,26 +565,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"bless",
-							"guiding bolt"
-						],
-						"3": [
-							"aid",
-							"warding bond"
-						],
-						"5": [
-							"beacon of hope",
-							"crusader's mantle"
-						],
-						"7": [
-							"aura of life",
-							"guardian of faith"
-						],
-						"9": [
-							"circle of power",
-							"mass cure wounds"
-						]
+						"1": ["bless", "guiding bolt"],
+						"3": ["aid", "warding bond"],
+						"5": ["beacon of hope", "crusader's mantle"],
+						"7": ["aura of life", "guardian of faith"],
+						"9": ["circle of power", "mass cure wounds"]
 					}
 				}
 			],
@@ -1073,26 +602,11 @@
 						}
 					},
 					"prepared": {
-						"1": [
-							"divine favor",
-							"shield of faith"
-						],
-						"3": [
-							"enhance ability",
-							"protection from poison"
-						],
-						"5": [
-							"haste",
-							"protection from energy"
-						],
-						"7": [
-							"dominate beast",
-							"stoneskin"
-						],
-						"9": [
-							"destructive wave",
-							"insect plague"
-						]
+						"1": ["divine favor", "shield of faith"],
+						"3": ["enhance ability", "protection from poison"],
+						"5": ["haste", "protection from energy"],
+						"7": ["dominate beast", "stoneskin"],
+						"9": ["destructive wave", "insect plague"]
 					}
 				}
 			],
@@ -1116,26 +630,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"searing smite",
-							"thunderous smite"
-						],
-						"3": [
-							"magic weapon",
-							"shatter"
-						],
-						"5": [
-							"haste",
-							"fireball"
-						],
-						"7": [
-							"fire shield|",
-							"freedom of movement"
-						],
-						"9": [
-							"destructive wave",
-							"flame strike"
-						]
+						"1": ["searing smite", "thunderous smite"],
+						"3": ["magic weapon", "shatter"],
+						"5": ["haste", "fireball"],
+						"7": ["fire shield|", "freedom of movement"],
+						"9": ["destructive wave", "flame strike"]
 					}
 				}
 			],
@@ -1159,26 +658,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"identify",
-							"searing smite"
-						],
-						"3": [
-							"heat metal",
-							"magic weapon"
-						],
-						"5": [
-							"elemental weapon",
-							"protection from energy"
-						],
-						"7": [
-							"fabricate",
-							"wall of fire"
-						],
-						"9": [
-							"animate objects",
-							"creation"
-						]
+						"1": ["identify", "searing smite"],
+						"3": ["heat metal", "magic weapon"],
+						"5": ["elemental weapon", "protection from energy"],
+						"7": ["fabricate", "wall of fire"],
+						"9": ["animate objects", "creation"]
 					}
 				}
 			],
@@ -1202,31 +686,14 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"bane",
-							"false life"
-						],
-						"3": [
-							"gentle repose",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"revivify",
-							"vampiric touch"
-						],
-						"7": [
-							"blight",
-							"death ward"
-						],
-						"9": [
-							"antilife shell",
-							"raise dead"
-						]
+						"1": ["bane", "false life"],
+						"3": ["gentle repose", "ray of enfeeblement"],
+						"5": ["revivify", "vampiric touch"],
+						"7": ["blight", "death ward"],
+						"9": ["antilife shell", "raise dead"]
 					},
 					"known": {
-						"1": [
-							"spare the dying#c"
-						]
+						"1": ["spare the dying#c"]
 					}
 				}
 			],
@@ -1250,26 +717,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"bless",
-							"goodberry"
-						],
-						"3": [
-							"aid",
-							"heroism"
-						],
-						"5": [
-							"beacon of hope",
-							"spirit guardians"
-						],
-						"7": [
-							"banishment",
-							"mordenkainen's faithful hound"
-						],
-						"9": [
-							"mass cure wounds",
-							"rary's telepathic bond"
-						]
+						"1": ["bless", "goodberry"],
+						"3": ["aid", "heroism"],
+						"5": ["beacon of hope", "spirit guardians"],
+						"7": ["banishment", "mordenkainen's faithful hound"],
+						"9": ["mass cure wounds", "rary's telepathic bond"]
 					}
 				}
 			],
@@ -1291,26 +743,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"sleep",
-							"veil of dusk|HWCS"
-						],
-						"3": [
-							"darkness",
-							"moonbeam"
-						],
-						"5": [
-							"nondetection",
-							"globe of twilight|HWCS"
-						],
-						"7": [
-							"divination",
-							"stellar bodies|HWCS"
-						],
-						"9": [
-							"dream",
-							"seeming"
-						]
+						"1": ["sleep", "veil of dusk|HWCS"],
+						"3": ["darkness", "moonbeam"],
+						"5": ["nondetection", "globe of twilight|HWCS"],
+						"7": ["divination", "stellar bodies|HWCS"],
+						"9": ["dream", "seeming"]
 					}
 				}
 			],
@@ -1338,26 +775,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"command",
-							"heroism"
-						],
-						"3": [
-							"hold person",
-							"zone of truth"
-						],
-						"5": [
-							"mass healing word",
-							"slow"
-						],
-						"7": [
-							"compulsion",
-							"locate creature"
-						],
-						"9": [
-							"commune",
-							"dominate person"
-						]
+						"1": ["command", "heroism"],
+						"3": ["hold person", "zone of truth"],
+						"5": ["mass healing word", "slow"],
+						"7": ["compulsion", "locate creature"],
+						"9": ["commune", "dominate person"]
 					}
 				}
 			],
@@ -1381,26 +803,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"heroism",
-							"sanctuary"
-						],
-						"3": [
-							"aid",
-							"warding bond"
-						],
-						"5": [
-							"beacon of hope",
-							"sending"
-						],
-						"7": [
-							"aura of purity",
-							"Otiluke's resilient sphere"
-						],
-						"9": [
-							"greater restoration",
-							"Rary's telepathic bond"
-						]
+						"1": ["heroism", "sanctuary"],
+						"3": ["aid", "warding bond"],
+						"5": ["beacon of hope", "sending"],
+						"7": ["aura of purity", "Otiluke's resilient sphere"],
+						"9": ["greater restoration", "Rary's telepathic bond"]
 					}
 				}
 			],
@@ -1424,26 +831,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"faerie fire",
-							"sleep"
-						],
-						"3": [
-							"moonbeam",
-							"see invisibility"
-						],
-						"5": [
-							"aura of vitality",
-							"Leomund's tiny hut"
-						],
-						"7": [
-							"aura of life",
-							"greater invisibility"
-						],
-						"9": [
-							"circle of power",
-							"mislead"
-						]
+						"1": ["faerie fire", "sleep"],
+						"3": ["moonbeam", "see invisibility"],
+						"5": ["aura of vitality", "Leomund's tiny hut"],
+						"7": ["aura of life", "greater invisibility"],
+						"9": ["circle of power", "mislead"]
 					}
 				}
 			],
@@ -1467,26 +859,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"false life",
-							"sleep"
-						],
-						"3": [
-							"hold person",
-							"ray of enfeeblement"
-						],
-						"5": [
-							"haste",
-							"slow"
-						],
-						"7": [
-							"blight",
-							"stoneskin"
-						],
-						"9": [
-							"dominate person",
-							"hold monster"
-						]
+						"1": ["false life", "sleep"],
+						"3": ["hold person", "ray of enfeeblement"],
+						"5": ["haste", "slow"],
+						"7": ["blight", "stoneskin"],
+						"9": ["dominate person", "hold monster"]
 					}
 				}
 			],
@@ -1512,26 +889,11 @@
 			"additionalSpells": [
 				{
 					"prepared": {
-						"1": [
-							"faerie fire",
-							"silent image"
-						],
-						"3": [
-							"invisibility",
-							"moonbeam"
-						],
-						"5": [
-							"hypnotic pattern",
-							"major image"
-						],
-						"7": [
-							"greater invisibility",
-							"hallucinatory terrain"
-						],
-						"9": [
-							"dream",
-							"passwall"
-						]
+						"1": ["faerie fire", "silent image"],
+						"3": ["invisibility", "moonbeam"],
+						"5": ["hypnotic pattern", "major image"],
+						"7": ["greater invisibility", "hallucinatory terrain"],
+						"9": ["dream", "passwall"]
 					}
 				}
 			],
@@ -1603,16 +965,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						}
 					]
 				},
@@ -1957,14 +1315,8 @@
 				{
 					"type": "table",
 					"caption": "Death Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -1978,14 +1330,8 @@
 							"5th",
 							"{@spell animate dead}, {@spell vampiric touch}"
 						],
-						[
-							"7th",
-							"{@spell blight}, {@spell death ward}"
-						],
-						[
-							"9th",
-							"{@spell antilife shell}, {@spell cloudkill}"
-						]
+						["7th", "{@spell blight}, {@spell death ward}"],
+						["9th", "{@spell antilife shell}, {@spell cloudkill}"]
 					]
 				},
 				{
@@ -2117,23 +1463,11 @@
 				{
 					"type": "table",
 					"caption": "Community Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-3 text-center",
-						"col-9"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-3 text-center", "col-9"],
 					"rows": [
-						[
-							"1st",
-							"{@spell Bless}, {@spell Goodberry}"
-						],
-						[
-							"3rd",
-							"{@spell Aid}, {@spell Heroism}"
-						],
+						["1st", "{@spell Bless}, {@spell Goodberry}"],
+						["3rd", "{@spell Aid}, {@spell Heroism}"],
 						[
 							"5th",
 							"{@spell Beacon of Hope}, {@spell Spirit Guardians}"
@@ -2239,23 +1573,11 @@
 				{
 					"type": "table",
 					"caption": "Night Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-3 text-center",
-						"col-9"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-3 text-center", "col-9"],
 					"rows": [
-						[
-							"1st",
-							"{@spell Sleep}, {@spell Veil of Dusk|HWCS}"
-						],
-						[
-							"3rd",
-							"{@spell Darkness}, {@spell Moonbeam}"
-						],
+						["1st", "{@spell Sleep}, {@spell Veil of Dusk|HWCS}"],
+						["3rd", "{@spell Darkness}, {@spell Moonbeam}"],
 						[
 							"5th",
 							"{@spell Nondetection}, {@spell Globe of Twilight|HWCS}"
@@ -2264,10 +1586,7 @@
 							"7th",
 							"{@spell Divination}, {@spell Stellar Bodies|HWCS}"
 						],
-						[
-							"9th",
-							"{@spell Dream}, {@spell Seeming}"
-						]
+						["9th", "{@spell Dream}, {@spell Seeming}"]
 					]
 				},
 				{
@@ -2387,35 +1706,17 @@
 				{
 					"type": "table",
 					"caption": "Knowledge Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell command}, {@spell identify}"
-						],
-						[
-							"3rd",
-							"{@spell augury}, {@spell suggestion}"
-						],
+						["1st", "{@spell command}, {@spell identify}"],
+						["3rd", "{@spell augury}, {@spell suggestion}"],
 						[
 							"5th",
 							"{@spell nondetection}, {@spell speak with dead}"
 						],
-						[
-							"7th",
-							"{@spell arcane eye}, {@spell confusion}"
-						],
-						[
-							"9th",
-							"{@spell legend lore}, {@spell scrying}"
-						]
+						["7th", "{@spell arcane eye}, {@spell confusion}"],
+						["9th", "{@spell legend lore}, {@spell scrying}"]
 					]
 				},
 				{
@@ -2562,27 +1863,15 @@
 				{
 					"type": "table",
 					"caption": "Life Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell bless}, {@spell cure wounds}"
-						],
+						["1st", "{@spell bless}, {@spell cure wounds}"],
 						[
 							"3rd",
 							"{@spell lesser restoration}, {@spell spiritual weapon}"
 						],
-						[
-							"5th",
-							"{@spell beacon of hope}, {@spell revivify}"
-						],
+						["5th", "{@spell beacon of hope}, {@spell revivify}"],
 						[
 							"7th",
 							"{@spell death ward}, {@spell guardian of faith}"
@@ -2734,35 +2023,20 @@
 				{
 					"type": "table",
 					"caption": "Light Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell burning hands}, {@spell faerie fire}"
-						],
+						["1st", "{@spell burning hands}, {@spell faerie fire}"],
 						[
 							"3rd",
 							"{@spell flaming sphere}, {@spell scorching ray}"
 						],
-						[
-							"5th",
-							"{@spell daylight}, {@spell fireball}"
-						],
+						["5th", "{@spell daylight}, {@spell fireball}"],
 						[
 							"7th",
 							"{@spell guardian of faith}, {@spell wall of fire}"
 						],
-						[
-							"9th",
-							"{@spell flame strike}, {@spell scrying}"
-						]
+						["9th", "{@spell flame strike}, {@spell scrying}"]
 					]
 				},
 				{
@@ -2895,35 +2169,20 @@
 				{
 					"type": "table",
 					"caption": "Nature Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
 							"{@spell animal friendship}, {@spell speak with animals}"
 						],
-						[
-							"3rd",
-							"{@spell barkskin}, {@spell spike growth}"
-						],
-						[
-							"5th",
-							"{@spell plant growth}, {@spell wind wall}"
-						],
+						["3rd", "{@spell barkskin}, {@spell spike growth}"],
+						["5th", "{@spell plant growth}, {@spell wind wall}"],
 						[
 							"7th",
 							"{@spell dominate beast}, {@spell grasping vine}"
 						],
-						[
-							"9th",
-							"{@spell insect plague}, {@spell tree stride}"
-						]
+						["9th", "{@spell insect plague}, {@spell tree stride}"]
 					]
 				},
 				{
@@ -3055,31 +2314,16 @@
 				{
 					"type": "table",
 					"caption": "Tempest Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell fog cloud}, {@spell thunderwave}"
-						],
-						[
-							"3rd",
-							"{@spell gust of wind}, {@spell shatter}"
-						],
+						["1st", "{@spell fog cloud}, {@spell thunderwave}"],
+						["3rd", "{@spell gust of wind}, {@spell shatter}"],
 						[
 							"5th",
 							"{@spell call lightning}, {@spell sleet storm}"
 						],
-						[
-							"7th",
-							"{@spell control water}, {@spell ice storm}"
-						],
+						["7th", "{@spell control water}, {@spell ice storm}"],
 						[
 							"9th",
 							"{@spell destructive wave}, {@spell insect plague}"
@@ -3216,14 +2460,8 @@
 				{
 					"type": "table",
 					"caption": "Trickery Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -3233,14 +2471,8 @@
 							"3rd",
 							"{@spell mirror image}, {@spell pass without trace}"
 						],
-						[
-							"5th",
-							"{@spell blink}, {@spell dispel magic}"
-						],
-						[
-							"7th",
-							"{@spell dimension door}, {@spell polymorph}"
-						],
+						["5th", "{@spell blink}, {@spell dispel magic}"],
+						["7th", "{@spell dimension door}, {@spell polymorph}"],
 						[
 							"9th",
 							"{@spell dominate person}, {@spell modify memory}"
@@ -3363,14 +2595,8 @@
 				{
 					"type": "table",
 					"caption": "War Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -3388,10 +2614,7 @@
 							"7th",
 							"{@spell freedom of movement}, {@spell stoneskin}"
 						],
-						[
-							"9th",
-							"{@spell flame strike}, {@spell hold monster}"
-						]
+						["9th", "{@spell flame strike}, {@spell hold monster}"]
 					]
 				},
 				{
@@ -3531,19 +2754,10 @@
 				{
 					"type": "table",
 					"caption": "Ambition Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell bane}, {@spell disguise self}"
-						],
+						["1st", "{@spell bane}, {@spell disguise self}"],
 						[
 							"3rd",
 							"{@spell mirror image}, {@spell ray of enfeeblement}"
@@ -3552,10 +2766,7 @@
 							"5th",
 							"{@spell bestow curse}, {@spell vampiric touch}"
 						],
-						[
-							"7th",
-							"{@spell death ward}, {@spell dimension door}"
-						],
+						["7th", "{@spell death ward}, {@spell dimension door}"],
 						[
 							"9th",
 							"{@spell dominate person}, {@spell modify memory}"
@@ -3708,23 +2919,11 @@
 				{
 					"type": "table",
 					"caption": "Solidarity Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell bless}, {@spell guiding bolt}"
-						],
-						[
-							"3rd",
-							"{@spell aid}, {@spell warding bond}"
-						],
+						["1st", "{@spell bless}, {@spell guiding bolt}"],
+						["3rd", "{@spell aid}, {@spell warding bond}"],
 						[
 							"5th",
 							"{@spell beacon of hope}, {@spell crusader's mantle}"
@@ -3874,14 +3073,8 @@
 				{
 					"type": "table",
 					"caption": "Strength Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -3895,10 +3088,7 @@
 							"5th",
 							"{@spell haste}, {@spell protection from energy}"
 						],
-						[
-							"7th",
-							"{@spell dominate beast}, {@spell stoneskin}"
-						],
+						["7th", "{@spell dominate beast}, {@spell stoneskin}"],
 						[
 							"9th",
 							"{@spell destructive wave}, {@spell insect plague}"
@@ -4039,27 +3229,15 @@
 				{
 					"type": "table",
 					"caption": "Zeal Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
 							"{@spell searing smite}, {@spell thunderous smite}"
 						],
-						[
-							"3rd",
-							"{@spell magic weapon}, {@spell shatter}"
-						],
-						[
-							"5th",
-							"{@spell haste}, {@spell fireball}"
-						],
+						["3rd", "{@spell magic weapon}, {@spell shatter}"],
+						["5th", "{@spell haste}, {@spell fireball}"],
 						[
 							"7th",
 							"{@spell fire shield||fire shield (warm shield only)}, {@spell freedom of movement}"
@@ -4203,14 +3381,8 @@
 				{
 					"type": "table",
 					"caption": "Arcana Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -4220,10 +3392,7 @@
 							"3rd",
 							"{@spell magic weapon}, {@spell Nystul's magic aura}"
 						],
-						[
-							"5th",
-							"{@spell dispel magic}, {@spell magic circle}"
-						],
+						["5th", "{@spell dispel magic}, {@spell magic circle}"],
 						[
 							"7th",
 							"{@spell arcane eye}, {@spell Leomund's secret chest}"
@@ -4279,31 +3448,13 @@
 						"Cleric level",
 						"Banishes Creatures of CR..."
 					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"5th",
-							"1/2 or lower"
-						],
-						[
-							"8th",
-							"1 or lower"
-						],
-						[
-							"11th",
-							"2 or lower"
-						],
-						[
-							"14th",
-							"3 or lower"
-						],
-						[
-							"17th",
-							"4 or lower"
-						]
+						["5th", "1/2 or lower"],
+						["8th", "1 or lower"],
+						["11th", "2 or lower"],
+						["14th", "3 or lower"],
+						["17th", "4 or lower"]
 					]
 				}
 			]
@@ -4389,35 +3540,17 @@
 				{
 					"type": "table",
 					"caption": "Order Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell command}, {@spell heroism}"
-						],
-						[
-							"3rd",
-							"{@spell hold person}, {@spell zone of truth}"
-						],
-						[
-							"5th",
-							"{@spell mass healing word}, {@spell slow}"
-						],
+						["1st", "{@spell command}, {@spell heroism}"],
+						["3rd", "{@spell hold person}, {@spell zone of truth}"],
+						["5th", "{@spell mass healing word}, {@spell slow}"],
 						[
 							"7th",
 							"{@spell compulsion}, {@spell locate creature}"
 						],
-						[
-							"9th",
-							"{@spell commune}, {@spell dominate person}"
-						]
+						["9th", "{@spell commune}, {@spell dominate person}"]
 					]
 				},
 				{
@@ -4588,47 +3721,20 @@
 				{
 					"type": "table",
 					"caption": "Peace Deities",
-					"colLabels": [
-						"Example Deity",
-						"Pantheon"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Example Deity", "Pantheon"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
-						[
-							"{@deity Angharradh|Elven|SCAG}",
-							"Elven"
-						],
+						["{@deity Angharradh|Elven|SCAG}", "Elven"],
 						[
 							"{@deity Berronar Truesilver|Dwarven|SCAG}",
 							"Dwarven"
 						],
-						[
-							"{@deity Boldrei|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Cyrrollalee|Halfling|SCAG}",
-							"Halfling"
-						],
-						[
-							"{@deity Eldath}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Gaerdal Ironhand|Gnomish|SCAG}",
-							"Gnomish"
-						],
-						[
-							"{@deity Paladine|Dragonlance}",
-							"Dragonlance"
-						],
-						[
-							"{@deity Rao|Greyhawk}",
-							"Greyhawk"
-						]
+						["{@deity Boldrei|Eberron}", "Eberron"],
+						["{@deity Cyrrollalee|Halfling|SCAG}", "Halfling"],
+						["{@deity Eldath}", "Forgotten Realms"],
+						["{@deity Gaerdal Ironhand|Gnomish|SCAG}", "Gnomish"],
+						["{@deity Paladine|Dragonlance}", "Dragonlance"],
+						["{@deity Rao|Greyhawk}", "Greyhawk"]
 					]
 				},
 				{
@@ -4640,23 +3746,11 @@
 						{
 							"type": "table",
 							"caption": "Peace Domain Spells",
-							"colLabels": [
-								"Cleric Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Cleric Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
-								[
-									"1st",
-									"{@spell heroism}, {@spell sanctuary}"
-								],
-								[
-									"3rd",
-									"{@spell aid}, {@spell warding bond}"
-								],
+								["1st", "{@spell heroism}, {@spell sanctuary}"],
+								["3rd", "{@spell aid}, {@spell warding bond}"],
 								[
 									"5th",
 									"{@spell beacon of hope}, {@spell sending}"
@@ -4808,47 +3902,17 @@
 				{
 					"type": "table",
 					"caption": "Twilight Deities",
-					"colLabels": [
-						"Example Deity",
-						"Pantheon"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Example Deity", "Pantheon"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
-						[
-							"{@deity Boldrei|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Celestian|Greyhawk}",
-							"Greyhawk"
-						],
-						[
-							"{@deity Dol Arrah|Eberron}",
-							"Eberron"
-						],
-						[
-							"{@deity Helm}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Ilmater}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Mishakal|Dragonlance}",
-							"Dragonlance"
-						],
-						[
-							"{@deity Selûne}",
-							"Forgotten Realms"
-						],
-						[
-							"{@deity Yondalla|Nonhuman}",
-							"Halfling"
-						]
+						["{@deity Boldrei|Eberron}", "Eberron"],
+						["{@deity Celestian|Greyhawk}", "Greyhawk"],
+						["{@deity Dol Arrah|Eberron}", "Eberron"],
+						["{@deity Helm}", "Forgotten Realms"],
+						["{@deity Ilmater}", "Forgotten Realms"],
+						["{@deity Mishakal|Dragonlance}", "Dragonlance"],
+						["{@deity Selûne}", "Forgotten Realms"],
+						["{@deity Yondalla|Nonhuman}", "Halfling"]
 					]
 				},
 				{
@@ -4860,19 +3924,10 @@
 						{
 							"type": "table",
 							"caption": "Twilight Domain Spells",
-							"colLabels": [
-								"Cleric Level",
-								"Spells"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
+							"colLabels": ["Cleric Level", "Spells"],
+							"colStyles": ["col-2 text-center", "col-10"],
 							"rows": [
-								[
-									"1st",
-									"{@spell faerie fire}, {@spell sleep}"
-								],
+								["1st", "{@spell faerie fire}, {@spell sleep}"],
 								[
 									"3rd",
 									"{@spell moonbeam}, {@spell see invisibility}"
@@ -5110,31 +4165,16 @@
 				{
 					"type": "table",
 					"caption": "Blood Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell false life}, {@spell sleep}"
-						],
+						["1st", "{@spell false life}, {@spell sleep}"],
 						[
 							"3rd",
 							"{@spell hold person}, {@spell ray of enfeeblement}"
 						],
-						[
-							"5th",
-							"{@spell haste}, {@spell slow}"
-						],
-						[
-							"7th",
-							"{@spell blight}, {@spell stoneskin}"
-						],
+						["5th", "{@spell haste}, {@spell slow}"],
+						["7th", "{@spell blight}, {@spell stoneskin}"],
 						[
 							"9th",
 							"{@spell dominate person}, {@spell hold monster}"
@@ -5318,23 +4358,11 @@
 				{
 					"type": "table",
 					"caption": "Moon Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell faerie fire}, {@spell silent image}"
-						],
-						[
-							"3rd",
-							"{@spell invisibility}, {@spell moonbeam}"
-						],
+						["1st", "{@spell faerie fire}, {@spell silent image}"],
+						["3rd", "{@spell invisibility}, {@spell moonbeam}"],
 						[
 							"5th",
 							"{@spell hypnotic pattern}, {@spell major image}"
@@ -5343,10 +4371,7 @@
 							"7th",
 							"{@spell greater invisibility}, {@spell hallucinatory terrain}"
 						],
-						[
-							"9th",
-							"{@spell dream}, {@spell passwall}"
-						]
+						["9th", "{@spell dream}, {@spell passwall}"]
 					]
 				}
 			]
@@ -5451,35 +4476,17 @@
 				{
 					"type": "table",
 					"caption": "Forge Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell identify}, {@spell searing smite}"
-						],
-						[
-							"3rd",
-							"{@spell heat metal}, {@spell magic weapon}"
-						],
+						["1st", "{@spell identify}, {@spell searing smite}"],
+						["3rd", "{@spell heat metal}, {@spell magic weapon}"],
 						[
 							"5th",
 							"{@spell elemental weapon}, {@spell protection from energy}"
 						],
-						[
-							"7th",
-							"{@spell fabricate}, {@spell wall of fire}"
-						],
-						[
-							"9th",
-							"{@spell animate objects}, {@spell creation}"
-						]
+						["7th", "{@spell fabricate}, {@spell wall of fire}"],
+						["9th", "{@spell animate objects}, {@spell creation}"]
 					]
 				},
 				{
@@ -5626,35 +4633,17 @@
 				{
 					"type": "table",
 					"caption": "Grave Domain Spells",
-					"colLabels": [
-						"Cleric Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Cleric Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1st",
-							"{@spell bane}, {@spell false life}"
-						],
+						["1st", "{@spell bane}, {@spell false life}"],
 						[
 							"3rd",
 							"{@spell gentle repose}, {@spell ray of enfeeblement}"
 						],
-						[
-							"5th",
-							"{@spell revivify}, {@spell vampiric touch}"
-						],
-						[
-							"7th",
-							"{@spell blight}, {@spell death ward}"
-						],
-						[
-							"9th",
-							"{@spell antilife shell}, {@spell raise dead}"
-						]
+						["5th", "{@spell revivify}, {@spell vampiric touch}"],
+						["7th", "{@spell blight}, {@spell death ward}"],
+						["9th", "{@spell antilife shell}, {@spell raise dead}"]
 					]
 				},
 				{

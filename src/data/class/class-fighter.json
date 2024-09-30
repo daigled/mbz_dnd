@@ -10,16 +10,11 @@
 				"number": 1,
 				"faces": 10
 			},
-			"proficiency": [
-				"str",
-				"con"
-			],
+			"proficiency": ["str", "con"],
 			"optionalfeatureProgression": [
 				{
 					"name": "Fighting Style",
-					"featureType": [
-						"FS:F"
-					],
+					"featureType": ["FS:F"],
 					"progression": {
 						"1": 1
 					}
@@ -32,10 +27,7 @@
 					"heavy",
 					"{@item shield|phb|shields}"
 				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
+				"weapons": ["simple", "martial"],
 				"skills": [
 					{
 						"choose": {
@@ -65,9 +57,7 @@
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"chain mail|phb"
-						],
+						"a": ["chain mail|phb"],
 						"b": [
 							"leather armor|phb",
 							"longbow|phb",
@@ -89,10 +79,7 @@
 						]
 					},
 					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
+						"a": ["light crossbow|phb", "crossbow bolts (20)|phb"],
 						"b": [
 							{
 								"item": "handaxe|phb",
@@ -101,12 +88,8 @@
 						]
 					},
 					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["dungeoneer's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					}
 				]
 			},
@@ -120,15 +103,8 @@
 					]
 				},
 				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
+					"armor": ["light", "medium", "{@item shield|phb|shields}"],
+					"weapons": ["simple", "martial"]
 				}
 			},
 			"classFeatures": [
@@ -187,9 +163,7 @@
 			"optionalfeatureProgression": [
 				{
 					"name": "Maneuvers",
-					"featureType": [
-						"MV:B"
-					],
+					"featureType": ["MV:B"],
 					"progression": {
 						"3": 3,
 						"7": 5,
@@ -223,9 +197,7 @@
 			"optionalfeatureProgression": [
 				{
 					"name": "Fighting Style",
-					"featureType": [
-						"FS:F"
-					],
+					"featureType": ["FS:F"],
 					"progression": {
 						"10": 1
 					}
@@ -249,47 +221,10 @@
 			"spellcastingAbility": "int",
 			"casterProgression": "1/3",
 			"cantripProgression": [
-				0,
-				0,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				2,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3,
-				3
+				0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
 			],
 			"spellsKnownProgression": [
-				0,
-				0,
-				3,
-				4,
-				4,
-				4,
-				5,
-				6,
-				6,
-				7,
-				8,
-				8,
-				9,
-				10,
-				10,
-				11,
-				11,
-				11,
-				12,
+				0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12,
 				13
 			],
 			"additionalSpells": [
@@ -334,86 +269,26 @@
 						"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
 					],
 					"rows": [
-						[
-							0,
-							0
-						],
-						[
-							0,
-							0
-						],
-						[
-							2,
-							3
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							4
-						],
-						[
-							2,
-							5
-						],
-						[
-							2,
-							6
-						],
-						[
-							2,
-							6
-						],
-						[
-							3,
-							7
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							8
-						],
-						[
-							3,
-							9
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							10
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							11
-						],
-						[
-							3,
-							12
-						],
-						[
-							3,
-							13
-						]
+						[0, 0],
+						[0, 0],
+						[2, 3],
+						[2, 4],
+						[2, 4],
+						[2, 4],
+						[2, 5],
+						[2, 6],
+						[2, 6],
+						[3, 7],
+						[3, 8],
+						[3, 8],
+						[3, 9],
+						[3, 10],
+						[3, 10],
+						[3, 11],
+						[3, 11],
+						[3, 11],
+						[3, 12],
+						[3, 13]
 					]
 				},
 				{
@@ -431,126 +306,26 @@
 						"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
 					],
 					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							1
-						]
+						[0, 0, 0, 0],
+						[0, 0, 0, 0],
+						[2, 0, 0, 0],
+						[3, 0, 0, 0],
+						[3, 0, 0, 0],
+						[3, 0, 0, 0],
+						[4, 2, 0, 0],
+						[4, 2, 0, 0],
+						[4, 2, 0, 0],
+						[4, 3, 0, 0],
+						[4, 3, 0, 0],
+						[4, 3, 0, 0],
+						[4, 3, 2, 0],
+						[4, 3, 2, 0],
+						[4, 3, 2, 0],
+						[4, 3, 3, 0],
+						[4, 3, 3, 0],
+						[4, 3, 3, 0],
+						[4, 3, 3, 1],
+						[4, 3, 3, 1]
 					]
 				}
 			],
@@ -588,25 +363,19 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"prestidigitation#c"
-						]
+						"3": ["prestidigitation#c"]
 					}
 				},
 				{
 					"known": {
-						"3": [
-							"druidcraft#c"
-						]
+						"3": ["druidcraft#c"]
 					}
 				}
 			],
 			"optionalfeatureProgression": [
 				{
 					"name": "Arcane Shots",
-					"featureType": [
-						"AS"
-					],
+					"featureType": ["AS"],
 					"progression": {
 						"3": 2,
 						"7": 3,
@@ -701,9 +470,7 @@
 					"innate": {
 						"18": {
 							"daily": {
-								"1": [
-									"telekinesis"
-								]
+								"1": ["telekinesis"]
 							}
 						}
 					}
@@ -728,9 +495,7 @@
 			"optionalfeatureProgression": [
 				{
 					"name": "Runes",
-					"featureType": [
-						"RN"
-					],
+					"featureType": ["RN"],
 					"progression": {
 						"3": 2,
 						"7": 3,
@@ -1423,10 +1188,7 @@
 								{
 									"type": "abilityDc",
 									"name": "Maneuver",
-									"attributes": [
-										"str",
-										"dex"
-									]
+									"attributes": ["str", "dex"]
 								}
 							]
 						}
@@ -1610,9 +1372,7 @@
 			"subclassSource": "PHB",
 			"level": 7,
 			"header": 2,
-			"entries": [
-				"You gain another superiority die at 7th level."
-			]
+			"entries": ["You gain another superiority die at 7th level."]
 		},
 		{
 			"name": "Know Your Enemy",
@@ -1692,9 +1452,7 @@
 			"subclassSource": "PHB",
 			"level": 15,
 			"header": 2,
-			"entries": [
-				"You gain another superiority die at 15th level."
-			]
+			"entries": ["You gain another superiority die at 15th level."]
 		},
 		{
 			"name": "Relentless",
@@ -1903,16 +1661,12 @@
 								{
 									"type": "abilityDc",
 									"name": "Spell",
-									"attributes": [
-										"int"
-									]
+									"attributes": ["int"]
 								},
 								{
 									"type": "abilityAttackMod",
 									"name": "Spell",
-									"attributes": [
-										"int"
-									]
+									"attributes": ["int"]
 								}
 							]
 						}
@@ -2315,31 +2069,13 @@
 				{
 					"type": "table",
 					"caption": "Runes Known",
-					"colLabels": [
-						"Fighter Level",
-						"Number of Runes"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Fighter Level", "Number of Runes"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
-						[
-							"3rd",
-							"2"
-						],
-						[
-							"7th",
-							"3"
-						],
-						[
-							"10th",
-							"4"
-						],
-						[
-							"15th",
-							"5"
-						]
+						["3rd", "2"],
+						["7th", "3"],
+						["10th", "4"],
+						["15th", "5"]
 					]
 				},
 				"The following runes are available to you when you learn a rune. If a rune has a level requirement, you must be at least that level in this class to learn the rune. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Constitution modifier.",
@@ -2555,9 +2291,7 @@
 				{
 					"type": "abilityDc",
 					"name": "Arcane Shot",
-					"attributes": [
-						"int"
-					]
+					"attributes": ["int"]
 				},
 				{
 					"type": "options",

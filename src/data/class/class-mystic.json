@@ -8,17 +8,10 @@
 				"number": 1,
 				"faces": 8
 			},
-			"proficiency": [
-				"int",
-				"wis"
-			],
+			"proficiency": ["int", "wis"],
 			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple"
-				],
+				"armor": ["light"],
+				"weapons": ["simple"],
 				"skills": [
 					{
 						"choose": {
@@ -47,26 +40,15 @@
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"spear|phb"
-						],
-						"b": [
-							"mace|phb"
-						]
+						"a": ["spear|phb"],
+						"b": ["mace|phb"]
 					},
 					{
-						"a": [
-							"leather armor|phb"
-						],
-						"b": [
-							"studded leather armor|phb"
-						]
+						"a": ["leather armor|phb"],
+						"b": ["studded leather armor|phb"]
 					},
 					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
+						"a": ["light crossbow|phb", "crossbow bolts (20)|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -74,12 +56,8 @@
 						]
 					},
 					{
-						"a": [
-							"scholar's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["scholar's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					}
 				]
 			},
@@ -92,126 +70,26 @@
 						"Psi Limit"
 					],
 					"rows": [
-						[
-							1,
-							1,
-							4,
-							2
-						],
-						[
-							1,
-							1,
-							6,
-							2
-						],
-						[
-							2,
-							2,
-							14,
-							3
-						],
-						[
-							2,
-							2,
-							17,
-							3
-						],
-						[
-							2,
-							3,
-							27,
-							5
-						],
-						[
-							2,
-							3,
-							32,
-							5
-						],
-						[
-							2,
-							4,
-							38,
-							6
-						],
-						[
-							2,
-							4,
-							44,
-							6
-						],
-						[
-							2,
-							5,
-							57,
-							7
-						],
-						[
-							3,
-							5,
-							64,
-							7
-						],
-						[
-							3,
-							5,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							6,
-							64,
-							7
-						],
-						[
-							3,
-							7,
-							64,
-							7
-						],
-						[
-							3,
-							7,
-							64,
-							7
-						],
-						[
-							4,
-							7,
-							64,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						],
-						[
-							4,
-							8,
-							71,
-							7
-						]
+						[1, 1, 4, 2],
+						[1, 1, 6, 2],
+						[2, 2, 14, 3],
+						[2, 2, 17, 3],
+						[2, 3, 27, 5],
+						[2, 3, 32, 5],
+						[2, 4, 38, 6],
+						[2, 4, 44, 6],
+						[2, 5, 57, 7],
+						[3, 5, 64, 7],
+						[3, 5, 64, 7],
+						[3, 6, 64, 7],
+						[3, 6, 64, 7],
+						[3, 6, 64, 7],
+						[3, 7, 64, 7],
+						[3, 7, 64, 7],
+						[4, 7, 64, 7],
+						[4, 8, 71, 7],
+						[4, 8, 71, 7],
+						[4, 8, 71, 7]
 					]
 				}
 			],
@@ -423,16 +301,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Discipline",
-							"attributes": [
-								"int"
-							]
+							"attributes": ["int"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Discipline",
-							"attributes": [
-								"int"
-							]
+							"attributes": ["int"]
 						}
 					]
 				}
@@ -1186,27 +1060,12 @@
 				"Starting at 3rd level, you can spend psi points to augment your soul knife's attack rolls and damage. You gain a bonus to attack and damage rolls with your soul knives depending on the number of psi points spent, as shown on the table below. This bonus lasts for 10 minutes.",
 				{
 					"type": "table",
-					"colLabels": [
-						"Psi Points",
-						"Attack and Damage Bonus"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Psi Points", "Attack and Damage Bonus"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
-						[
-							"2",
-							"+1"
-						],
-						[
-							"5",
-							"+2"
-						],
-						[
-							"7",
-							"+4"
-						]
+						["2", "+1"],
+						["5", "+2"],
+						["7", "+4"]
 					]
 				}
 			]
@@ -1318,35 +1177,14 @@
 				"As a bonus action, you can spend psi points to create spell slots that you can use to cast these spells, as well as other spells you are capable of casting. The psi-point cost of each spell slot is detailed on the table below.",
 				{
 					"type": "table",
-					"colLabels": [
-						"Spell Slot Level",
-						"Psi Cost"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Spell Slot Level", "Psi Cost"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
-						[
-							"1st",
-							"2"
-						],
-						[
-							"2nd",
-							"3"
-						],
-						[
-							"3rd",
-							"5"
-						],
-						[
-							"4th",
-							"6"
-						],
-						[
-							"5th",
-							"7"
-						]
+						["1st", "2"],
+						["2nd", "3"],
+						["3rd", "5"],
+						["4th", "6"],
+						["5th", "7"]
 					]
 				},
 				"The spell slot remains until you use it or finish a long rest. You must observe your psi limit when spending psi points to create a spell slot.",

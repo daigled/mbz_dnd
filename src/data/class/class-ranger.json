@@ -9,55 +9,24 @@
 				"number": 1,
 				"faces": 10
 			},
-			"proficiency": [
-				"str",
-				"dex"
-			],
+			"proficiency": ["str", "dex"],
 			"spellcastingAbility": "wis",
 			"casterProgression": "1/2",
 			"spellsKnownProgression": [
-				0,
-				2,
-				3,
-				3,
-				4,
-				4,
-				5,
-				5,
-				6,
-				6,
-				7,
-				7,
-				8,
-				8,
-				9,
-				9,
-				10,
-				10,
-				11,
-				11
+				0, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11
 			],
 			"optionalfeatureProgression": [
 				{
 					"name": "Fighting Style",
-					"featureType": [
-						"FS:R"
-					],
+					"featureType": ["FS:R"],
 					"progression": {
 						"2": 1
 					}
 				}
 			],
 			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
+				"armor": ["light", "medium", "{@item shield|phb|shields}"],
+				"weapons": ["simple", "martial"],
 				"skills": [
 					{
 						"choose": {
@@ -87,12 +56,8 @@
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"scale mail|phb"
-						],
-						"b": [
-							"leather armor|phb"
-						]
+						"a": ["scale mail|phb"],
+						"b": ["leather armor|phb"]
 					},
 					{
 						"a": [
@@ -109,18 +74,11 @@
 						]
 					},
 					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["dungeoneer's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					},
 					{
-						"_": [
-							"longbow|phb",
-							"arrows (20)|phb"
-						]
+						"_": ["longbow|phb", "arrows (20)|phb"]
 					}
 				]
 			},
@@ -130,11 +88,7 @@
 					"wis": 13
 				},
 				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"{@item shield|phb|shields}"
-					],
+					"armor": ["light", "medium", "{@item shield|phb|shields}"],
 					"skills": [
 						{
 							"choose": {
@@ -152,78 +106,33 @@
 							}
 						}
 					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
+					"weapons": ["simple", "martial"]
 				}
 			},
 			"classTableGroups": [
 				{
-					"colLabels": [
-						"{@filter Spells Known|spells|class=ranger}"
-					],
+					"colLabels": ["{@filter Spells Known|spells|class=ranger}"],
 					"rows": [
-						[
-							0
-						],
-						[
-							2
-						],
-						[
-							3
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							4
-						],
-						[
-							5
-						],
-						[
-							5
-						],
-						[
-							6
-						],
-						[
-							6
-						],
-						[
-							7
-						],
-						[
-							7
-						],
-						[
-							8
-						],
-						[
-							8
-						],
-						[
-							9
-						],
-						[
-							9
-						],
-						[
-							10
-						],
-						[
-							10
-						],
-						[
-							11
-						],
-						[
-							11
-						]
+						[0],
+						[2],
+						[3],
+						[3],
+						[4],
+						[4],
+						[5],
+						[5],
+						[6],
+						[6],
+						[7],
+						[7],
+						[8],
+						[8],
+						[9],
+						[9],
+						[10],
+						[10],
+						[11],
+						[11]
 					]
 				},
 				{
@@ -236,146 +145,26 @@
 						"{@filter 5th|spells|level=5|class=Ranger}"
 					],
 					"rowsSpellProgression": [
-						[
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2
-						]
+						[0, 0, 0, 0, 0],
+						[2, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0],
+						[4, 2, 0, 0, 0],
+						[4, 2, 0, 0, 0],
+						[4, 3, 0, 0, 0],
+						[4, 3, 0, 0, 0],
+						[4, 3, 2, 0, 0],
+						[4, 3, 2, 0, 0],
+						[4, 3, 3, 0, 0],
+						[4, 3, 3, 0, 0],
+						[4, 3, 3, 1, 0],
+						[4, 3, 3, 1, 0],
+						[4, 3, 3, 2, 0],
+						[4, 3, 3, 2, 0],
+						[4, 3, 3, 3, 1],
+						[4, 3, 3, 3, 1],
+						[4, 3, 3, 3, 2],
+						[4, 3, 3, 3, 2]
 					]
 				}
 			],
@@ -469,21 +258,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"disguise self"
-						],
-						"5": [
-							"rope trick"
-						],
-						"9": [
-							"fear"
-						],
-						"13": [
-							"greater invisibility"
-						],
-						"17": [
-							"seeming"
-						]
+						"3": ["disguise self"],
+						"5": ["rope trick"],
+						"9": ["fear"],
+						"13": ["greater invisibility"],
+						"17": ["seeming"]
 					}
 				}
 			],
@@ -504,21 +283,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"protection from evil and good"
-						],
-						"5": [
-							"misty step"
-						],
-						"9": [
-							"haste"
-						],
-						"13": [
-							"banishment"
-						],
-						"17": [
-							"teleportation circle"
-						]
+						"3": ["protection from evil and good"],
+						"5": ["misty step"],
+						"9": ["haste"],
+						"13": ["banishment"],
+						"17": ["teleportation circle"]
 					}
 				}
 			],
@@ -539,21 +308,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"protection from evil and good"
-						],
-						"5": [
-							"zone of truth"
-						],
-						"9": [
-							"magic circle"
-						],
-						"13": [
-							"banishment"
-						],
-						"17": [
-							"hold monster"
-						]
+						"3": ["protection from evil and good"],
+						"5": ["zone of truth"],
+						"9": ["magic circle"],
+						"13": ["banishment"],
+						"17": ["hold monster"]
 					}
 				}
 			],
@@ -574,21 +333,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"charm person"
-						],
-						"5": [
-							"misty step"
-						],
-						"9": [
-							"dispel magic"
-						],
-						"13": [
-							"dimension door"
-						],
-						"17": [
-							"mislead"
-						]
+						"3": ["charm person"],
+						"5": ["misty step"],
+						"9": ["dispel magic"],
+						"13": ["dimension door"],
+						"17": ["mislead"]
 					}
 				}
 			],
@@ -610,22 +359,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"mage hand#c",
-							"faerie fire"
-						],
-						"5": [
-							"web"
-						],
-						"9": [
-							"gaseous form"
-						],
-						"13": [
-							"arcane eye"
-						],
-						"17": [
-							"insect plague"
-						]
+						"3": ["mage hand#c", "faerie fire"],
+						"5": ["web"],
+						"9": ["gaseous form"],
+						"13": ["arcane eye"],
+						"17": ["insect plague"]
 					}
 				}
 			],
@@ -647,9 +385,7 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"thaumaturgy#c"
-						]
+						"3": ["thaumaturgy#c"]
 					}
 				}
 			],
@@ -822,16 +558,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"wis"
-							]
+							"attributes": ["wis"]
 						}
 					]
 				}
@@ -864,35 +596,14 @@
 				{
 					"type": "table",
 					"caption": "Primal Awareness Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spell"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spell"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell speak with animals}"
-						],
-						[
-							"5th",
-							"{@spell beast sense}"
-						],
-						[
-							"9th",
-							"{@spell speak with plants}"
-						],
-						[
-							"13th",
-							"{@spell locate creature}"
-						],
-						[
-							"17th",
-							"{@spell commune with nature}"
-						]
+						["3rd", "{@spell speak with animals}"],
+						["5th", "{@spell beast sense}"],
+						["9th", "{@spell speak with plants}"],
+						["13th", "{@spell locate creature}"],
+						["17th", "{@spell commune with nature}"]
 					]
 				},
 				"You can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest."
@@ -1071,9 +782,7 @@
 			"className": "Ranger",
 			"classSource": "PHB",
 			"level": 10,
-			"entries": [
-				"You gain an additional favored terrain."
-			]
+			"entries": ["You gain an additional favored terrain."]
 		},
 		{
 			"name": "Nature's Veil",
@@ -1217,14 +926,8 @@
 				{
 					"type": "table",
 					"caption": "Drakewarden Origin",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
+					"colLabels": ["d6", "Origin"],
+					"colStyles": ["col-1 text-center", "col-11"],
 					"rows": [
 						[
 							"1",
@@ -1882,49 +1585,22 @@
 				{
 					"type": "table",
 					"caption": "Fey Wanderer Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell charm person}"
-						],
-						[
-							"5th",
-							"{@spell misty step}"
-						],
-						[
-							"9th",
-							"{@spell dispel magic}"
-						],
-						[
-							"13th",
-							"{@spell dimension door}"
-						],
-						[
-							"17th",
-							"{@spell mislead}"
-						]
+						["3rd", "{@spell charm person}"],
+						["5th", "{@spell misty step}"],
+						["9th", "{@spell dispel magic}"],
+						["13th", "{@spell dimension door}"],
+						["17th", "{@spell mislead}"]
 					]
 				},
 				"You also possess a preternatural blessing from a fey ally or a place of fey power. Choose your blessing from the Feywild Gifts table or determine it randomly.",
 				{
 					"type": "table",
 					"caption": "Feywild Gifts",
-					"colLabels": [
-						"d6",
-						"Gift"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Gift"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1",
@@ -1942,10 +1618,7 @@
 							"4",
 							"Your shadow dances while no one is looking directly at it."
 						],
-						[
-							"5",
-							"Horns or antlers sprout from your head."
-						],
+						["5", "Horns or antlers sprout from your head."],
 						[
 							"6",
 							"Your skin and hair change color to match the season at each dawn."
@@ -2055,31 +1728,13 @@
 				{
 					"type": "table",
 					"caption": "Swarm Appearance",
-					"colLabels": [
-						"d4",
-						"Appearance"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d4", "Appearance"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1",
-							"Swarming insects"
-						],
-						[
-							"2",
-							"Miniature twig blights"
-						],
-						[
-							"3",
-							"Fluttering birds"
-						],
-						[
-							"4",
-							"Playful pixies"
-						]
+						["1", "Swarming insects"],
+						["2", "Miniature twig blights"],
+						["3", "Fluttering birds"],
+						["4", "Playful pixies"]
 					]
 				},
 				"Once on each of your turns, you can cause the swarm to assist you in one of the following ways, immediately after you hit a creature with an attack:",
@@ -2118,35 +1773,14 @@
 				{
 					"type": "table",
 					"caption": "Swarmkeeper Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell faerie fire}"
-						],
-						[
-							"5th",
-							"{@spell web}"
-						],
-						[
-							"9th",
-							"{@spell gaseous form}"
-						],
-						[
-							"13th",
-							"{@spell arcane eye}"
-						],
-						[
-							"17th",
-							"{@spell insect plague}"
-						]
+						["3rd", "{@spell faerie fire}"],
+						["5th", "{@spell web}"],
+						["9th", "{@spell gaseous form}"],
+						["13th", "{@spell arcane eye}"],
+						["17th", "{@spell insect plague}"]
 					]
 				}
 			]
@@ -2261,35 +1895,14 @@
 				{
 					"type": "table",
 					"caption": "Gloom Stalker Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell disguise self}"
-						],
-						[
-							"5th",
-							"{@spell rope trick}"
-						],
-						[
-							"9th",
-							"{@spell fear}"
-						],
-						[
-							"13th",
-							"{@spell greater invisibility}"
-						],
-						[
-							"17th",
-							"{@spell seeming}"
-						]
+						["3rd", "{@spell disguise self}"],
+						["5th", "{@spell rope trick}"],
+						["9th", "{@spell fear}"],
+						["13th", "{@spell greater invisibility}"],
+						["17th", "{@spell seeming}"]
 					]
 				}
 			]
@@ -2407,35 +2020,14 @@
 				{
 					"type": "table",
 					"caption": "Horizon Walker Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell protection from evil and good}"
-						],
-						[
-							"5th",
-							"{@spell misty step}"
-						],
-						[
-							"9th",
-							"{@spell haste}"
-						],
-						[
-							"13th",
-							"{@spell banishment}"
-						],
-						[
-							"17th",
-							"{@spell teleportation circle}"
-						]
+						["3rd", "{@spell protection from evil and good}"],
+						["5th", "{@spell misty step}"],
+						["9th", "{@spell haste}"],
+						["13th", "{@spell banishment}"],
+						["17th", "{@spell teleportation circle}"]
 					]
 				}
 			]
@@ -2554,35 +2146,14 @@
 				{
 					"type": "table",
 					"caption": "Monster Slayer Spells",
-					"colLabels": [
-						"Ranger Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Ranger Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"3rd",
-							"{@spell protection from evil and good}"
-						],
-						[
-							"5th",
-							"{@spell zone of truth}"
-						],
-						[
-							"9th",
-							"{@spell magic circle}"
-						],
-						[
-							"13th",
-							"{@spell banishment}"
-						],
-						[
-							"17th",
-							"{@spell hold monster}"
-						]
+						["3rd", "{@spell protection from evil and good}"],
+						["5th", "{@spell zone of truth}"],
+						["9th", "{@spell magic circle}"],
+						["13th", "{@spell banishment}"],
+						["17th", "{@spell hold monster}"]
 					]
 				}
 			]

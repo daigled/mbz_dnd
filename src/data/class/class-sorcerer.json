@@ -9,62 +9,20 @@
 				"number": 1,
 				"faces": 6
 			},
-			"proficiency": [
-				"con",
-				"cha"
-			],
+			"proficiency": ["con", "cha"],
 			"spellcastingAbility": "cha",
 			"casterProgression": "full",
 			"cantripProgression": [
-				4,
-				4,
-				4,
-				5,
-				5,
-				5,
-				5,
-				5,
-				5,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6,
-				6
+				4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 			],
 			"spellsKnownProgression": [
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				12,
-				13,
-				13,
-				14,
-				14,
-				15,
-				15,
-				15,
-				15
+				2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15,
+				15, 15
 			],
 			"optionalfeatureProgression": [
 				{
 					"name": "Metamagic",
-					"featureType": [
-						"MM"
-					],
+					"featureType": ["MM"],
 					"progression": {
 						"3": 2,
 						"10": 3,
@@ -107,10 +65,7 @@
 				"goldAlternative": "{@dice 3d4 × 10|3d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"light crossbow|phb",
-							"crossbow bolts (20)|phb"
-						],
+						"a": ["light crossbow|phb", "crossbow bolts (20)|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponSimple"
@@ -118,9 +73,7 @@
 						]
 					},
 					{
-						"a": [
-							"component pouch|phb"
-						],
+						"a": ["component pouch|phb"],
 						"b": [
 							{
 								"equipmentType": "focusSpellcastingArcane"
@@ -128,12 +81,8 @@
 						]
 					},
 					{
-						"a": [
-							"dungeoneer's pack|phb"
-						],
-						"b": [
-							"explorer's pack|phb"
-						]
+						"a": ["dungeoneer's pack|phb"],
+						"b": ["explorer's pack|phb"]
 					},
 					{
 						"_": [
@@ -152,70 +101,28 @@
 			},
 			"classTableGroups": [
 				{
-					"colLabels": [
-						"Sorcery Points"
-					],
+					"colLabels": ["Sorcery Points"],
 					"rows": [
-						[
-							0
-						],
-						[
-							2
-						],
-						[
-							3
-						],
-						[
-							4
-						],
-						[
-							5
-						],
-						[
-							6
-						],
-						[
-							7
-						],
-						[
-							8
-						],
-						[
-							9
-						],
-						[
-							10
-						],
-						[
-							11
-						],
-						[
-							12
-						],
-						[
-							13
-						],
-						[
-							14
-						],
-						[
-							15
-						],
-						[
-							16
-						],
-						[
-							17
-						],
-						[
-							18
-						],
-						[
-							19
-						],
-						[
-							20
-						]
+						[0],
+						[2],
+						[3],
+						[4],
+						[5],
+						[6],
+						[7],
+						[8],
+						[9],
+						[10],
+						[11],
+						[12],
+						[13],
+						[14],
+						[15],
+						[16],
+						[17],
+						[18],
+						[19],
+						[20]
 					]
 				},
 				{
@@ -224,86 +131,26 @@
 						"{@filter Spells Known|spells|class=sorcerer}"
 					],
 					"rows": [
-						[
-							4,
-							2
-						],
-						[
-							4,
-							3
-						],
-						[
-							4,
-							4
-						],
-						[
-							5,
-							5
-						],
-						[
-							5,
-							6
-						],
-						[
-							5,
-							7
-						],
-						[
-							5,
-							8
-						],
-						[
-							5,
-							9
-						],
-						[
-							5,
-							10
-						],
-						[
-							6,
-							11
-						],
-						[
-							6,
-							12
-						],
-						[
-							6,
-							12
-						],
-						[
-							6,
-							13
-						],
-						[
-							6,
-							13
-						],
-						[
-							6,
-							14
-						],
-						[
-							6,
-							14
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						],
-						[
-							6,
-							15
-						]
+						[4, 2],
+						[4, 3],
+						[4, 4],
+						[5, 5],
+						[5, 6],
+						[5, 7],
+						[5, 8],
+						[5, 9],
+						[5, 10],
+						[6, 11],
+						[6, 12],
+						[6, 12],
+						[6, 13],
+						[6, 13],
+						[6, 14],
+						[6, 14],
+						[6, 15],
+						[6, 15],
+						[6, 15],
+						[6, 15]
 					]
 				},
 				{
@@ -320,226 +167,26 @@
 						"{@filter 9th|spells|level=9|class=sorcerer}"
 					],
 					"rowsSpellProgression": [
-						[
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							0,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							1,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							0,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							0,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							0,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							0
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							1,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							1,
-							1,
-							1
-						],
-						[
-							4,
-							3,
-							3,
-							3,
-							3,
-							2,
-							2,
-							1,
-							1
-						]
+						[2, 0, 0, 0, 0, 0, 0, 0, 0],
+						[3, 0, 0, 0, 0, 0, 0, 0, 0],
+						[4, 2, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 0, 0, 0, 0, 0, 0, 0],
+						[4, 3, 2, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 0, 0, 0, 0, 0, 0],
+						[4, 3, 3, 1, 0, 0, 0, 0, 0],
+						[4, 3, 3, 2, 0, 0, 0, 0, 0],
+						[4, 3, 3, 3, 1, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 0, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 0, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 0, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 0],
+						[4, 3, 3, 3, 2, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 1, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 1, 1, 1],
+						[4, 3, 3, 3, 3, 2, 2, 1, 1]
 					]
 				}
 			],
@@ -636,9 +283,7 @@
 				{
 					"name": "Good",
 					"known": {
-						"1": [
-							"cure wounds"
-						]
+						"1": ["cure wounds"]
 					},
 					"expanded": {
 						"1": [
@@ -694,9 +339,7 @@
 				{
 					"name": "Evil",
 					"known": {
-						"1": [
-							"inflict wounds"
-						]
+						"1": ["inflict wounds"]
 					},
 					"expanded": {
 						"1": [
@@ -752,9 +395,7 @@
 				{
 					"name": "Law",
 					"known": {
-						"1": [
-							"bless"
-						]
+						"1": ["bless"]
 					},
 					"expanded": {
 						"1": [
@@ -810,9 +451,7 @@
 				{
 					"name": "Chaos",
 					"known": {
-						"1": [
-							"bane"
-						]
+						"1": ["bane"]
 					},
 					"expanded": {
 						"1": [
@@ -868,9 +507,7 @@
 				{
 					"name": "Neutrality",
 					"known": {
-						"1": [
-							"protection from evil and good"
-						]
+						"1": ["protection from evil and good"]
 					},
 					"expanded": {
 						"1": [
@@ -941,9 +578,7 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"darkness"
-						]
+						"3": ["darkness"]
 					}
 				}
 			],
@@ -990,22 +625,13 @@
 							"arms of Hadar",
 							"dissonant whispers"
 						],
-						"3": [
-							"calm emotions",
-							"detect thoughts"
-						],
-						"5": [
-							"hunger of Hadar",
-							"sending"
-						],
+						"3": ["calm emotions", "detect thoughts"],
+						"5": ["hunger of Hadar", "sending"],
 						"7": [
 							"Evard's black tentacles",
 							"summon aberration|TCE"
 						],
-						"9": [
-							"Rary's telepathic bond",
-							"telekinesis"
-						]
+						"9": ["Rary's telepathic bond", "telekinesis"]
 					}
 				}
 			],
@@ -1028,26 +654,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"1": [
-							"alarm",
-							"protection from evil and good"
-						],
-						"3": [
-							"aid",
-							"lesser restoration"
-						],
-						"5": [
-							"dispel magic",
-							"protection from energy"
-						],
-						"7": [
-							"freedom of movement",
-							"summon construct|TCE"
-						],
-						"9": [
-							"greater restoration",
-							"wall of force"
-						]
+						"1": ["alarm", "protection from evil and good"],
+						"3": ["aid", "lesser restoration"],
+						"5": ["dispel magic", "protection from energy"],
+						"7": ["freedom of movement", "summon construct|TCE"],
+						"9": ["greater restoration", "wall of force"]
 					}
 				}
 			],
@@ -1069,26 +680,11 @@
 			"additionalSpells": [
 				{
 					"known": {
-						"3": [
-							"longstrider",
-							"protection from evil and good"
-						],
-						"5": [
-							"lesser restoration",
-							"protection from poison"
-						],
-						"9": [
-							"glyph of warding",
-							"magic circle"
-						],
-						"13": [
-							"death ward",
-							"freedom of movement"
-						],
-						"17": [
-							"greater restoration",
-							"telekinesis"
-						]
+						"3": ["longstrider", "protection from evil and good"],
+						"5": ["lesser restoration", "protection from poison"],
+						"9": ["glyph of warding", "magic circle"],
+						"13": ["death ward", "freedom of movement"],
+						"17": ["greater restoration", "telekinesis"]
 					}
 				}
 			],
@@ -1114,11 +710,7 @@
 				{
 					"name": "Full Moon",
 					"known": {
-						"1": [
-							"shield",
-							"ray of sickness",
-							"color spray"
-						],
+						"1": ["shield", "ray of sickness", "color spray"],
 						"3": [
 							"lesser restoration",
 							"blindness/deafness",
@@ -1208,16 +800,12 @@
 						{
 							"type": "abilityDc",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
-							"attributes": [
-								"cha"
-							]
+							"attributes": ["cha"]
 						}
 					]
 				},
@@ -1258,26 +846,11 @@
 								"col-6 text-center"
 							],
 							"rows": [
-								[
-									"1st",
-									"2"
-								],
-								[
-									"2nd",
-									"3"
-								],
-								[
-									"3rd",
-									"5"
-								],
-								[
-									"4th",
-									"6"
-								],
-								[
-									"5th",
-									"7"
-								]
+								["1st", "2"],
+								["2nd", "3"],
+								["3rd", "5"],
+								["4th", "6"],
+								["5th", "7"]
 							]
 						}
 					]
@@ -1856,14 +1429,8 @@
 				{
 					"type": "table",
 					"caption": "Draconic Ancestry",
-					"colLabels": [
-						"Dragon",
-						"Damage Type"
-					],
-					"colStyles": [
-						"col-6 text-center",
-						"col-6 text-center"
-					],
+					"colLabels": ["Dragon", "Damage Type"],
+					"colStyles": ["col-6 text-center", "col-6 text-center"],
 					"rows": [
 						[
 							"Black",
@@ -2015,14 +1582,8 @@
 				{
 					"type": "table",
 					"caption": "Wild Magic Surge",
-					"colLabels": [
-						"{@dice d100}",
-						"Effect"
-					],
-					"colStyles": [
-						"col-1 text-center",
-						"col-11"
-					],
+					"colLabels": ["{@dice d100}", "Effect"],
+					"colStyles": ["col-1 text-center", "col-11"],
 					"rows": [
 						[
 							"01-02",
@@ -2100,10 +1661,7 @@
 							"37-38",
 							"{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
 						],
-						[
-							"39-40",
-							"You regain {@dice 2d10} hit points."
-						],
+						["39-40", "You regain {@dice 2d10} hit points."],
 						[
 							"41-42",
 							"You turn into a potted plant until the start of your next turn. While a plant, you are {@condition incapacitated} and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts."
@@ -2112,10 +1670,7 @@
 							"43-44",
 							"For the next minute, you can teleport up to 20 feet as a bonus action on each of your turns."
 						],
-						[
-							"45-46",
-							"You cast {@spell levitate} on yourself."
-						],
+						["45-46", "You cast {@spell levitate} on yourself."],
 						[
 							"47-48",
 							"A {@creature unicorn} controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later."
@@ -2192,10 +1747,7 @@
 							"83-84",
 							"Each creature within 30 feet of you takes {@damage 1d10} necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt."
 						],
-						[
-							"85-86",
-							"You cast {@spell mirror image}."
-						],
+						["85-86", "You cast {@spell mirror image}."],
 						[
 							"87-88",
 							"You cast {@spell fly} on a random creature within 60 feet of you."
@@ -2220,10 +1772,7 @@
 							"97-98",
 							"You are surrounded by faint, ethereal music for the next minute."
 						],
-						[
-							"99-00",
-							"You regain all expended sorcery points."
-						]
+						["99-00", "You regain all expended sorcery points."]
 					],
 					"data": {
 						"tableInclude": true
@@ -2365,14 +1914,8 @@
 				{
 					"type": "table",
 					"caption": "Aberrant Origins",
-					"colLabels": [
-						"d6",
-						"Origin"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Origin"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1",
@@ -2427,14 +1970,8 @@
 				{
 					"type": "table",
 					"caption": "Psionic Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Sorcerer Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -2444,10 +1981,7 @@
 							"3rd",
 							"{@spell calm emotions}, {@spell detect thoughts}"
 						],
-						[
-							"5th",
-							"{@spell hunger of Hadar}, {@spell sending}"
-						],
+						["5th", "{@spell hunger of Hadar}, {@spell sending}"],
 						[
 							"7th",
 							"{@spell Evard's black tentacles}, {@spell summon aberration|TCE}"
@@ -2585,23 +2119,14 @@
 				{
 					"type": "table",
 					"caption": "Clockwork Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Sorcerer Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
 							"{@spell alarm}, {@spell protection from evil and good}"
 						],
-						[
-							"3rd",
-							"{@spell aid}, {@spell lesser restoration}"
-						],
+						["3rd", "{@spell aid}, {@spell lesser restoration}"],
 						[
 							"5th",
 							"{@spell dispel magic}, {@spell protection from energy}"
@@ -2620,27 +2145,12 @@
 				{
 					"type": "table",
 					"caption": "Manifestations of Order",
-					"colLabels": [
-						"d6",
-						"Manifestation"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Manifestation"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1",
-							"Spectral cogwheels hover behind you."
-						],
-						[
-							"2",
-							"The hands of a clock spin in your eyes."
-						],
-						[
-							"3",
-							"Your skin glows with a brassy sheen."
-						],
+						["1", "Spectral cogwheels hover behind you."],
+						["2", "The hands of a clock spin in your eyes."],
+						["3", "Your skin glows with a brassy sheen."],
 						[
 							"4",
 							"Floating equations and geometric objects overlay your body."
@@ -2807,14 +2317,8 @@
 				{
 					"type": "table",
 					"caption": "Runic Spells",
-					"colLabels": [
-						"Sorcerer Level",
-						"Spells"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["Sorcerer Level", "Spells"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1st",
@@ -2977,35 +2481,14 @@
 				"In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer spell for you, but it doesn't count against your number of sorcerer spells known. If you later replace this spell, you must replace it with a spell from the cleric spell list.",
 				{
 					"type": "table",
-					"colLabels": [
-						"Affinity",
-						"Spell"
-					],
-					"colStyles": [
-						"col-6",
-						"col-6"
-					],
+					"colLabels": ["Affinity", "Spell"],
+					"colStyles": ["col-6", "col-6"],
 					"rows": [
-						[
-							"Good",
-							"{@spell cure wounds}"
-						],
-						[
-							"Evil",
-							"{@spell inflict wounds}"
-						],
-						[
-							"Law",
-							"{@spell bless}"
-						],
-						[
-							"Chaos",
-							"{@spell bane}"
-						],
-						[
-							"Neutrality",
-							"{@spell protection from evil and good}"
-						]
+						["Good", "{@spell cure wounds}"],
+						["Evil", "{@spell inflict wounds}"],
+						["Law", "{@spell bless}"],
+						["Chaos", "{@spell bane}"],
+						["Neutrality", "{@spell protection from evil and good}"]
 					]
 				}
 			]
@@ -3086,27 +2569,15 @@
 				{
 					"type": "table",
 					"caption": "Shadow Sorcerer Quirks",
-					"colLabels": [
-						"d6",
-						"Quirk"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d6", "Quirk"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
-						[
-							"1",
-							"You are always icy cold to the touch."
-						],
+						["1", "You are always icy cold to the touch."],
 						[
 							"2",
 							"When you are asleep, you don't appear to breathe (though you must still breathe to survive)."
 						],
-						[
-							"3",
-							"You barely bleed, even when badly injured."
-						],
+						["3", "You barely bleed, even when badly injured."],
 						[
 							"4",
 							"Your heart beats once per minute. This event sometimes surprises you."
@@ -3115,10 +2586,7 @@
 							"5",
 							"You have trouble remembering that living creatures and corpses should be treated differently."
 						],
-						[
-							"6",
-							"You blinked. Once. Last week."
-						]
+						["6", "You blinked. Once. Last week."]
 					]
 				},
 				{

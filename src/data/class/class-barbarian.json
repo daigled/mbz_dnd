@@ -9,20 +9,10 @@
 				"number": 1,
 				"faces": 12
 			},
-			"proficiency": [
-				"str",
-				"con"
-			],
+			"proficiency": ["str", "con"],
 			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"{@item shield|phb|shields}"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
+				"armor": ["light", "medium", "{@item shield|phb|shields}"],
+				"weapons": ["simple", "martial"],
 				"skills": [
 					{
 						"choose": {
@@ -49,9 +39,7 @@
 				"goldAlternative": "{@dice 2d4 × 10|2d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
-						"a": [
-							"greataxe|phb"
-						],
+						"a": ["greataxe|phb"],
 						"b": [
 							{
 								"equipmentType": "weaponMartialMelee"
@@ -87,21 +75,13 @@
 					"str": 13
 				},
 				"proficienciesGained": {
-					"armor": [
-						"{@item shield|phb|shields}"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
+					"armor": ["{@item shield|phb|shields}"],
+					"weapons": ["simple", "martial"]
 				}
 			},
 			"classTableGroups": [
 				{
-					"colLabels": [
-						"Rages",
-						"Rage Damage"
-					],
+					"colLabels": ["Rages", "Rage Damage"],
 					"rows": [
 						[
 							"2",
@@ -317,15 +297,10 @@
 				{
 					"innate": {
 						"3": {
-							"ritual": [
-								"beast sense",
-								"speak with animals"
-							]
+							"ritual": ["beast sense", "speak with animals"]
 						},
 						"10": {
-							"ritual": [
-								"commune with nature"
-							]
+							"ritual": ["commune with nature"]
 						}
 					}
 				}
@@ -363,10 +338,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"10": [
-							"augury",
-							"clairvoyance"
-						]
+						"10": ["augury", "clairvoyance"]
 					}
 				}
 			],
@@ -464,16 +436,12 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"3": [
-							"druidcraft#c"
-						]
+						"3": ["druidcraft#c"]
 					}
 				},
 				{
 					"innate": {
-						"3": [
-							"thaumaturgy#c"
-						]
+						"3": ["thaumaturgy#c"]
 					}
 				}
 			],
@@ -1402,14 +1370,8 @@
 				{
 					"type": "table",
 					"caption": "Origin of the Beast",
-					"colLabels": [
-						"d4",
-						"Origin"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d4", "Origin"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1",
@@ -1590,14 +1552,8 @@
 				{
 					"type": "table",
 					"caption": "Wild Magic",
-					"colLabels": [
-						"d8",
-						"Magical Effect"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
+					"colLabels": ["d8", "Magical Effect"],
+					"colStyles": ["col-2 text-center", "col-10"],
 					"rows": [
 						[
 							"1",
