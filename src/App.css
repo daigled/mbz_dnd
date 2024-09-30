@@ -1,0 +1,23 @@
+.container {
+	position: relative;
+	display: block;
+	margin: auto;
+	padding: 0 30px;
+	max-width: 1300px;
+}
+
+.main-flex-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.character-builder-wrap, .character-summary-wrap {
+  flex: 1;
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}

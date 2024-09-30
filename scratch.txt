@@ -1,0 +1,3 @@
+{"name":"toolProficiencies","count":1,"types":["string"],"isRequired":false},
+{"name":"weaponProficiencies","count":1,"types":["string"],"isRequired":false},
+{"name":"additionalSpells","count":1,"types":["string"],"isRequired":false}]
