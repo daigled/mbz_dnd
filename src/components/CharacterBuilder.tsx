@@ -2,9 +2,15 @@ import Tabs from './Tabs'
 import ClassTab from './class/ClassTab'
 import RaceTab from './race/RaceTab'
 import AttributesTab from './attributes/AttributesTab'
+import AbilityScoresTab from './ability-scores/AbilityScoresTab'
+import { CharacterAttributes } from '../interfaces'
 
 function CharacterBuilder(props: any) {
 	const { character, setCharacter } = props
+
+	const setCharacterAttrs = (attrs: CharacterAttributes) => {
+		setCharacter({ ...character, attributes: attrs })
+	}
 
 	const tabList = [
 		{
@@ -28,7 +34,8 @@ function CharacterBuilder(props: any) {
 		{
 			id: 'attribute-selection',
 			name: 'Attributes',
-			content: <AttributesTab />,
+			// content: <AttributesTab />,
+			content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
 		},
 	]
 
