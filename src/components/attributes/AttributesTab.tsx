@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 export default function AttributesTab() {
+	const [inputVisibility, setInputVisibility] = useState(false)
 	const [bottomVisibility, setBottomVisibility] = useState(false)
 	const [buttonVisibility, setButtonVisibility] = useState(false)
 	const [numbersArray, setNumbersArray] = useState([0, 0, 0, 0, 0, 0])
@@ -36,16 +37,19 @@ export default function AttributesTab() {
 			setButtonVisibility(false)
 			setSelectedAttributes(['non', 'non', 'non', 'non', 'non', 'non'])
 			setBottomVisibility(true)
+			setInputVisibility(false)
 		} else if (e === 'rolled') {
 			setNumbersArray([0, 0, 0, 0, 0, 0])
 			setButtonVisibility(true)
 			setSelectedAttributes(['non', 'non', 'non', 'non', 'non', 'non'])
 			setBottomVisibility(true)
+			setInputVisibility(false)
 		} else {
 			setNumbersArray(['n', 'n', 'n', 'n', 'n', 'n'])
 			setButtonVisibility(false)
 			setSelectedAttributes(['non', 'non', 'non', 'non', 'non', 'non'])
 			setBottomVisibility(true)
+			setInputVisibility(true)
 		}
 	}
 
@@ -111,7 +115,11 @@ export default function AttributesTab() {
 								Roll
 							</button>
 						)}
-						<label htmlFor={num}>{num}</label>
+						{inputVisibility ? (
+							<input type="number" min="3" max="18" />
+						) : (
+							<label htmlFor={num}>{num}</label>
+						)}
 						<select
 							name={num}
 							id={num}
