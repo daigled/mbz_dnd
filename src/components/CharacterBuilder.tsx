@@ -34,8 +34,8 @@ function CharacterBuilder(props: any) {
 		{
 			id: 'attribute-selection',
 			name: 'Attributes',
-			// content: <AttributesTab />,
-			content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
+			content: <AttributesTab />,
+			// content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
 		},
 	]
 

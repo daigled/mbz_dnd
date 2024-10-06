@@ -9,7 +9,7 @@ function App() {
 		race: '',
 		subrace: '',
 		class: '',
-		attributes: {
+		abilityScores: {
 			str: -1,
 			dex: -1,
 			con: -1,
