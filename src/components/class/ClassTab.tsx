@@ -40,15 +40,17 @@ function ClassTab() {
 
 	return (
 		<div className="class-tab">
-			<h2>Select A Class:</h2>
-			<select
-				name="class-select"
-				value={selectedClass}
-				onChange={e => setSelectedClass(e.target.value)}>
-				{options.map(opt => (
-					<option value={opt[0].name}>{opt[0].name}</option>
-				))}
-			</select>
+			<div className="class-selector-wrap" style={{display: 'flex', width: 300, alignItems: 'center', justifyContent: 'space-between'}}>
+				<label htmlFor='class-select'>Select A Class:</label>
+				<select
+					name="class-select"
+					value={selectedClass}
+					onChange={e => setSelectedClass(e.target.value)}>
+					{options.map(opt => (
+						<option value={opt[0].name}>{opt[0].name}</option>
+					))}
+				</select>
+			</div>
 		</div>
 	)
 }
