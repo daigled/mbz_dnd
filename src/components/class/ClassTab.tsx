@@ -13,14 +13,14 @@ function ClassTab() {
 		// console.log(classModules[curr])
 
 		const targetData = classModules[curr]().then(data => {
-			console.log(data.default.class)
+			// console.log(data.default.class)
 			return data.default.class
 		})
 
 		return [...acc, targetData]
 	}, [])
 
-	console.log(classOptions)
+	// console.log(classOptions)
 
 	const [options, setOptions] = useState([])
 	const [selectedClass, setSelectedClass] = useState({})
@@ -28,15 +28,33 @@ function ClassTab() {
 	useEffect(() => {
 		let classes = []
 
-		for (const path in classModules) {
-			classModules[path]().then(mod => {
-				if (mod.default.class[0].source === 'PHB')
-					classes.push(mod.default.class)
-			})
-		}
+		// for (const path in classModules) {
+		// 	classModules[path]().then(mod => {
+		// 		if (mod.default.class[0].source === 'PHB')
+		// 			classes.push(mod.default.class)
+		// 	})
+		// }
 
-		setOptions(classes)
+		Object.values(classModules).forEach(module => {
+			module().then(d => {
+				console.log('pushing the following into classes: ')
+				console.log(d)
+				setOptions([...options, d])
+			})
+		})
+
+		// console.log('setting options to the following:')
+		// console.log(classes)
+		// console.log(' ')
+
+
+
+		// setOptions(classes)
 	}, [])
+
+	console.log('Options: ')
+	console.log(options)
+	console.log(' ')
 
 	return (
 		<div className="class-tab">
@@ -47,7 +65,7 @@ function ClassTab() {
 					value={selectedClass}
 					onChange={e => setSelectedClass(e.target.value)}>
 					{options.map(opt => (
-						<option value={opt[0].name}>{opt[0].name}</option>
+						<option value={opt.default.class[0].name}>{opt.default.class[0].name}</option>
 					))}
 				</select>
 			</div>
