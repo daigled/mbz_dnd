@@ -13,14 +13,14 @@ function ClassTab() {
 		// console.log(classModules[curr])
 
 		const targetData = classModules[curr]().then(data => {
-			console.log(data.default.class)
+			// console.log(data.default.class)
 			return data.default.class
 		})
 
 		return [...acc, targetData]
 	}, [])
 
-	console.log(classOptions)
+	// console.log(classOptions)
 
 	const [options, setOptions] = useState([])
 	const [selectedClass, setSelectedClass] = useState({})

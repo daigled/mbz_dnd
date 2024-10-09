@@ -25,3 +25,19 @@ export interface Race {
 	additionalSpells?: any[]
 	subraces?: any[]
 }
+
+export interface CharacterAbilityScores {
+	str: number
+	dex: number
+	con: number
+	int: number
+	wis: number
+	cha: number
+}
+
+export interface Character {
+	race: string
+	subrace: string
+	class: string
+	abilityScores: CharacterAbilityScores
+}
