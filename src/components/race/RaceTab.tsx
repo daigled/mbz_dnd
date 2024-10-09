@@ -21,7 +21,7 @@ function RaceTab(props: RaceTabProps) {
 		const assocSubRaces = availableSubraces.filter(
 			aS => aS.raceName === aR.name
 		)
-		let mapped = { ...aR }
+		const mapped = { ...aR }
 		mapped['subraces'] = assocSubRaces
 
 		return mapped
@@ -29,12 +29,7 @@ function RaceTab(props: RaceTabProps) {
 
 	useEffect(() => {
 		const found = raceOptions.find(r => r.name === characterRaceKey)
-		if (!!found) setSelectedRace(found)
-	}, [])
-
-	useEffect(() => {
-		const found = raceOptions.find(r => r.name === characterRaceKey)
-		if (!!found) setSelectedRace(found)
+		if (found) setSelectedRace(found)
 		else setSelectedRace({})
 	}, [characterRaceKey])
 
@@ -46,8 +41,22 @@ function RaceTab(props: RaceTabProps) {
 				value={characterRaceKey}
 				onChange={e => {
 					onChange(e.target.value)
+					console.log(raceOptions)
 				}}>
 				{availableRaces.map(r => (
+					<option key={r.name} value={r.name}>
+						{r.name}
+					</option>
+				))}
+			</select>
+			<label htmlFor="character-subrace-select">Select A Subrace:</label>
+			<select
+				name="character-subrace-select"
+				value={characterSubRaceKey}
+				onChange={e => {
+					onChange(e.target.value)
+				}}>
+				{availableSubraces.map(r => (
 					<option key={r.name} value={r.name}>
 						{r.name}
 					</option>

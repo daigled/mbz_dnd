@@ -1,0 +1,181 @@
+import { useState } from 'react'
+
+/**
+ * In Rolled Array Selection, we have to "roll" 4d6 and drop the lowest score six times until we get a set of 6 numbers. Each of those
+ * numbers will be assigned to one of the character's ability scores
+ */
+
+function DiceRollArraySelection() {
+	// true constants
+	const DICE_ROLL_ARRAY = [8, 10, 12, 13, 14, 15]
+	const ABILITIES = ['str', 'dex', 'con', 'int', 'wis', 'cha']
+
+	const [selectedValues, setSelectedValues] = useState({
+		str: -1,
+		dex: -1,
+		con: -1,
+		int: -1,
+		wis: -1,
+		cha: -1,
+	})
+
+	const [availableValues, setAvailableValues] = useState([])
+
+	const resetSelectedValues = () =>
+		setSelectedValues({
+			str: -1,
+			dex: -1,
+			con: -1,
+			int: -1,
+			wis: -1,
+			cha: -1,
+		})
+	const resetAvailableValues = () => setAvailableValues(DICE_ROLL_ARRAY)
+	const resetValues = () => {
+		resetAvailableValues()
+		resetSelectedValues()
+	}
+	const allAreSelected = Object.values(selectedValues)
+		.sort()
+		.every((element, index) => DICE_ROLL_ARRAY[index] === parseInt(element))
+	const noneAreSelected =
+		availableValues.length === DICE_ROLL_ARRAY.length &&
+		Object.values(selectedValues).length === 0
+
+	const makeSelection = (abilityKey, value, index) => {
+		let updatedSelection = { ...selectedValues }
+		let updatedAvailable = [...availableValues]
+		// if the incoming value is -1, we're "unselecting" this abilityKey
+		if (value === -1) {
+			const valueToRestore = selectedValues[abilityKey]
+			updatedSelection = { ...selectedValues, [abilityKey]: -1 }
+			updatedAvailable = [...availableValues, valueToRestore]
+		}
+
+		// if the incoming value already exists in selectedValues.values(), we need to find the
+		// competing key and reset that abilityKey to -1
+		else if (Object.values(selectedValues).includes(value)) {
+			const targetKey = Object.keys(selectedValues).find(
+				k => selectedValues[k] === value
+			)
+			updatedSelection = {
+				...selectedValues,
+				[targetKey]: -1,
+				[abilityKey]: value,
+			}
+		}
+
+		// BAU...
+		else {
+			updatedSelection = { ...selectedValues, [abilityKey]: value }
+			updatedAvailable = updatedAvailable.map((v, i) => {
+				if (i === index) {
+					return value
+				} else {
+					return v
+				}
+			})
+		}
+
+		setSelectedValues(updatedSelection)
+		setAvailableValues(updatedAvailable)
+	}
+
+	//Dice Roll Functions
+
+	function rollDice(numDice, numSides) {
+		const results = []
+		for (let i = 0; i < numDice; i++) {
+			results.push(Math.floor(Math.random() * numSides) + 1)
+		}
+		return results
+	}
+
+	function handleRoll() {
+		for (let i = 0; i < 6; i++) {
+			const rolls = rollDice(4, 6)
+			console.log(rolls)
+			rolls.sort((a, b) => a - b)
+			rolls.shift()
+			setAvailableValues([
+				...availableValues,
+				rolls.reduce((sum, roll) => sum + roll, 0),
+			])
+		}
+	}
+
+	return (
+		<div style={{ marginTop: '30px', borderTop: 'solid 1px blue' }}>
+			<h1
+				style={{
+					marginBottom: '30px',
+					padding: '10px 0',
+					borderBottom: 'solid 1px #dedede',
+					display: 'flex',
+					flexDirection: 'column',
+				}}>
+				Dice Roll Array Selection
+				<div className="available-values">
+					<h2>Available Values</h2>
+					<pre>{JSON.stringify(availableValues)}</pre>
+				</div>
+				<button onClick={e => handleRoll()}>Roll</button>
+			</h1>
+
+			{ABILITIES.map((abilityKey, index) => {
+				return (
+					<>
+						<label htmlFor={abilityKey}>
+							{abilityKey.toUpperCase()}
+						</label>
+						<select
+							value={selectedValues[abilityKey]}
+							name={abilityKey}
+							key={abilityKey}
+							onChange={e => {
+								// makeSelection(
+								// 	abilityKey,
+								// 	parseInt(e.target.value),
+								// 	index
+								// )
+								console.dir(e.target.value)
+							}}>
+							<option value={-1}> - </option>
+							{availableValues.map((val, index) => (
+								<option
+									key={`${abilityKey}_${val}`}
+									value={{
+										optionValue: val,
+										optionIndex: index,
+									}}>
+									{val}
+								</option>
+							))}
+							{/**NOTE: we could include a disabled prop on the options here
+							 * something like Object.values(selectedValues).includes(val),
+							 * but that forces users to un-select instead of being able to overwrite... */}
+						</select>
+					</>
+				)
+			})}
+			<div
+				className="data-summary"
+				style={{
+					margin: '30px 0',
+					padding: '30px 0',
+					border: 'solid 1px aliceblue',
+				}}>
+				<div className="available-values">
+					<h2>Available Values</h2>
+					<pre>{JSON.stringify(availableValues)}</pre>
+				</div>
+				<div className="selected-values">
+					<h2>Selected Values</h2>
+					<pre>{JSON.stringify(selectedValues)}</pre>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default DiceRollArraySelection

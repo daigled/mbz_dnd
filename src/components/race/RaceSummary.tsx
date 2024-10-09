@@ -109,14 +109,14 @@ function RaceSummary(props: any) {
 					{JSON.stringify(race.additionalSpells)}
 				</div>
 			)}
-			{!!race.subraces && (
+			{/* {!!race.subraces && (
 				<div className="subraces">
 					<span className="detail-key">Subraces: </span>
 					{race.subraces.map(s => (
 						<RaceSummary race={s} />
 					))}
 				</div>
-			)}
+			)} */}
 		</div>
 	)
 }
