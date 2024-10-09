@@ -1,12 +1,18 @@
+import './CharacterSummary.css'
+
 function CharacterSummary(props: any) {
 	const { character } = props
 
 	return (
-		<div className="character-summary-wrap">
-			<h1>This is the summary for the character</h1>
+		<div className="character-summary-wrap" style={{background: '#ccc'}}>
+			<h1 className='section-header'>Character Summary</h1>
 			<div className="detail-container">
 				<div className="detail-name">Race:</div>
-				<div className="detail-value">{character.race}</div>
+				<div className="detail-value">{character.race ?? 'unset'}</div>
+			</div>
+			<div className="detail-container">
+				<div className="detail-name">Class:</div>
+				<div className="detail-value">{character.class ?? 'unset'}</div>
 			</div>
 		</div>
 	)

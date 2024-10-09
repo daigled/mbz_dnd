@@ -23,6 +23,12 @@ function App() {
 
 	return (
 		<>
+		<header className='site-header'>
+			<div className="container">
+				MOUNTAIN BOYZ CHARACTER CREATOR
+			</div>
+		</header>
+		<main>
 			<div className="container">
 				<div className="main-flex-wrap">
 					<CharacterBuilder
@@ -32,6 +38,11 @@ function App() {
 					<CharacterSummary character={character} />
 				</div>
 			</div>
+		</main>
+		<footer>
+			<p>build it. you won't.</p>
+		</footer>
+			
 		</>
 	)
 }
