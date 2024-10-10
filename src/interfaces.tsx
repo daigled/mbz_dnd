@@ -26,6 +26,15 @@ export interface Race {
 	subraces?: any[]
 }
 
+export interface Background {
+	name: string
+	source: string
+	skillProficiencies: string
+	languageProficiencies?: string | any[]
+	startingEquipment: string | any[]
+	entries: string | any[]
+}
+
 export interface CharacterAbilityScores {
 	str: number
 	dex: number
@@ -40,4 +49,5 @@ export interface Character {
 	subrace: string
 	class: string
 	abilityScores: CharacterAbilityScores
+	background: string
 }

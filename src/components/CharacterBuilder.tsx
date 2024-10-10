@@ -4,6 +4,7 @@ import RaceTab from './race/RaceTab'
 import AttributesTab from './attributes/AttributesTab'
 import AbilityScoresTab from './ability-scores/AbilityScoresTab'
 import { CharacterAttributes } from '../interfaces'
+import BackgroundsTab from './backgrounds/BackgroundsTab'
 
 function CharacterBuilder(props: any) {
 	const { character, setCharacter } = props
@@ -36,6 +37,17 @@ function CharacterBuilder(props: any) {
 			name: 'Attributes',
 			content: <AttributesTab />,
 			// content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
+		},
+		{
+			id: 'background-selection',
+			name: 'Background',
+			content: (
+				<BackgroundsTab
+					onChange={(v: any) =>
+						setCharacter({ ...character, background: v })
+					}
+				/>
+			),
 		},
 	]
 
