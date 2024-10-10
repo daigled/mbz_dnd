@@ -38,7 +38,8 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 							style={{
 								backgroundColor: 'grey',
 								cursor: 'pointer',
-								border: '5px solid',
+								border: '3px solid',
+								padding: '5px',
 							}}
 							onClick={e => handleChange(b.name)}
 							key={b.name}>
