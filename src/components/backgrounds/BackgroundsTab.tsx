@@ -10,7 +10,12 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 	const { onChange } = props
 	const [openSummary, setopenSummary] = useState('')
 
-	const availableBackgrounds = background.filter(b => b.source === 'PHB')
+	const availableBackgrounds = background.filter(
+		b =>
+			b.source === 'PHB' &&
+			b.name !== 'Custom Background' &&
+			!b.name.includes('Variant')
+	)
 
 	function handleChange(val) {
 		if (openSummary === val) {
@@ -30,14 +35,18 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 				return (
 					<>
 						<div
-							style={{ cursor: 'pointer' }}
+							style={{
+								backgroundColor: 'grey',
+								cursor: 'pointer',
+								border: '5px solid',
+							}}
 							onClick={e => handleChange(b.name)}
 							key={b.name}>
 							{b.name}
+							{openSummary === b.name && (
+								<BackgroundSummary background={b} />
+							)}
 						</div>
-						{openSummary === b.name && (
-							<BackgroundSummary background={b} />
-						)}
 					</>
 				)
 			})}
