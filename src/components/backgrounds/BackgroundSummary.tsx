@@ -109,6 +109,12 @@ export default function BackgroundSummary(props: any) {
 							{background.entries[1].entries}
 						</li>
 					)}
+					{background.entries.slice(2).map(entry => (
+						<li>
+							<span className="detail-key">{entry.name}:</span>
+							{JSON.stringify(entry.entries[0])}
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>

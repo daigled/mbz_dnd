@@ -33,7 +33,7 @@ export interface Background {
 	languageProficiencies?: string | any[]
 	startingEquipment: string | any[]
 	toolProficiencies?: string | any[]
-	entries: string | any[]
+	entries: any[]
 }
 
 export interface CharacterAbilityScores {
