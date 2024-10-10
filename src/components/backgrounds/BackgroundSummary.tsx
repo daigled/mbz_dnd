@@ -1,4 +1,5 @@
 import { Background } from '../../interfaces'
+import './BackgroundSummary.css'
 
 export default function BackgroundSummary(props: any) {
 	const background: Background = props.background
@@ -109,10 +110,39 @@ export default function BackgroundSummary(props: any) {
 							{background.entries[1].entries}
 						</li>
 					)}
-					{background.entries.slice(2).map(entry => (
+					{background.entries.slice(2).map(sg => (
 						<li>
-							<span className="detail-key">{entry.name}:</span>
-							{JSON.stringify(entry.entries[0])}
+							<span className="detail-key">{sg.name}:</span>
+							{JSON.stringify(sg.entries[0])}
+							{sg.entries[1].type === 'table' && (
+								// <div>{JSON.stringify(sg.entries[1].type)}</div>
+								<table>
+									<thead>
+										<tr>
+											{sg.entries[1].colLabels.map(
+												(label, index) => (
+													<th key={index}>{label}</th>
+												)
+											)}
+										</tr>
+									</thead>
+									<tbody>
+										{sg.entries[1].rows.map(
+											(row, rowIndex) => (
+												<tr key={rowIndex}>
+													{row.map(
+														(cell, cellIndex) => (
+															<td key={cellIndex}>
+																{cell}
+															</td>
+														)
+													)}
+												</tr>
+											)
+										)}
+									</tbody>
+								</table>
+							)}
 						</li>
 					))}
 				</ul>
