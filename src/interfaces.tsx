@@ -32,6 +32,7 @@ export interface Background {
 	skillProficiencies: string
 	languageProficiencies?: string | any[]
 	startingEquipment: string | any[]
+	toolProficiencies?: string | any[]
 	entries: string | any[]
 }
 
