@@ -1,6 +1,24 @@
 import { useState, useEffect } from 'react'
 const classModules = import.meta.glob('../../data/class/*.json')
 
+
+const classOptions = [
+	'artificier',
+	'barbarian',
+	'bard',
+	'cleric',
+	'druid',
+	'fighter',
+	'monk',
+	// 'mystic',
+	'paladin',
+	'ranger',
+	'rogue',
+	'sorcerer',
+	'warlock',
+	'wizard'
+]
+
 function ClassTab() {
 	for (const path in classModules) {
 		classModules[path]().then(mod => {
@@ -9,52 +27,36 @@ function ClassTab() {
 			// console.log(myKey, mod)
 		})
 	}
-	const classOptions = Object.keys(classModules).reduce((acc, curr) => {
-		// console.log(classModules[curr])
 
-		const targetData = classModules[curr]().then(data => {
-			// console.log(data.default.class)
-			return data.default.class
-		})
-
-		return [...acc, targetData]
-	}, [])
-
-	// console.log(classOptions)
-
-	const [options, setOptions] = useState([])
-	const [selectedClass, setSelectedClass] = useState({})
+	const [selectedClass, setSelectedClass] = useState(null)
+	const [classData, setClassData] = useState({})
 
 	useEffect(() => {
-		let classes = []
 
-		// for (const path in classModules) {
-		// 	classModules[path]().then(mod => {
-		// 		if (mod.default.class[0].source === 'PHB')
-		// 			classes.push(mod.default.class)
-		// 	})
-		// }
+		// (async () => {
+		// 	const r = await fetch(`class/class-${selectedClass}.json`)
+		// 	console.log(r.json())
 
-		Object.values(classModules).forEach(module => {
-			module().then(d => {
-				console.log('pushing the following into classes: ')
-				console.log(d)
-				setOptions([...options, d])
-			})
-		})
+		// })();
 
-		// console.log('setting options to the following:')
-		// console.log(classes)
-		// console.log(' ')
+		const fetchClassData = async (selectedClass) => {
+			const r = await fetch(`class/class-${selectedClass}.json`)
+			console.log('hey, think we got the stuff')
+			console.log(r.body)
+			setClassData(r)
 
+			const j = await r.json()
+			console.log(j)
+			setClassData(j)
+		}
 
+		fetchClassData(selectedClass)
 
-		// setOptions(classes)
-	}, [])
+	}, [selectedClass])
 
-	console.log('Options: ')
-	console.log(options)
-	console.log(' ')
+	// console.log('Options: ')
+	// console.log(options)
+	// console.log(' ')
 
 	return (
 		<div className="class-tab">
@@ -64,11 +66,13 @@ function ClassTab() {
 					name="class-select"
 					value={selectedClass}
 					onChange={e => setSelectedClass(e.target.value)}>
-					{options.map(opt => (
-						<option value={opt.default.class[0].name}>{opt.default.class[0].name}</option>
+					{classOptions.map(opt => (
+						<option value={opt}>{opt}</option>
 					))}
 				</select>
 			</div>
+			<div style={{margin: '30px 0'}}> ----- </div>
+			<div>{JSON.stringify(classData)}</div>
 		</div>
 	)
 }
