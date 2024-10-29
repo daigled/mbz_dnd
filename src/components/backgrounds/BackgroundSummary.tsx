@@ -2,6 +2,7 @@ import { Background } from '../../interfaces'
 import './BackgroundSummary.css'
 
 export default function BackgroundSummary(props: any) {
+	const { setLanguages, setToolProficiencies, setSkillProficiences } = props
 	const background: Background = props.background
 
 	const cleanText = string => {

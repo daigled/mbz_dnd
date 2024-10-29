@@ -6,7 +6,7 @@ export interface BackgroundsTabProps {
 	onChange: any
 }
 
-export default function BackgroundsTab(props: BackgroundsTabProps) {
+export default function BackgroundsTab(props: any) {
 	const { onChange } = props
 	const [openSummary, setopenSummary] = useState('')
 
@@ -23,6 +23,7 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 			onChange('')
 		} else {
 			setopenSummary(val)
+
 			onChange(val)
 		}
 	}

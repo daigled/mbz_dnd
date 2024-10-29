@@ -49,6 +49,9 @@ export interface Character {
 	race: string
 	subrace: string
 	class: string
-	abilityScores: CharacterAbilityScores
+	abilityScores: any[]
 	background: string
+	skillProficiencies: any[]
+	toolProficiencies: any[]
+	languages: any[]
 }
