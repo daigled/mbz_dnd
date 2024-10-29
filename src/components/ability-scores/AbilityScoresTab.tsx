@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import StandardArraySelection from './StandardArraySelection'
+import DiceRollSelection from './DiceRollSelection'
 
 function AbilityScoresTab({ setCharacterAttrs }) {
 	const [mode, setMode] = useState('')
@@ -26,6 +27,7 @@ function AbilityScoresTab({ setCharacterAttrs }) {
 			</div>
 			{!noModeSet && <>selected mode: {mode}</>}
 			{mode === 'standard_array' && <StandardArraySelection />}
+			{mode === 'dice_roll' && <DiceRollSelection />}
 		</div>
 	)
 }

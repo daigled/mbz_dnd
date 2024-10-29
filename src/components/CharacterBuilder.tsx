@@ -36,6 +36,7 @@ function CharacterBuilder(props: any) {
 			name: 'Attributes',
 			// content: <AttributesTab />,
 			content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
+
 		},
 		{
 			id: 'background-selection',
