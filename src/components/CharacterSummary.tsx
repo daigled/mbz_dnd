@@ -14,12 +14,12 @@ function CharacterSummary(props: any) {
 				<div className="detail-name">Class:</div>
 				<div className="detail-value">{character.class ?? 'unset'}</div>
 			</div>
-			{/* <div className="detail-container">
+			<div className="detail-container">
 				<div className="detail-name">Abilty Scores:</div>
 				<div className="detail-value">
-					{character.abilityScores ?? 'unset'}
+					{/* {character.abilityScores ?? 'unset'} */}
 				</div>
-			</div> */}
+			</div>
 			<div className="detail-container">
 				<div className="detail-name">Background:</div>
 				<div className="detail-value">{character.background ?? ''}</div>

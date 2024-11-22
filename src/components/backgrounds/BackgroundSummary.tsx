@@ -5,8 +5,8 @@ export default function BackgroundSummary(props: any) {
 	const { setLanguages, setToolProficiencies, setSkillProficiences } = props
 	const background: Background = props.background
 
-	const cleanText = string => {
-		const cleanedString = string
+	const cleanText = str => {
+		const cleanedString = str
 			.replace(/@item/g, '')
 			.replace(/@skill/g, '')
 			.replace(/@filter/g, '')

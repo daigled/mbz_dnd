@@ -3,12 +3,13 @@ import './App.css'
 import CharacterBuilder from './components/CharacterBuilder'
 import CharacterSummary from './components/CharacterSummary'
 import { Character } from './interfaces'
+import { CharacterContext } from './store/character-context'
 
 function App() {
 	const defaultCharacter: Character = {
-		race: '',
-		subrace: '',
-		class: '',
+		race: 't',
+		subrace: 't',
+		class: 't',
 		abilityScores: {
 			str: -1,
 			dex: -1,
@@ -23,26 +24,23 @@ function App() {
 
 	return (
 		<>
-		<header className='site-header'>
-			<div className="container">
-				MOUNTAIN BOYZ CHARACTER CREATOR
-			</div>
-		</header>
-		<main>
-			<div className="container">
-				<div className="main-flex-wrap">
-					<CharacterBuilder
-						character={character}
-						setCharacter={setCharacter}
-					/>
-					<CharacterSummary character={character} />
+			<header className="site-header">
+				<div className="container">MOUNTAIN BOYZ CHARACTER CREATOR</div>
+			</header>
+			<main>
+				<div className="container">
+					<div className="main-flex-wrap">
+						<CharacterBuilder
+							character={character}
+							setCharacter={setCharacter}
+						/>
+						<CharacterSummary character={character} />
+					</div>
 				</div>
-			</div>
-		</main>
-		<footer>
-			<p>build it. you won't.</p>
-		</footer>
-			
+			</main>
+			<footer>
+				<p>build it. you won't.</p>
+			</footer>
 		</>
 	)
 }

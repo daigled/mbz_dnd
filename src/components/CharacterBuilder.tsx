@@ -34,9 +34,7 @@ function CharacterBuilder(props: any) {
 		{
 			id: 'attribute-selection',
 			name: 'Attributes',
-			// content: <AttributesTab />,
 			content: <AbilityScoresTab setCharacterAttrs={setCharacterAttrs} />,
-
 		},
 		{
 			id: 'background-selection',
@@ -52,7 +50,7 @@ function CharacterBuilder(props: any) {
 	]
 
 	return (
-		<div className="character-builder-wrap">
+		<div className="character-builder-wrap" style={{ width: '50%' }}>
 			<Tabs tabs={tabList} />
 		</div>
 	)
