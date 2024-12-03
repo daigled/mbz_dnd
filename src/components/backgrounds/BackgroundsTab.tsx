@@ -30,9 +30,11 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 
 	useEffect(() => {
 		// Find equipment and features when component mounts
-		const [equipment, features] = findEquipment(availableBackgrounds)
+		const [equipment, features] =
+			findBackgroundInformation(availableBackgrounds)
 		setEquipmentArray(equipment)
 		setFeatureArray(features)
+		console.log(availableBackgrounds)
 	}, [])
 
 	const availableBackgrounds = background.filter(
@@ -42,14 +44,15 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 			!b.name.includes('Variant')
 	)
 
-	function findEquipment(
+	//spelunking through the json
+	function findBackgroundInformation(
 		obj: any,
 		equipmentList: string[] = [],
 		featureList: string[] = []
 	): [string[], string[]] {
 		for (const key in obj) {
 			if (typeof obj[key] === 'object' && obj[key] !== null) {
-				findEquipment(obj[key], equipmentList, featureList)
+				findBackgroundInformation(obj[key], equipmentList, featureList)
 			} else if (key === 'name' && obj[key] === 'Equipment:') {
 				equipmentList.push(obj.entry)
 			} else if (key === 'name' && obj[key].includes('Feature:')) {
@@ -138,7 +141,6 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 	const availableLangTools = [
 		{ value: 'abyssal', label: 'Abyssal' },
 		{ value: 'celestial', label: 'Celestial' },
-		{ value: 'common', label: 'Common' },
 		{ value: 'draconic', label: 'Draconic' },
 		{ value: 'dwarvish', label: 'Dwarvish' },
 		{ value: 'elvish', label: 'Elvish' },
@@ -174,7 +176,11 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 	return (
 		<form action="" style={{ display: 'flex', flexDirection: 'column' }}>
 			<label htmlFor="background-name">Name:</label>
-			<input type="text" name="background-name" />
+			<input
+				type="text"
+				name="background-name"
+				onChange={e => onChange(e.target.value)}
+			/>
 
 			<label htmlFor="skill-prof">Select 2 skill proficiencies</label>
 			<Select

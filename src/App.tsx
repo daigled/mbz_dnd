@@ -7,9 +7,9 @@ import { CharacterContext } from './store/character-context'
 
 function App() {
 	const defaultCharacter: Character = {
-		race: 't',
-		subrace: 't',
-		class: 't',
+		race: '',
+		subrace: '',
+		class: '',
 		abilityScores: {
 			str: -1,
 			dex: -1,
@@ -18,6 +18,10 @@ function App() {
 			wis: -1,
 			cha: -1,
 		},
+		background: '',
+		skillProficiencies: [],
+		toolProficiencies: [],
+		languages: [],
 	}
 
 	const [character, setCharacter] = useState(defaultCharacter)

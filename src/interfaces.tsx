@@ -51,7 +51,7 @@ export interface Character {
 	class: string
 	abilityScores: any[]
 	background: string
-	skillProficiencies: any[]
-	toolProficiencies: any[]
-	languages: any[]
+	skillProficiencies: Array<string>
+	toolProficiencies: Array<string>
+	languages: Array<string>
 }
