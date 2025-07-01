@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
-function DiceRollSelection() {
+function DiceRollSelection({ dispatch }) {
 	const ABILITIES = ['str', 'dex', 'con', 'int', 'wis', 'cha']
-	// scores do not have explicit values; they "point" to a value in diceValues
+
 	const [scores, setScores] = useState({
 		str: -1,
 		dex: -1,
@@ -21,7 +21,6 @@ function DiceRollSelection() {
 		'f',
 	])
 	const [selectedKeys, setSelectedKeys] = useState([])
-	// const [ diceValues, setDiceValues ] = useState([])
 	const [diceValues, setDiceValues] = useState([
 		{ key: 'a', value: 0 },
 		{ key: 'b', value: 0 },
@@ -38,7 +37,7 @@ function DiceRollSelection() {
 		}
 		return results
 	}
-	// hacky, but an empty deps array on an effect ensures it only happens when the component mounts
+
 	useEffect(() => {
 		const values = diceValues.map(v => {
 			const rolls = rollDice(4, 6)
@@ -47,40 +46,45 @@ function DiceRollSelection() {
 			const newVal = rolls.reduce((sum, roll) => sum + roll, 0)
 			return { ...v, value: newVal }
 		})
-
 		setDiceValues(values)
 	}, [])
+
+	useEffect(() => {
+		const allAbilitiesAssigned = ABILITIES.every(key => scores[key] !== -1)
+		if (allAbilitiesAssigned) {
+			const abilityScores = {}
+			for (const ability of ABILITIES) {
+				const dieKey = scores[ability]
+				const die = diceValues.find(d => d.key === dieKey)
+				abilityScores[ability] = die?.value ?? -1
+				dispatch({
+					type: 'SET_ABILITY_SCORE',
+					payload: { stat: ability, value: abilityScores[ability] },
+				})
+			}
+		}
+	}, [scores, diceValues])
 
 	const makeSelection = (abilityKey, dieKey) => {
 		let updatedSelectedKeys = [...selectedKeys]
 		let updatedAvailableKeys = [...availableKeys]
-		let updatedScores = { ...scores }
+		const updatedScores = { ...scores }
 
-		// we are "unsetting" this ability
-		if (dieKey === -1) {
-			// console.log('not handled yet!')
+		if (dieKey === '-1') {
 			const keyToRestore = scores[abilityKey]
-			updatedScores = { ...scores, [abilityKey]: -1 }
-			updatedAvailableKeys = [...availableKeys, keyToRestore]
+			updatedScores[abilityKey] = -1
+			updatedAvailableKeys.push(keyToRestore)
 			updatedSelectedKeys = selectedKeys.filter(k => k !== keyToRestore)
 		} else if (selectedKeys.includes(dieKey)) {
-			console.log('not handled yet')
-
-			// first, find the score currently using this dieKey
 			const targetKey = Object.keys(scores).find(
 				k => scores[k] === dieKey
 			)
-			updatedScores = {
-				...scores,
-				[targetKey]: -1,
-				[abilityKey]: dieKey,
-			}
-			// updatedAvailableKeys = [...availableKeys, dieKey]
-			// updatedSelectedKeys = selectedKeys.filter(k => k === targetKey)
+			updatedScores[targetKey] = -1
+			updatedScores[abilityKey] = dieKey
 		} else {
-			updatedSelectedKeys = [...selectedKeys, dieKey]
+			updatedSelectedKeys.push(dieKey)
 			updatedAvailableKeys = availableKeys.filter(k => k !== dieKey)
-			updatedScores = { ...updatedScores, [abilityKey]: dieKey }
+			updatedScores[abilityKey] = dieKey
 		}
 
 		setSelectedKeys(updatedSelectedKeys)
@@ -98,68 +102,45 @@ function DiceRollSelection() {
 				}}>
 				Dice Roll Selection
 			</h1>
-			{ABILITIES.map(abilityKey => {
-				return (
-					<>
-						<label htmlFor={abilityKey}>
-							{abilityKey.toUpperCase()}
-						</label>
-						<select
-							value={scores[abilityKey]}
-							name={abilityKey}
-							key={abilityKey}
-							onChange={e => {
-								const dieKey = e.target.value
-								makeSelection(abilityKey, dieKey)
-							}}>
-							<option value={-1}> - </option>
-							{diceValues.map((die, i) => (
-								<option
-									key={`${abilityKey}_${die.key}`}
-									value={die.key}>
-									{die.value}:{die.key}
-								</option>
-							))}
-						</select>
-					</>
-				)
-			})}
+			{ABILITIES.map(abilityKey => (
+				<div key={abilityKey}>
+					<label htmlFor={abilityKey}>
+						{abilityKey.toUpperCase()}
+					</label>
+					<select
+						value={scores[abilityKey]}
+						name={abilityKey}
+						onChange={e =>
+							makeSelection(abilityKey, e.target.value)
+						}>
+						<option value="-1"> - </option>
+						{diceValues.map(die => (
+							<option
+								key={`${abilityKey}_${die.key}`}
+								value={die.key}>
+								{die.value}:{die.key}
+							</option>
+						))}
+					</select>
+				</div>
+			))}
+			{/* Optional: debug info */}
 			<div
-				className="data-summary"
 				style={{
 					margin: '30px 0',
 					padding: '30px 0',
 					border: 'solid 1px aliceblue',
 				}}>
-				<div className="available-values">
-					<h2>Available Keys</h2>
-					<pre>{JSON.stringify(availableKeys)}</pre>
-				</div>
-				<div className="selected-values">
-					<h2>Selected Keys</h2>
-					<pre>{JSON.stringify(selectedKeys)}</pre>
-				</div>
-				<div className="dice-values">
-					<h2>Dice Values</h2>
-					<pre>{JSON.stringify(diceValues)}</pre>
-				</div>
-				<div className="scores-summary">
-					<h2>Scores</h2>
-					<ul>
-						{Object.keys(scores).map(el => (
-							<li>
-								<span>{el}:</span>{' '}
-								<span>
-									{
-										diceValues.find(
-											die => die.key === scores[el]
-										)?.value
-									}
-								</span>
-							</li>
-						))}
-					</ul>
-				</div>
+				<h2>Scores</h2>
+				<ul>
+					{Object.keys(scores).map(el => (
+						<li key={el}>
+							{el.toUpperCase()}:{' '}
+							{diceValues.find(die => die.key === scores[el])
+								?.value ?? '-'}
+						</li>
+					))}
+				</ul>
 			</div>
 		</div>
 	)

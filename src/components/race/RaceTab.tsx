@@ -1,18 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { race, subrace } from '../../data/races.json'
 import RaceSummary from './RaceSummary'
+import { CharacterContext } from '../../store/characterContext'
 
-export interface RaceTabProps {
-	characterRaceKey: string
-	characterSubRaceKey: string
-	onChange: any
-}
+function RaceTab() {
+	const { state: character, dispatch } = useContext(CharacterContext)
 
-function RaceTab(props: RaceTabProps) {
-	const { characterRaceKey, characterSubRaceKey, onChange } = props
-
-	const [selectedRace, setSelectedRace] = useState({})
-	const [selectedSubRace, setSelectedSubRace] = useState({})
+	const [selectedRace, setSelectedRace] = useState<any>({})
 
 	const availableRaces = race.filter(r => r.source === 'PHB')
 	const availableSubraces = subrace.filter(s => s.source === 'PHB')
@@ -21,38 +15,35 @@ function RaceTab(props: RaceTabProps) {
 		const assocSubRaces = availableSubraces.filter(
 			aS => aS.raceName === aR.name
 		)
-		let mapped = { ...aR }
-		mapped['subraces'] = assocSubRaces
-
-		return mapped
+		return { ...aR, subraces: assocSubRaces }
 	})
 
 	useEffect(() => {
-		const found = raceOptions.find(r => r.name === characterRaceKey)
-		if (!!found) setSelectedRace(found)
-	}, [])
+		const found = raceOptions.find(r => r.name === character.race)
+		setSelectedRace(found || {})
+	}, [character.race])
 
-	useEffect(() => {
-		const found = raceOptions.find(r => r.name === characterRaceKey)
-		if (!!found) setSelectedRace(found)
-		else setSelectedRace({})
-	}, [characterRaceKey])
+	const handleRaceChange = (newRace: string) => {
+		dispatch({ type: 'SET_RACE', payload: newRace })
+		// Optional: reset subrace on race change if needed
+		dispatch({ type: 'SET_SUBRACE', payload: '' })
+	}
 
 	return (
-		<div className={'character-race-tab-wrap'}>
+		<div className="character-race-tab-wrap">
 			<label htmlFor="character-race-select">Select A Race:</label>
 			<select
 				name="character-race-select"
-				value={characterRaceKey}
-				onChange={e => {
-					onChange(e.target.value)
-				}}>
+				value={character.race}
+				onChange={e => handleRaceChange(e.target.value)}>
+				<option value="">-- Choose a race --</option>
 				{availableRaces.map(r => (
 					<option key={r.name} value={r.name}>
 						{r.name}
 					</option>
 				))}
 			</select>
+
 			{selectedRace && <RaceSummary race={selectedRace} />}
 		</div>
 	)

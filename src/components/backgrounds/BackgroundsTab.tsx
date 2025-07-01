@@ -1,13 +1,11 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useContext } from 'react'
 import { background } from '../../data/backgrounds.json'
 import Select from 'react-select'
+import { CharacterContext } from '../../store/characterContext'
+import Dropdown from './BackgroundsDropdown'
 
-export interface BackgroundsTabProps {
-	onChange: (val: string) => void
-}
-
-export default function BackgroundsTab(props: BackgroundsTabProps) {
-	const { onChange } = props
+export default function BackgroundsTab() {
+	const { dispatch } = useContext(CharacterContext)
 
 	const [skillsSelected, setSkillsSelected] = useState<any[]>([])
 	const [langToolsSelected, setLangToolsSelected] = useState<any[]>([])
@@ -34,7 +32,6 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 			findBackgroundInformation(availableBackgrounds)
 		setEquipmentArray(equipment)
 		setFeatureArray(features)
-		console.log(availableBackgrounds)
 	}, [])
 
 	const availableBackgrounds = background.filter(
@@ -64,7 +61,8 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 
 	// Handle multi-select for skills
 	function handleSkillsSelect(selected: any) {
-		if (selected.length <= 2) setSkillsSelected(selected)
+		dispatch({ type: 'ADD_SKILL_PROFICIENCY', payload: selected })
+		console.log(selected)
 	}
 
 	// Handle multi-select for languages/tools
@@ -72,7 +70,6 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 		if (selected.length <= 2) setLangToolsSelected(selected)
 	}
 
-	// Handle package type changes (equipment or feature)
 	// Handle package type changes (equipment or feature)
 	function handlePackageChange(type: 'equipment' | 'feature', value: string) {
 		// Reset selected premade values when switching between types
@@ -179,16 +176,19 @@ export default function BackgroundsTab(props: BackgroundsTabProps) {
 			<input
 				type="text"
 				name="background-name"
-				onChange={e => onChange(e.target.value)}
+				onChange={e => {
+					dispatch({
+						type: 'SET_BACKGROUND',
+						payload: e.target.value,
+					})
+				}}
 			/>
 
 			<label htmlFor="skill-prof">Select 2 skill proficiencies</label>
-			<Select
-				isMulti
-				value={skillsSelected}
-				onChange={handleSkillsSelect}
+			<Dropdown
+				label="Select Skill"
 				options={availableSkills}
-				isSearchable
+				onChange={handleSkillsSelect}
 			/>
 
 			<label htmlFor="lang-tools">
