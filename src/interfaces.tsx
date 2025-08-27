@@ -45,13 +45,33 @@ export interface CharacterAbilityScores {
 	cha: number
 }
 
+export interface ClassLevel {
+	className: string
+	level: number
+	selectedSkills: Array<string>
+	selectedFeatures: { [featureName: string]: any }
+	selectedSubclass?: string
+}
+
 export interface Character {
 	race: string
 	subrace: string
-	class: string
-	abilityScores: any[]
+	class: string // Primary class name
+	classLevel: number // Primary class level
+	classLevels: Array<ClassLevel>
+	totalLevel: number
+	abilityScores: CharacterAbilityScores // Base ability scores from rolling/point buy
+	racialAbilityBonuses: CharacterAbilityScores // Bonuses from race/subrace
 	background: string
 	skillProficiencies: Array<string>
 	toolProficiencies: Array<string>
 	languages: Array<string>
+	savingThrowProficiencies: Array<string>
+	armorProficiencies: Array<string>
+	weaponProficiencies: Array<string>
+	racialChoices?: {
+		selectedSkills?: Array<string>
+		selectedLanguages?: Array<string>
+		selectedAbilityScores?: { [key: string]: number }
+	}
 }

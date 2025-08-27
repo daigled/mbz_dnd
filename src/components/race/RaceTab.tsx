@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
-import { race, subrace } from '../../data/races.json'
+import { races } from '../../data/races.json'
 import RaceSummary from './RaceSummary'
 import { CharacterContext } from '../../store/characterContext'
 
@@ -8,15 +8,7 @@ function RaceTab() {
 
 	const [selectedRace, setSelectedRace] = useState<any>({})
 
-	const availableRaces = race.filter(r => r.source === 'PHB')
-	const availableSubraces = subrace.filter(s => s.source === 'PHB')
-
-	const raceOptions = availableRaces.map(aR => {
-		const assocSubRaces = availableSubraces.filter(
-			aS => aS.raceName === aR.name
-		)
-		return { ...aR, subraces: assocSubRaces }
-	})
+	const raceOptions = races
 
 	useEffect(() => {
 		const found = raceOptions.find(r => r.name === character.race)
@@ -37,7 +29,7 @@ function RaceTab() {
 				value={character.race}
 				onChange={e => handleRaceChange(e.target.value)}>
 				<option value="">-- Choose a race --</option>
-				{availableRaces.map(r => (
+				{races.map(r => (
 					<option key={r.name} value={r.name}>
 						{r.name}
 					</option>

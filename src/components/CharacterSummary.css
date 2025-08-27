@@ -1,12 +1,12 @@
 .detail-container {
-    display: flex;
-    align-items: center;
-    &:not(:last-of-type) { margin-bottom: 10px; }
+	display: flex;
+	align-items: center;
+	&:not(:last-of-type) {
+		margin-bottom: 10px;
+	}
 }
 
 .detail-name {
-    flex: 0 120px;
-    font-weight: bold;
+	flex: 0 120px;
+	font-weight: bold;
 }
-
-.detail-value { flex: 0 0; }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useContext } from 'react'
-import { background } from '../../data/backgrounds.json'
+import { backgrounds } from '../../data/backgrounds.json'
 import Select from 'react-select'
 import { CharacterContext } from '../../store/characterContext'
 import Dropdown from './BackgroundsDropdown'
@@ -27,40 +27,19 @@ export default function BackgroundsTab() {
 	const [featureArray, setFeatureArray] = useState<string[]>([])
 
 	useEffect(() => {
-		// Find equipment and features when component mounts
-		const [equipment, features] =
-			findBackgroundInformation(availableBackgrounds)
+		// Extract equipment and features directly
+		const equipment = availableBackgrounds.map(bg => bg.equipment)
+		const features = availableBackgrounds.map(bg => bg.feature)
 		setEquipmentArray(equipment)
 		setFeatureArray(features)
 	}, [])
 
-	const availableBackgrounds = background.filter(
-		b =>
-			b.source === 'PHB' &&
-			b.name !== 'Custom Background' &&
-			!b.name.includes('Variant')
-	)
+	const availableBackgrounds = backgrounds
 
-	//spelunking through the json
-	function findBackgroundInformation(
-		obj: any,
-		equipmentList: string[] = [],
-		featureList: string[] = []
-	): [string[], string[]] {
-		for (const key in obj) {
-			if (typeof obj[key] === 'object' && obj[key] !== null) {
-				findBackgroundInformation(obj[key], equipmentList, featureList)
-			} else if (key === 'name' && obj[key] === 'Equipment:') {
-				equipmentList.push(obj.entry)
-			} else if (key === 'name' && obj[key].includes('Feature:')) {
-				featureList.push(obj.entries)
-			}
-		}
-		return [equipmentList, featureList]
-	}
 
 	// Handle multi-select for skills
 	function handleSkillsSelect(selected: any) {
+		setSkillsSelected(prevSelected => [...prevSelected, selected])
 		dispatch({ type: 'ADD_SKILL_PROFICIENCY', payload: selected })
 		console.log(selected)
 	}
@@ -190,6 +169,7 @@ export default function BackgroundsTab() {
 				options={availableSkills}
 				onChange={handleSkillsSelect}
 			/>
+			<div>Skills Selected:{skillsSelected}</div>
 
 			<label htmlFor="lang-tools">
 				Select 2 languages or tool proficiencies
