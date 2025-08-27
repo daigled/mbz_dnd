@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import StandardArraySelection from './StandardArraySelection'
 import DiceRollSelection from './DiceRollSelection'
+import { CharacterContext } from '../../store/characterContext'
 
-function AbilityScoresTab({ setCharacterAttrs }) {
+function AbilityScoresTab() {
+	const { dispatch } = useContext(CharacterContext)
 	const [mode, setMode] = useState('')
 
 	const noModeSet = mode === ''
@@ -14,20 +16,25 @@ function AbilityScoresTab({ setCharacterAttrs }) {
 			<div className="mode-selection-wrap">
 				{noModeSet && <p>Please Select a Mode</p>}
 				{selectionModes.map(sM => (
-					<div className="selection-mode-option-wrap">
-						<label htmlFor="">{sM}</label>
+					<div key={sM} className="selection-mode-option-wrap">
+						<label htmlFor={sM}>{sM}</label>
 						<input
+							id={sM}
 							type="radio"
 							checked={mode === sM}
 							value={sM}
-							onChange={e => setMode(sM)}
+							onChange={() => setMode(sM)}
 						/>
 					</div>
 				))}
 			</div>
-			{!noModeSet && <>selected mode: {mode}</>}
-			{mode === 'standard_array' && <StandardArraySelection />}
-			{mode === 'dice_roll' && <DiceRollSelection />}
+
+			{!noModeSet && <>Selected mode: {mode}</>}
+
+			{mode === 'standard_array' && (
+				<StandardArraySelection dispatch={dispatch} />
+			)}
+			{mode === 'dice_roll' && <DiceRollSelection dispatch={dispatch} />}
 		</div>
 	)
 }

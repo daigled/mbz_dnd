@@ -1,57 +1,278 @@
-import { useState } from 'react'
-import { background } from '../../data/backgrounds.json'
-import BackgroundSummary from './BackgroundSummary'
+import { useState, useEffect, useMemo, useContext } from 'react'
+import { backgrounds } from '../../data/backgrounds.json'
+import Select from 'react-select'
+import { CharacterContext } from '../../store/characterContext'
+import Dropdown from './BackgroundsDropdown'
 
-export interface BackgroundsTabProps {
-	onChange: any
-}
+export default function BackgroundsTab() {
+	const { dispatch } = useContext(CharacterContext)
 
-export default function BackgroundsTab(props: any) {
-	const { onChange } = props
-	const [openSummary, setopenSummary] = useState('')
+	const [skillsSelected, setSkillsSelected] = useState<any[]>([])
+	const [langToolsSelected, setLangToolsSelected] = useState<any[]>([])
 
-	const availableBackgrounds = background.filter(
-		b =>
-			b.source === 'PHB' &&
-			b.name !== 'Custom Background' &&
-			!b.name.includes('Variant')
-	)
+	// Consolidated state for equipment and features
+	const [selectedPackage, setSelectedPackage] = useState<{
+		equipmentType: string
+		featureType: string
+		selectedPremadeEquipment: any | null
+		selectedPremadeFeature: any | null
+	}>({
+		equipmentType: 'custom',
+		featureType: 'custom',
+		selectedPremadeEquipment: null,
+		selectedPremadeFeature: null,
+	})
 
-	function handleChange(val) {
-		if (openSummary === val) {
-			setopenSummary('')
-			onChange('')
-		} else {
-			setopenSummary(val)
+	const [equipmentArray, setEquipmentArray] = useState<string[]>([])
+	const [featureArray, setFeatureArray] = useState<string[]>([])
 
-			onChange(val)
-		}
+	useEffect(() => {
+		// Extract equipment and features directly
+		const equipment = availableBackgrounds.map(bg => bg.equipment)
+		const features = availableBackgrounds.map(bg => bg.feature)
+		setEquipmentArray(equipment)
+		setFeatureArray(features)
+	}, [])
+
+	const availableBackgrounds = backgrounds
+
+
+	// Handle multi-select for skills
+	function handleSkillsSelect(selected: any) {
+		setSkillsSelected(prevSelected => [...prevSelected, selected])
+		dispatch({ type: 'ADD_SKILL_PROFICIENCY', payload: selected })
+		console.log(selected)
 	}
 
+	// Handle multi-select for languages/tools
+	function handleLangToolsSelect(selected: any) {
+		if (selected.length <= 2) setLangToolsSelected(selected)
+	}
+
+	// Handle package type changes (equipment or feature)
+	function handlePackageChange(type: 'equipment' | 'feature', value: string) {
+		// Reset selected premade values when switching between types
+		setSelectedPackage(prev => ({
+			...prev,
+			[`${type}Type`]: value,
+			[`selectedPremade${capitalizeFirstLetter(type)}`]: null, // Clear selected package
+		}))
+	}
+
+	// Handle selecting equipment or feature from premade list
+	const handleSelectPackage = (
+		type: 'equipment' | 'feature',
+		selectedOption: any
+	) => {
+		setSelectedPackage(prev => ({
+			...prev,
+			[`selectedPremade${capitalizeFirstLetter(type)}`]: selectedOption,
+		}))
+	}
+
+	const capitalizeFirstLetter = (str: string) =>
+		str.charAt(0).toUpperCase() + str.slice(1)
+
+	// Memoized combined options to avoid unnecessary recalculations on every render
+	const combinedEquipmentArray = useMemo(
+		() =>
+			equipmentArray.map((item, index) => ({
+				value: item || 'Default Equipment',
+				label:
+					availableBackgrounds[index]?.name || 'Unknown Background',
+			})),
+		[equipmentArray, availableBackgrounds]
+	)
+
+	const combinedFeatureArray = useMemo(
+		() =>
+			featureArray.map((item, index) => ({
+				value: item || 'Default Feature',
+				label:
+					availableBackgrounds[index]?.name || 'Unknown Background',
+			})),
+		[featureArray, availableBackgrounds]
+	)
+
+	const availableSkills = [
+		{ value: 'acrobatics', label: 'Acrobatics' },
+		{ value: 'animal_handling', label: 'Animal Handling' },
+		{ value: 'arcana', label: 'Arcana' },
+		{ value: 'athletics', label: 'Athletics' },
+		{ value: 'deception', label: 'Deception' },
+		{ value: 'history', label: 'History' },
+		{ value: 'insight', label: 'Insight' },
+		{ value: 'intimidation', label: 'Intimidation' },
+		{ value: 'medicine', label: 'Medicine' },
+		{ value: 'nature', label: 'Nature' },
+		{ value: 'perception', label: 'Perception' },
+		{ value: 'performance', label: 'Performance' },
+		{ value: 'persuasion', label: 'Persuasion' },
+		{ value: 'religion', label: 'Religion' },
+		{ value: 'sleight_of_hand', label: 'Sleight of Hand' },
+		{ value: 'stealth', label: 'Stealth' },
+		{ value: 'survival', label: 'Survival' },
+	]
+
+	const availableLangTools = [
+		{ value: 'abyssal', label: 'Abyssal' },
+		{ value: 'celestial', label: 'Celestial' },
+		{ value: 'draconic', label: 'Draconic' },
+		{ value: 'dwarvish', label: 'Dwarvish' },
+		{ value: 'elvish', label: 'Elvish' },
+		{ value: 'giant', label: 'Giant' },
+		{ value: 'gnomish', label: 'Gnomish' },
+		{ value: 'goblin', label: 'Goblin' },
+		{ value: 'halfling', label: 'Halfling' },
+		{ value: 'infernal', label: 'Infernal' },
+		{ value: 'orc', label: 'Orc' },
+		{ value: 'sylvan', label: 'Sylvan' },
+		{ value: 'terran', label: 'Terran' },
+		{ value: 'undercommon', label: 'Undercommon' },
+		{ value: 'alchemist_supplies', label: 'Alchemist’s Supplies' },
+		{ value: 'brewers_supplies', label: 'Brewer’s Supplies' },
+		{ value: 'calligrapher_supplies', label: 'Calligrapher’s Supplies' },
+		{ value: 'carpenter_tools', label: 'Carpenter’s Tools' },
+		{ value: 'cartographer_tools', label: 'Cartographer’s Tools' },
+		{ value: 'cobbler_tools', label: 'Cobbler’s Tools' },
+		{ value: 'cook_tools', label: 'Cook’s Tools' },
+		{ value: 'glassblower_tools', label: 'Glassblower’s Tools' },
+		{ value: 'jewelers_tools', label: 'Jeweler’s Tools' },
+		{ value: 'leatherworker_tools', label: 'Leatherworker’s Tools' },
+		{ value: 'mason_tools', label: 'Mason’s Tools' },
+		{ value: 'musical_instruments', label: 'Musical Instruments' },
+		{ value: 'painters_supplies', label: 'Painter’s Supplies' },
+		{ value: 'potters_tools', label: 'Potter’s Tools' },
+		{ value: 'smith_tools', label: 'Smith’s Tools' },
+		{ value: 'tinker_tools', label: 'Tinker’s Tools' },
+		{ value: 'weavers_tools', label: 'Weaver’s Tools' },
+		{ value: 'woodcarvers_tools', label: 'Woodcarver’s Tools' },
+	]
+
 	return (
-		<div
-			className="character-background-tab-wrap"
-			style={{ display: 'flex', flexDirection: 'column' }}>
-			{availableBackgrounds.map(b => {
-				return (
+		<form action="" style={{ display: 'flex', flexDirection: 'column' }}>
+			<label htmlFor="background-name">Name:</label>
+			<input
+				type="text"
+				name="background-name"
+				onChange={e => {
+					dispatch({
+						type: 'SET_BACKGROUND',
+						payload: e.target.value,
+					})
+				}}
+			/>
+
+			<label htmlFor="skill-prof">Select 2 skill proficiencies</label>
+			<Dropdown
+				label="Select Skill"
+				options={availableSkills}
+				onChange={handleSkillsSelect}
+			/>
+			<div>Skills Selected:{skillsSelected}</div>
+
+			<label htmlFor="lang-tools">
+				Select 2 languages or tool proficiencies
+			</label>
+			<Select
+				isMulti
+				value={langToolsSelected}
+				onChange={handleLangToolsSelect}
+				options={availableLangTools}
+				isSearchable
+			/>
+
+			<div>
+				<label htmlFor="equipment-select">
+					Select Equipment Package:
+				</label>
+				<div>
+					<input
+						type="radio"
+						value="custom"
+						checked={selectedPackage.equipmentType === 'custom'}
+						onChange={() =>
+							handlePackageChange('equipment', 'custom')
+						}
+					/>
+					Fill out custom equipment
+					<input
+						type="radio"
+						value="premade"
+						checked={selectedPackage.equipmentType === 'premade'}
+						onChange={() =>
+							handlePackageChange('equipment', 'premade')
+						}
+					/>
+					Select from premade equipment packages
+				</div>
+
+				{selectedPackage.equipmentType === 'custom' && (
+					<input type="text" />
+				)}
+				{selectedPackage.equipmentType === 'premade' && (
 					<>
-						<div
-							style={{
-								backgroundColor: 'grey',
-								cursor: 'pointer',
-								border: '3px solid',
-								padding: '5px',
-							}}
-							onClick={e => handleChange(b.name)}
-							key={b.name}>
-							{b.name}
-							{openSummary === b.name && (
-								<BackgroundSummary background={b} />
-							)}
-						</div>
+						<Select
+							isSearchable
+							options={combinedEquipmentArray}
+							onChange={selectedOption =>
+								handleSelectPackage('equipment', selectedOption)
+							}
+						/>
+						{selectedPackage.selectedPremadeEquipment && (
+							<div style={{ marginTop: '10px' }}>
+								<strong>Selected Equipment:</strong>{' '}
+								{selectedPackage.selectedPremadeEquipment.value}
+							</div>
+						)}
 					</>
-				)
-			})}
-		</div>
+				)}
+			</div>
+
+			<div>
+				<label htmlFor="feature-select">Select Feature Package:</label>
+				<div>
+					<input
+						type="radio"
+						value="custom"
+						checked={selectedPackage.featureType === 'custom'}
+						onChange={() =>
+							handlePackageChange('feature', 'custom')
+						}
+					/>
+					Fill out custom feature
+					<input
+						type="radio"
+						value="premade"
+						checked={selectedPackage.featureType === 'premade'}
+						onChange={() =>
+							handlePackageChange('feature', 'premade')
+						}
+					/>
+					Select from premade features
+				</div>
+
+				{selectedPackage.featureType === 'custom' && (
+					<input type="text" />
+				)}
+				{selectedPackage.featureType === 'premade' && (
+					<>
+						<Select
+							isSearchable
+							options={combinedFeatureArray}
+							onChange={selectedOption =>
+								handleSelectPackage('feature', selectedOption)
+							}
+						/>
+						{selectedPackage.selectedPremadeFeature && (
+							<div style={{ marginTop: '10px' }}>
+								<strong>Selected Feature:</strong>{' '}
+								{selectedPackage.selectedPremadeFeature.value}
+							</div>
+						)}
+					</>
+				)}
+			</div>
+		</form>
 	)
 }

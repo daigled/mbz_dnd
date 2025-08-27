@@ -1,0 +1,621 @@
+{
+  "classes": [
+    {
+      "name": "Fighter",
+      "description": "A master of martial combat, skilled with a variety of weapons and armor.",
+      "hitDie": 10,
+      "primaryAbility": ["Str", "Dex"],
+      "savingThrows": ["Str", "Con"],
+      "skillChoices": 2,
+      "availableSkills": ["acrobatics", "animal_handling", "athletics", "history", "insight", "intimidation", "perception", "survival"],
+      "armorProficiency": ["Light", "Medium", "Heavy", "Shields"],
+      "weaponProficiency": ["Simple", "Martial"],
+      "features": ["Fighting Style", "Second Wind", "Action Surge", "Extra Attack"],
+      "spellcaster": false,
+      "subclassLevel": 3,
+      "subclassName": "Martial Archetype",
+      "subclasses": [
+        {
+          "name": "Champion",
+          "description": "A master of weapons who focuses on the development of raw physical power.",
+          "features": {
+            "3": ["Improved Critical"],
+            "7": ["Remarkable Athlete"],
+            "10": ["Additional Fighting Style"],
+            "15": ["Superior Critical"],
+            "18": ["Survivor"]
+          },
+          "featureDescriptions": {
+            "Improved Critical": "Your weapon attacks score a critical hit on a roll of 19 or 20.",
+            "Remarkable Athlete": "Add half your proficiency bonus (rounded up) to any Strength, Dexterity, or Constitution check you make that doesn't already use your proficiency bonus. In addition, when you make a running long jump, the distance you can cover increases by a number of feet equal to your Strength modifier.",
+            "Additional Fighting Style": "Choose a second option from the Fighting Style class feature. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+            "Superior Critical": "Your weapon attacks score a critical hit on a roll of 18-20.",
+            "Survivor": "At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don't gain this benefit if you have 0 hit points."
+          }
+        },
+        {
+          "name": "Battle Master",
+          "description": "A student of combat who employs martial techniques passed down through generations.",
+          "features": {
+            "3": ["Combat Superiority", "Maneuvers (3)", "Superiority Dice (4d8)"],
+            "7": ["Know Your Enemy"],
+            "10": ["Additional Maneuvers (2)", "Superiority Dice (5d10)"],
+            "15": ["Relentless"],
+            "18": ["Superiority Dice (6d12)"]
+          },
+          "featureDescriptions": {
+            "Combat Superiority": "You learn maneuvers that are fueled by special dice called superiority dice.",
+            "Maneuvers (3)": "You learn three maneuvers of your choice from the Battle Master list.",
+            "Superiority Dice (4d8)": "You have four superiority dice, which are d8s. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest.",
+            "Know Your Enemy": "If you spend at least 1 minute observing or interacting with another creature outside combat, you can learn certain information about its capabilities compared to your own.",
+            "Additional Maneuvers (2)": "You learn two additional maneuvers of your choice.",
+            "Superiority Dice (5d10)": "Your superiority dice turn into d10s. At 18th level, they turn into d12s.",
+            "Relentless": "When you roll initiative and have no superiority dice remaining, you regain 1 superiority die.",
+            "Superiority Dice (6d12)": "Your superiority dice turn into d12s, and you gain one additional superiority die."
+          }
+        },
+        {
+          "name": "Eldritch Knight",
+          "description": "A warrior who supplements martial prowess with the study of magic.",
+          "features": {
+            "3": ["Spellcasting", "Weapon Bond"],
+            "7": ["War Magic"],
+            "10": ["Eldritch Strike"],
+            "15": ["Arcane Charge"],
+            "18": ["Improved War Magic"]
+          },
+          "spellcaster": true,
+          "spellcastingAbility": "Int",
+          "featureDescriptions": {
+            "Weapon Bond": "You learn a ritual that creates a magical bond between yourself and one weapon. Once bonded, you can't be disarmed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand.",
+            "War Magic": "When you use your action to cast a cantrip, you can make one weapon attack as a bonus action.",
+            "Eldritch Strike": "When you hit a creature with your weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn.",
+            "Arcane Charge": "You gain the ability to teleport up to 30 feet to an unoccupied space you can see when you use your Action Surge. You can teleport before or after the additional action.",
+            "Improved War Magic": "When you use your action to cast a spell, you can make one weapon attack as a bonus action."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Fighting Style", "Second Wind"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Action Surge (one use)"] },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Martial Archetype"] },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"] },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Extra Attack (1)"] },
+        { "level": 6, "proficiencyBonus": 3, "features": ["Ability Score Improvement"] },
+        { "level": 7, "proficiencyBonus": 3, "features": ["Martial Archetype Feature"] },
+        { "level": 8, "proficiencyBonus": 3, "features": ["Ability Score Improvement"] },
+        { "level": 9, "proficiencyBonus": 4, "features": ["Indomitable (one use)"] },
+        { "level": 10, "proficiencyBonus": 4, "features": ["Martial Archetype Feature"] },
+        { "level": 11, "proficiencyBonus": 4, "features": ["Extra Attack (2)"] },
+        { "level": 12, "proficiencyBonus": 4, "features": ["Ability Score Improvement"] },
+        { "level": 13, "proficiencyBonus": 5, "features": ["Indomitable (two uses)"] },
+        { "level": 14, "proficiencyBonus": 5, "features": ["Ability Score Improvement"] },
+        { "level": 15, "proficiencyBonus": 5, "features": ["Martial Archetype Feature"] },
+        { "level": 16, "proficiencyBonus": 5, "features": ["Ability Score Improvement"] },
+        { "level": 17, "proficiencyBonus": 6, "features": ["Action Surge (two uses)", "Indomitable (three uses)"] },
+        { "level": 18, "proficiencyBonus": 6, "features": ["Martial Archetype Feature"] },
+        { "level": 19, "proficiencyBonus": 6, "features": ["Ability Score Improvement"] },
+        { "level": 20, "proficiencyBonus": 6, "features": ["Extra Attack (3)"] }
+      ]
+    },
+    {
+      "name": "Wizard",
+      "description": "A scholarly magic-user capable of manipulating the structures of spellcasting.",
+      "hitDie": 6,
+      "primaryAbility": ["Int"],
+      "savingThrows": ["Int", "Wis"],
+      "skillChoices": 2,
+      "availableSkills": ["arcana", "history", "insight", "investigation", "medicine", "religion"],
+      "armorProficiency": [],
+      "weaponProficiency": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
+      "features": ["Spellcasting", "Arcane Recovery", "Arcane Tradition", "Spell Mastery"],
+      "spellcaster": true,
+      "spellcastingAbility": "Int",
+      "ritualCasting": true,
+      "subclassLevel": 2,
+      "subclassName": "Arcane Tradition",
+      "subclasses": [
+        {
+          "name": "School of Evocation",
+          "description": "Focuses on magic that creates powerful elemental effects.",
+          "features": {
+            "2": ["Evocation Savant", "Sculpt Spells"],
+            "6": ["Potent Cantrip"],
+            "10": ["Empowered Evocation"],
+            "14": ["Overchannel"]
+          },
+          "featureDescriptions": {
+            "Evocation Savant": "The gold and time you must spend to copy an evocation spell into your spellbook is halved.",
+            "Sculpt Spells": "When you cast an evocation spell that affects other creatures, you can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.",
+            "Potent Cantrip": "When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip.",
+            "Empowered Evocation": "You can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast.",
+            "Overchannel": "When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell. The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12."
+          }
+        },
+        {
+          "name": "School of Divination",
+          "description": "Seeks to understand the multiverse through careful study and magic.",
+          "features": {
+            "2": ["Divination Savant", "Portent"],
+            "6": ["Expert Divination"],
+            "10": ["The Third Eye"],
+            "14": ["Greater Portent"]
+          },
+          "featureDescriptions": {
+            "Divination Savant": "The gold and time you must spend to copy a divination spell into your spellbook is halved.",
+            "Portent": "When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can use this feature only once per turn. Each foretelling roll can be used only once. When you finish a long rest, you lose any unused foretelling rolls.",
+            "Expert Divination": "When you cast a divination spell of 2nd level or higher using a spell slot, you regain one expended spell slot. The slot you regain must be of a level lower than the spell you cast and can't be higher than 5th level.",
+            "The Third Eye": "You can use your action to increase your powers of perception. When you do so, choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest: Darkvision (60 feet), Ethereal Sight (60 feet), Greater Comprehension (read any language), or See Invisibility.",
+            "Greater Portent": "You can roll three d20s for your Portent feature, rather than two."
+          }
+        },
+        {
+          "name": "School of Abjuration",
+          "description": "Emphasizes magic that blocks, banishes, or protects.",
+          "features": {
+            "2": ["Abjuration Savant", "Arcane Ward"],
+            "6": ["Projected Ward"],
+            "10": ["Improved Abjuration"],
+            "14": ["Spell Resistance"]
+          },
+          "featureDescriptions": {
+            "Abjuration Savant": "The gold and time you must spend to copy an abjuration spell into your spellbook is halved.",
+            "Arcane Ward": "When you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell's magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hit points equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage. While the ward has 0 hit points, it can't absorb damage, but its magic remains. Whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell.",
+            "Projected Ward": "When a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage.",
+            "Improved Abjuration": "When you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in counterspell and dispel magic), you add your proficiency bonus to that ability check.",
+            "Spell Resistance": "You have advantage on saving throws against spells. Furthermore, you have resistance against the damage of spells."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Spellcasting", "Arcane Recovery"], "cantripsKnown": 3, "spellsKnown": 6, "spellSlots": { "1st": 2 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Arcane Tradition"], "cantripsKnown": 3, "spellsKnown": 8, "spellSlots": { "1st": 3 } },
+        { "level": 3, "proficiencyBonus": 2, "features": [], "cantripsKnown": 3, "spellsKnown": 10, "spellSlots": { "1st": 4, "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "cantripsKnown": 4, "spellsKnown": 12, "spellSlots": { "1st": 4, "2nd": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": [], "cantripsKnown": 4, "spellsKnown": 14, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 2 } },
+        { "level": 6, "proficiencyBonus": 3, "features": ["Arcane Tradition Feature"], "cantripsKnown": 4, "spellsKnown": 16, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3 } },
+        { "level": 7, "proficiencyBonus": 3, "features": [], "cantripsKnown": 4, "spellsKnown": 18, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 1 } },
+        { "level": 8, "proficiencyBonus": 3, "features": ["Ability Score Improvement"], "cantripsKnown": 4, "spellsKnown": 20, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 2 } },
+        { "level": 9, "proficiencyBonus": 4, "features": [], "cantripsKnown": 4, "spellsKnown": 22, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 1 } },
+        { "level": 10, "proficiencyBonus": 4, "features": ["Arcane Tradition Feature"], "cantripsKnown": 5, "spellsKnown": 24, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2 } },
+        { "level": 11, "proficiencyBonus": 4, "features": [], "cantripsKnown": 5, "spellsKnown": 26, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1 } },
+        { "level": 12, "proficiencyBonus": 4, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellsKnown": 28, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1 } },
+        { "level": 13, "proficiencyBonus": 5, "features": [], "cantripsKnown": 5, "spellsKnown": 30, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1 } },
+        { "level": 14, "proficiencyBonus": 5, "features": ["Arcane Tradition Feature"], "cantripsKnown": 5, "spellsKnown": 32, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1 } },
+        { "level": 15, "proficiencyBonus": 5, "features": [], "cantripsKnown": 5, "spellsKnown": 34, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1 } },
+        { "level": 16, "proficiencyBonus": 5, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellsKnown": 36, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1 } },
+        { "level": 17, "proficiencyBonus": 6, "features": [], "cantripsKnown": 5, "spellsKnown": 38, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 18, "proficiencyBonus": 6, "features": ["Spell Mastery"], "cantripsKnown": 5, "spellsKnown": 40, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 1, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 19, "proficiencyBonus": 6, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellsKnown": 42, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 2, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 20, "proficiencyBonus": 6, "features": ["Signature Spells"], "cantripsKnown": 5, "spellsKnown": 44, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 2, "7th": 2, "8th": 1, "9th": 1 } }
+      ]
+    },
+    {
+      "name": "Rogue",
+      "description": "A scoundrel who uses stealth and trickery to accomplish objectives.",
+      "hitDie": 8,
+      "primaryAbility": ["Dex"],
+      "savingThrows": ["Dex", "Int"],
+      "skillChoices": 4,
+      "availableSkills": ["acrobatics", "athletics", "deception", "insight", "intimidation", "investigation", "perception", "performance", "persuasion", "sleight_of_hand", "stealth"],
+      "armorProficiency": ["Light"],
+      "weaponProficiency": ["Simple", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+      "features": ["Sneak Attack", "Thieves' Cant", "Cunning Action", "Expertise"],
+      "spellcaster": false,
+      "subclassLevel": 3,
+      "subclassName": "Roguish Archetype",
+      "subclasses": [
+        {
+          "name": "Thief",
+          "description": "Enhances the rogue's stealth and agility.",
+          "features": {
+            "3": ["Fast Hands", "Second-Story Work"],
+            "9": ["Supreme Sneak"],
+            "13": ["Use Magic Device"],
+            "17": ["Thief's Reflexes"]
+          },
+          "featureDescriptions": {
+            "Fast Hands": "You can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves' tools to disarm a trap or open a lock, or take the Use an Object action.",
+            "Second-Story Work": "You gain the ability to climb faster than normal; climbing no longer costs you extra movement. In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier.",
+            "Supreme Sneak": "You have advantage on a Dexterity (Stealth) check if you move no more than half your speed on the same turn.",
+            "Use Magic Device": "You ignore all class, race, and level requirements on the use of magic items.",
+            "Thief's Reflexes": "You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature when you are surprised."
+          }
+        },
+        {
+          "name": "Assassin",
+          "description": "A master of dealing sudden death.",
+          "features": {
+            "3": ["Bonus Proficiencies", "Assassinate"],
+            "9": ["Infiltration Expertise"],
+            "13": ["Impostor"],
+            "17": ["Death Strike"]
+          },
+          "featureDescriptions": {
+            "Bonus Proficiencies": "You gain proficiency with the disguise kit and the poisoner's kit.",
+            "Assassinate": "You have advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit.",
+            "Infiltration Expertise": "You can unfailingly create false identities for yourself. You must spend seven days and 25 gp to establish the history, profession, and affiliations for an identity. You can't establish an identity that belongs to someone else.",
+            "Impostor": "You gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerisms. Your ruse is indiscernible to the casual observer.",
+            "Death Strike": "When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
+          }
+        },
+        {
+          "name": "Arcane Trickster",
+          "description": "Uses magic to enhance their stealth and trickery.",
+          "features": {
+            "3": ["Spellcasting", "Mage Hand Legerdemain"],
+            "9": ["Magical Ambush"],
+            "13": ["Versatile Trickster"],
+            "17": ["Spell Thief"]
+          },
+          "spellcaster": true,
+          "spellcastingAbility": "Int",
+          "featureDescriptions": {
+            "Mage Hand Legerdemain": "When you cast mage hand, you can make the spectral hand invisible, and you can perform the following additional tasks: stow one object the hand is holding in a container worn or carried by another creature, retrieve an object in a container worn or carried by another creature, or use thieves' tools to pick locks and disarm traps at range. You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature's Wisdom (Perception) check. In addition, you can use the bonus action granted by your Cunning Action to control the hand.",
+            "Magical Ambush": "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn.",
+            "Versatile Trickster": "You gain the ability to distract targets with your mage hand. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn.",
+            "Spell Thief": "You gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals 8 + your proficiency bonus + your Intelligence modifier. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Expertise", "Sneak Attack (1d6)", "Thieves' Cant"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Cunning Action"] },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Roguish Archetype", "Sneak Attack (2d6)"] },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"] },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Uncanny Dodge", "Sneak Attack (3d6)"] },
+        { "level": 6, "proficiencyBonus": 3, "features": ["Expertise"] },
+        { "level": 7, "proficiencyBonus": 3, "features": ["Evasion", "Sneak Attack (4d6)"] },
+        { "level": 8, "proficiencyBonus": 3, "features": ["Ability Score Improvement"] },
+        { "level": 9, "proficiencyBonus": 4, "features": ["Roguish Archetype Feature", "Sneak Attack (5d6)"] },
+        { "level": 10, "proficiencyBonus": 4, "features": ["Ability Score Improvement"] },
+        { "level": 11, "proficiencyBonus": 4, "features": ["Reliable Talent", "Sneak Attack (6d6)"] },
+        { "level": 12, "proficiencyBonus": 4, "features": ["Ability Score Improvement"] },
+        { "level": 13, "proficiencyBonus": 5, "features": ["Roguish Archetype Feature", "Sneak Attack (7d6)"] },
+        { "level": 14, "proficiencyBonus": 5, "features": ["Blindsense"] },
+        { "level": 15, "proficiencyBonus": 5, "features": ["Slippery Mind", "Sneak Attack (8d6)"] },
+        { "level": 16, "proficiencyBonus": 5, "features": ["Ability Score Improvement"] },
+        { "level": 17, "proficiencyBonus": 6, "features": ["Roguish Archetype Feature", "Sneak Attack (9d6)"] },
+        { "level": 18, "proficiencyBonus": 6, "features": ["Elusive"] },
+        { "level": 19, "proficiencyBonus": 6, "features": ["Ability Score Improvement", "Sneak Attack (10d6)"] },
+        { "level": 20, "proficiencyBonus": 6, "features": ["Stroke of Luck"] }
+      ]
+    },
+    {
+      "name": "Cleric",
+      "description": "A priestly champion who wields divine magic in service of a higher power.",
+      "hitDie": 8,
+      "primaryAbility": ["Wis"],
+      "savingThrows": ["Wis", "Cha"],
+      "skillChoices": 2,
+      "availableSkills": ["history", "insight", "medicine", "persuasion", "religion"],
+      "armorProficiency": ["Light", "Medium", "Shields"],
+      "weaponProficiency": ["Simple"],
+      "features": ["Spellcasting", "Divine Domain", "Channel Divinity", "Destroy Undead"],
+      "spellcaster": true,
+      "spellcastingAbility": "Wis",
+      "ritualCasting": true,
+      "subclassLevel": 1,
+      "subclassName": "Divine Domain",
+      "subclasses": [
+        {
+          "name": "Life Domain",
+          "description": "The Life domain focuses on the vibrant positive energy that sustains all life.",
+          "features": {
+            "1": ["Bonus Proficiency", "Disciple of Life"],
+            "2": ["Channel Divinity: Preserve Life"],
+            "6": ["Blessed Healer"],
+            "8": ["Divine Strike"],
+            "17": ["Supreme Healing"]
+          },
+          "featureDescriptions": {
+            "Bonus Proficiency": "You gain proficiency with heavy armor.",
+            "Disciple of Life": "Your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
+            "Channel Divinity: Preserve Life": "You can use your Channel Divinity to heal the badly injured. As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum.",
+            "Blessed Healer": "The healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.",
+            "Divine Strike": "You gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+            "Supreme Healing": "When you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die."
+          }
+        },
+        {
+          "name": "Light Domain",
+          "description": "Gods of light promote the ideals of rebirth and renewal, truth, vigilance, and beauty.",
+          "features": {
+            "1": ["Bonus Cantrip", "Warding Flare"],
+            "2": ["Channel Divinity: Radiance of the Dawn"],
+            "6": ["Improved Flare"],
+            "8": ["Potent Spellcasting"],
+            "17": ["Corona of Light"]
+          },
+          "featureDescriptions": {
+            "Bonus Cantrip": "You gain the light cantrip if you don't already know it. This cantrip doesn't count against the number of cleric cantrips you know.",
+            "Warding Flare": "You can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be blinded is immune to this feature. You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest.",
+            "Channel Divinity: Radiance of the Dawn": "You can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes. As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one.",
+            "Improved Flare": "You can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you.",
+            "Potent Spellcasting": "You add your Wisdom modifier to the damage you deal with any cleric cantrip.",
+            "Corona of Light": "You can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
+          }
+        },
+        {
+          "name": "War Domain",
+          "description": "War has many manifestations. It can make heroes of ordinary people.",
+          "features": {
+            "1": ["Bonus Proficiency", "War Priest"],
+            "2": ["Channel Divinity: Guided Strike"],
+            "6": ["Channel Divinity: War God's Blessing"],
+            "8": ["Divine Strike"],
+            "17": ["Avatar of Battle"]
+          },
+          "featureDescriptions": {
+            "Bonus Proficiency": "You gain proficiency with martial weapons and heavy armor.",
+            "War Priest": "When you use the Attack action, you can make one weapon attack as a bonus action. You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest.",
+            "Channel Divinity: Guided Strike": "You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+            "Channel Divinity: War God's Blessing": "When a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+            "Divine Strike": "You gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.",
+            "Avatar of Battle": "You gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Spellcasting", "Divine Domain"], "cantripsKnown": 3, "spellSlots": { "1st": 2 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Channel Divinity (1/rest)", "Divine Domain Feature"], "cantripsKnown": 3, "spellSlots": { "1st": 3 } },
+        { "level": 3, "proficiencyBonus": 2, "features": [], "cantripsKnown": 3, "spellSlots": { "1st": 4, "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Destroy Undead (CR 1/2)"], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 2 } },
+        { "level": 6, "proficiencyBonus": 3, "features": ["Channel Divinity (2/rest)", "Divine Domain Feature"], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3 } },
+        { "level": 7, "proficiencyBonus": 3, "features": [], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 1 } },
+        { "level": 8, "proficiencyBonus": 3, "features": ["Ability Score Improvement", "Destroy Undead (CR 1)", "Divine Domain Feature"], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 2 } },
+        { "level": 9, "proficiencyBonus": 4, "features": [], "cantripsKnown": 4, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 1 } },
+        { "level": 10, "proficiencyBonus": 4, "features": ["Divine Intervention"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2 } },
+        { "level": 11, "proficiencyBonus": 4, "features": ["Destroy Undead (CR 2)"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1 } },
+        { "level": 12, "proficiencyBonus": 4, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1 } },
+        { "level": 13, "proficiencyBonus": 5, "features": [], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1 } },
+        { "level": 14, "proficiencyBonus": 5, "features": ["Destroy Undead (CR 3)"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1 } },
+        { "level": 15, "proficiencyBonus": 5, "features": [], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1 } },
+        { "level": 16, "proficiencyBonus": 5, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1 } },
+        { "level": 17, "proficiencyBonus": 6, "features": ["Destroy Undead (CR 4)", "Divine Domain Feature"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 2, "6th": 1, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 18, "proficiencyBonus": 6, "features": ["Channel Divinity (3/rest)"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 1, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 19, "proficiencyBonus": 6, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 2, "7th": 1, "8th": 1, "9th": 1 } },
+        { "level": 20, "proficiencyBonus": 6, "features": ["Divine Intervention Improvement"], "cantripsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 3, "4th": 3, "5th": 3, "6th": 2, "7th": 2, "8th": 1, "9th": 1 } }
+      ]
+    },
+    {
+      "name": "Ranger",
+      "description": "A warrior of the wilderness, skilled in tracking, survival, and combat.",
+      "hitDie": 10,
+      "primaryAbility": ["Dex", "Wis"],
+      "savingThrows": ["Str", "Dex"],
+      "skillChoices": 3,
+      "availableSkills": ["animal_handling", "athletics", "insight", "investigation", "nature", "perception", "stealth", "survival"],
+      "armorProficiency": ["Light", "Medium", "Shields"],
+      "weaponProficiency": ["Simple", "Martial"],
+      "features": ["Favored Enemy", "Natural Explorer", "Fighting Style", "Spellcasting"],
+      "spellcaster": true,
+      "spellcastingAbility": "Wis",
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Favored Enemy", "Natural Explorer"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Fighting Style", "Spellcasting"], "spellSlots": { "1st": 2 } },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Ranger Archetype", "Primeval Awareness"], "spellSlots": { "1st": 3 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "spellSlots": { "1st": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Extra Attack"], "spellSlots": { "1st": 4, "2nd": 2 } }
+      ]
+    },
+    {
+      "name": "Barbarian",
+      "description": "A fierce warrior of primitive background who can enter a battle rage.",
+      "hitDie": 12,
+      "primaryAbility": ["Str"],
+      "savingThrows": ["Str", "Con"],
+      "skillChoices": 2,
+      "availableSkills": ["animal_handling", "athletics", "intimidation", "nature", "perception", "survival"],
+      "armorProficiency": ["Light", "Medium", "Shields"],
+      "weaponProficiency": ["Simple", "Martial"],
+      "features": ["Rage", "Unarmored Defense", "Reckless Attack", "Danger Sense"],
+      "spellcaster": false,
+      "subclassLevel": 3,
+      "subclassName": "Primal Path",
+      "subclasses": [
+        {
+          "name": "Path of the Berserker",
+          "description": "For some barbarians, rage is a means to an end—that end being violence.",
+          "features": {
+            "3": ["Frenzy"],
+            "6": ["Mindless Rage"],
+            "10": ["Intimidating Presence"],
+            "14": ["Retaliation"]
+          },
+          "featureDescriptions": {
+            "Frenzy": "You can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion.",
+            "Mindless Rage": "You can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+            "Intimidating Presence": "You can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn.",
+            "Retaliation": "When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
+          }
+        },
+        {
+          "name": "Path of the Totem Warrior",
+          "description": "The Path of the Totem Warrior is a spiritual journey, as the barbarian accepts a spirit animal as guide, protector, and inspiration.",
+          "features": {
+            "3": ["Spirit Seeker", "Totem Spirit"],
+            "6": ["Aspect of the Beast"],
+            "10": ["Spirit Walker"],
+            "14": ["Totemic Attunement"]
+          },
+          "featureDescriptions": {
+            "Spirit Seeker": "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. You gain the ability to cast the beast sense and speak with animals spells, but only as rituals.",
+            "Totem Spirit": "Choose a totem spirit and gain its feature. You must make or acquire a physical totem object that incorporates fur or feathers, claws, teeth, or bones of the totem animal. Bear: While raging, you have resistance to all damage except psychic damage. Eagle: While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you. Wolf: While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you.",
+            "Aspect of the Beast": "You gain a magical benefit based on the totem animal of your choice. Bear: You gain the might of a bear. Your carrying capacity is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects. Eagle: You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Wolf: You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace.",
+            "Spirit Walker": "You can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.",
+            "Totemic Attunement": "You gain a magical benefit based on a totem animal of your choice. Bear: While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. Eagle: While raging, you have a flying speed equal to your current walking speed. Wolf: While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with a melee weapon attack."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Rage", "Unarmored Defense"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Reckless Attack", "Danger Sense"] },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Primal Path"] },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"] },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Extra Attack", "Fast Movement"] }
+      ]
+    },
+    {
+      "name": "Bard",
+      "description": "A master of song, speech, and the magic they contain.",
+      "hitDie": 8,
+      "primaryAbility": ["Cha"],
+      "savingThrows": ["Dex", "Cha"],
+      "skillChoices": 3,
+      "availableSkills": ["deception", "history", "investigation", "persuasion", "religion", "sleight_of_hand"],
+      "armorProficiency": ["Light"],
+      "weaponProficiency": ["Simple", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+      "features": ["Spellcasting", "Bardic Inspiration", "Jack of All Trades", "Expertise"],
+      "spellcaster": true,
+      "spellcastingAbility": "Cha",
+      "subclassLevel": 3,
+      "subclassName": "Bard College",
+      "subclasses": [
+        {
+          "name": "College of Lore",
+          "description": "Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales.",
+          "features": {
+            "3": ["Bonus Proficiencies", "Cutting Words"],
+            "6": ["Additional Magical Secrets"],
+            "14": ["Peerless Skill"]
+          },
+          "featureDescriptions": {
+            "Bonus Proficiencies": "You gain proficiency with three skills of your choice.",
+            "Cutting Words": "You learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll.",
+            "Additional Magical Secrets": "You learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know.",
+            "Peerless Skill": "When you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
+          }
+        },
+        {
+          "name": "College of Valor",
+          "description": "Bards of the College of Valor are daring skalds whose tales keep alive the memory of the great heroes of the past.",
+          "features": {
+            "3": ["Bonus Proficiencies", "Combat Inspiration"],
+            "6": ["Extra Attack"],
+            "14": ["Additional Magical Secrets"]
+          },
+          "featureDescriptions": {
+            "Bonus Proficiencies": "You gain proficiency with medium armor, shields, and all martial weapons.",
+            "Combat Inspiration": "You learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.",
+            "Extra Attack": "You can attack twice, instead of once, whenever you take the Attack action on your turn.",
+            "Additional Magical Secrets": "You learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip."
+          }
+        }
+      ],
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Spellcasting", "Bardic Inspiration"], "cantripsKnown": 2, "spellsKnown": 4, "spellSlots": { "1st": 2 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Jack of All Trades", "Song of Rest"], "cantripsKnown": 2, "spellsKnown": 5, "spellSlots": { "1st": 3 } },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Bard College", "Expertise"], "cantripsKnown": 2, "spellsKnown": 6, "spellSlots": { "1st": 4, "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "cantripsKnown": 3, "spellsKnown": 7, "spellSlots": { "1st": 4, "2nd": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Bardic Inspiration (d8)", "Font of Inspiration"], "cantripsKnown": 3, "spellsKnown": 8, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 2 } }
+      ]
+    },
+    {
+      "name": "Druid",
+      "description": "A priest of nature, wielding elemental forces and transforming into animals.",
+      "hitDie": 8,
+      "primaryAbility": ["Wis"],
+      "savingThrows": ["Int", "Wis"],
+      "skillChoices": 2,
+      "availableSkills": ["arcana", "animal_handling", "insight", "medicine", "nature", "perception", "religion", "survival"],
+      "armorProficiency": ["Light", "Medium", "Shields (non-metal)"],
+      "weaponProficiency": ["Clubs", "Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Scimitars", "Shields", "Slings", "Spears"],
+      "features": ["Druidcraft", "Spellcasting", "Wild Shape", "Druid Circle"],
+      "spellcaster": true,
+      "spellcastingAbility": "Wis",
+      "ritualCasting": true,
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Druidcraft", "Spellcasting"], "cantripsKnown": 2, "spellSlots": { "1st": 2 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Wild Shape", "Druid Circle"], "cantripsKnown": 2, "spellSlots": { "1st": 3 } },
+        { "level": 3, "proficiencyBonus": 2, "features": [], "cantripsKnown": 2, "spellSlots": { "1st": 4, "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Wild Shape Improvement", "Ability Score Improvement"], "cantripsKnown": 3, "spellSlots": { "1st": 4, "2nd": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": [], "cantripsKnown": 3, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 2 } }
+      ]
+    },
+    {
+      "name": "Monk",
+      "description": "A master of martial arts, harnessing inner power through discipline.",
+      "hitDie": 8,
+      "primaryAbility": ["Dex", "Wis"],
+      "savingThrows": ["Str", "Dex"],
+      "skillChoices": 2,
+      "availableSkills": ["acrobatics", "athletics", "history", "insight", "religion", "stealth"],
+      "armorProficiency": [],
+      "weaponProficiency": ["Simple", "Shortswords"],
+      "features": ["Unarmored Defense", "Martial Arts", "Ki", "Unarmored Movement"],
+      "spellcaster": false,
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Unarmored Defense", "Martial Arts"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Ki", "Unarmored Movement"] },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Monastic Tradition", "Deflect Missiles"] },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement", "Slow Fall"] },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Extra Attack", "Stunning Strike"] }
+      ]
+    },
+    {
+      "name": "Paladin",
+      "description": "A holy warrior bound by sacred oaths to fight against evil.",
+      "hitDie": 10,
+      "primaryAbility": ["Str", "Cha"],
+      "savingThrows": ["Wis", "Cha"],
+      "skillChoices": 2,
+      "availableSkills": ["athletics", "insight", "intimidation", "medicine", "persuasion", "religion"],
+      "armorProficiency": ["Light", "Medium", "Heavy", "Shields"],
+      "weaponProficiency": ["Simple", "Martial"],
+      "features": ["Divine Sense", "Lay on Hands", "Fighting Style", "Spellcasting", "Divine Smite"],
+      "spellcaster": true,
+      "spellcastingAbility": "Cha",
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Divine Sense", "Lay on Hands"] },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Fighting Style", "Spellcasting", "Divine Smite"], "spellSlots": { "1st": 2 } },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Divine Health", "Sacred Oath"], "spellSlots": { "1st": 3 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "spellSlots": { "1st": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": ["Extra Attack"], "spellSlots": { "1st": 4, "2nd": 2 } }
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "description": "A spellcaster who draws on inherent magic from a draconic or other exotic bloodline.",
+      "hitDie": 6,
+      "primaryAbility": ["Cha"],
+      "savingThrows": ["Con", "Cha"],
+      "skillChoices": 2,
+      "availableSkills": ["arcana", "deception", "insight", "intimidation", "persuasion", "religion"],
+      "armorProficiency": [],
+      "weaponProficiency": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
+      "features": ["Spellcasting", "Sorcerous Origin", "Font of Magic", "Metamagic"],
+      "spellcaster": true,
+      "spellcastingAbility": "Cha",
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Spellcasting", "Sorcerous Origin"], "cantripsKnown": 4, "spellsKnown": 2, "spellSlots": { "1st": 2 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Font of Magic"], "cantripsKnown": 4, "spellsKnown": 3, "spellSlots": { "1st": 3 } },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Metamagic"], "cantripsKnown": 4, "spellsKnown": 4, "spellSlots": { "1st": 4, "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "cantripsKnown": 5, "spellsKnown": 5, "spellSlots": { "1st": 4, "2nd": 3 } },
+        { "level": 5, "proficiencyBonus": 3, "features": [], "cantripsKnown": 5, "spellsKnown": 6, "spellSlots": { "1st": 4, "2nd": 3, "3rd": 2 } }
+      ]
+    },
+    {
+      "name": "Warlock",
+      "description": "A wielder of magic derived from a bargain with an extraplanar entity.",
+      "hitDie": 8,
+      "primaryAbility": ["Cha"],
+      "savingThrows": ["Wis", "Cha"],
+      "skillChoices": 2,
+      "availableSkills": ["arcana", "deception", "history", "intimidation", "investigation", "nature", "religion"],
+      "armorProficiency": ["Light"],
+      "weaponProficiency": ["Simple"],
+      "features": ["Otherworldly Patron", "Pact Magic", "Eldritch Invocations", "Pact Boon"],
+      "spellcaster": true,
+      "spellcastingAbility": "Cha",
+      "levelProgression": [
+        { "level": 1, "proficiencyBonus": 2, "features": ["Otherworldly Patron", "Pact Magic"], "cantripsKnown": 2, "spellsKnown": 2, "spellSlots": { "1st": 1 } },
+        { "level": 2, "proficiencyBonus": 2, "features": ["Eldritch Invocations"], "cantripsKnown": 2, "spellsKnown": 3, "spellSlots": { "1st": 2 } },
+        { "level": 3, "proficiencyBonus": 2, "features": ["Pact Boon"], "cantripsKnown": 2, "spellsKnown": 4, "spellSlots": { "2nd": 2 } },
+        { "level": 4, "proficiencyBonus": 2, "features": ["Ability Score Improvement"], "cantripsKnown": 3, "spellsKnown": 5, "spellSlots": { "2nd": 2 } },
+        { "level": 5, "proficiencyBonus": 3, "features": [], "cantripsKnown": 3, "spellsKnown": 6, "spellSlots": { "3rd": 2 } }
+      ]
+    }
+  ]
+}
